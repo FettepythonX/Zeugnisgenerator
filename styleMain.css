@@ -3,10 +3,13 @@ body {
 }
 
 .Tabelle{
+	margin:auto;
 	display: table;
-    position: absolute; top: 45%; left: 14%;
+	
+	padding: 40px;
+    top: 45%; left: 14%;
     height: 45%;
-	width: 625px;
+	width: 70%;
     background-color:darkorange;
 }
 
@@ -25,15 +28,17 @@ a{
     text-decoration: none;
 }
 #start{
-    position: absolute; top: 10%; left: 5%;
+	margin:auto;
+	padding: 10px;
+    top: 10%; left: 5%;
     height: 70%;
-	width: 45%;
-    background-color: orange;
+	width: 100%;
+
     
 }
 #infos{
-    position: absolute; top: 10%; left: 14%;
+	margin:auto;
+    top: 10%; left: 14%;
     height: auto;
 	width: 625px;
-    background-color: white;
 }

@@ -6,7 +6,7 @@
         <script language="javascript" type="text/javascript" src=""></script>
 		<title>Menü</title>
 	</head>
-    <body>
+    <body style="background-color:rgb(255, 140, 0);">
         <div id="start">
             <div id="infos">
                 <p>
@@ -106,6 +106,9 @@
                         <input type="date" id="ausbildungsende" onchange="update()">
                     </div>
                 </div>
+				
+				
+				<!----------- Eingeben Check ----------->
 				<div class="Zeile">
                     <div class="Zelle">
                         
@@ -168,6 +171,8 @@
                         <div id="dispausbildende"> </div>
                     </div>
                 </div>
+				<!------- Eingabe Check Ende --------->
+				
             </div>			
         </div>		
 
@@ -176,39 +181,61 @@
 			function update(){
 				let gender = document.getElementById('gender');
 				let valgender = gender.options[gender.selectedIndex];
+				//------------------
 				document.getElementById('dispgender').innerHTML = valgender.value;
-		
+				//------------------
+				
 				let job = document.getElementById('job');
 				let valjob = job.options[job.selectedIndex];
+				//------------------
 				document.getElementById('dispjob').innerHTML = valjob.value;
+				//------------------
 				
 				let nachname = document.getElementById('nachname').value;
+				//------------------
 				document.getElementById('dispnachnam').innerHTML = nachname;
+				//------------------
 				
 				let valpraktikum = document.getElementById("praktikum");
 				if (valpraktikum.checked == true){
+					//--------------
 					document.getElementById('disppraktikum').innerHTML = "In Praktikum";
+					//--------------
 				} else { 
+					//--------------
 					document.getElementById('disppraktikum').innerHTML = "";
+					//--------------
 				}
 				
-				let vorname = document.getElementById('vorname').value;
+				let vorname = document.getElementById('vorname').value;	
+				//------------------
 				document.getElementById('dispvornam').innerHTML = vorname;
+				//------------------
 				
 				let ausbilder = document.getElementById('ausbilder').value;
+				//------------------
 				document.getElementById('dispausbilder').innerHTML = ausbilder;
+				//------------------
 				
 				let geburtsort = document.getElementById('geburtsort').value;
+				//------------------
 				document.getElementById('dispgeburts').innerHTML = geburtsort;
+				//------------------
 				
 				let ausbildungsbeginn = document.getElementById('ausbildungsbeginn').value;
+				//------------------
 				document.getElementById('dispausbildbeginn').innerHTML = ausbildungsbeginn;
+				//------------------
 				
 				let geburtstag = document.getElementById('geburtstag').value;
+				//------------------
 				document.getElementById('dispgeburtstag').innerHTML = geburtstag;
+				//------------------
 				
 				let ausbildungsende = document.getElementById('ausbildungsende').value;
+				//------------------
 				document.getElementById('dispausbildende').innerHTML = ausbildungsende;
+				//------------------
 			}
 		</script>
     </body>
