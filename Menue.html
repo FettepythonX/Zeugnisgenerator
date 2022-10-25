@@ -6,7 +6,7 @@
         <script language="javascript" type="text/javascript" src=""></script>
 		<title>Menü</title>
 	</head>
-    <body style="background-color:rgb(255, 140, 0);">
+    <body style="background-color:rgb(255, 140, 0);" onload="eraseval()">
         <div id="start">
             <div id="infos">
                 <p>
@@ -178,6 +178,8 @@
 
 		
 		<script>
+			
+		
 			function update(){
 				let gender = document.getElementById('gender');
 				let valgender = gender.options[gender.selectedIndex];
@@ -199,10 +201,14 @@
 				let valpraktikum = document.getElementById("praktikum");
 				if (valpraktikum.checked == true){
 					//--------------
+					let opt1 = "Ja";
+					sessionStorage.setItem("opt1", opt1);
 					document.getElementById('disppraktikum').innerHTML = "In Praktikum";
 					//--------------
 				} else { 
 					//--------------
+					let opt1 = "Nein";
+					sessionStorage.setItem("opt1", opt1);
 					document.getElementById('disppraktikum').innerHTML = "";
 					//--------------
 				}
@@ -236,6 +242,9 @@
 				//------------------
 				document.getElementById('dispausbildende').innerHTML = ausbildungsende;
 				//------------------
+				function eraseval(){
+					sessionStorage.clear();
+				}
 			}
 		</script>
     </body>

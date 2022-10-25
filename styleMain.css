@@ -7,19 +7,18 @@ body {
 	display: table;
 	padding: 2%;
     height: 45%;
-	width: 40%;
-    background-color:darkorange;
+	width: 90%;
+    border: 2px solid black;
+	
 }
 
 .Zeile{
 	display: table-row;
-
 }
 
 .Zelle{
 	display: table-cell;
 	padding:2px;
-	
 }
 
 a{
@@ -27,15 +26,14 @@ a{
     text-decoration: none;
 }
 #start{
-	padding:1%;
 	margin:auto;
-
+	border: 2px solid black;
     height: 70%;
-	width: 90%;
+	width: 40%;
 }
 #infos{
 	margin:auto;
     height: auto;
-	width:40%;
+	width:70%;
 	background-color:white;
 }
