@@ -172,7 +172,7 @@
                     </div>
                 </div>
 				<!------- Eingabe Check Ende --------->
-				
+				<input type="button" id="submit" value="submit" onclick="checkall()">
             </div>			
         </div>		
 
@@ -201,14 +201,12 @@
 				let valpraktikum = document.getElementById("praktikum");
 				if (valpraktikum.checked == true){
 					//--------------
-					let opt1 = "Ja";
-					sessionStorage.setItem("opt1", opt1);
+					let prakt = "Praktikum";
 					document.getElementById('disppraktikum').innerHTML = "In Praktikum";
 					//--------------
 				} else { 
 					//--------------
-					let opt1 = "Nein";
-					sessionStorage.setItem("opt1", opt1);
+					let prakt = "";
 					document.getElementById('disppraktikum').innerHTML = "";
 					//--------------
 				}
@@ -242,9 +240,17 @@
 				//------------------
 				document.getElementById('dispausbildende').innerHTML = ausbildungsende;
 				//------------------
+				
+				
 				function eraseval(){
 					sessionStorage.clear();
 				}
+				
+				function checkall(){
+					sessionStorage 
+				
+				}
+				
 			}
 		</script>
     </body>
