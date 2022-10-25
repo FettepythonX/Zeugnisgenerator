@@ -1,7 +1,8 @@
 .tabelle{
+	margin:auto;
     display: table;
     width: 50%;
-    padding: 1%;
+    padding: 2%;
     border: 2px solid rgb(0, 0, 0);
     table-layout: fixed;
 }
@@ -17,7 +18,7 @@
 }
 .zelleBtn{
     display: table-cell;
-    height: 20px;
+    height: 30px;
     text-align: center;
     vertical-align:middle;
     padding: 0%;
