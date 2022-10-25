@@ -1,0 +1,39 @@
+body {
+    background-color:whitesmoke;
+}
+
+.Tabelle{
+	display: table;
+    position: absolute; top: 45%; left: 14%;
+    height: 45%;
+	width: 625px;
+    background-color:darkorange;
+}
+
+.Zeile{
+	display: table-row;
+    height: 20px;
+}
+
+.Zelle{
+	display: table-cell;
+    width: 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+#start{
+    position: absolute; top: 10%; left: 5%;
+    height: 70%;
+	width: 45%;
+    background-color: orange;
+    
+}
+#infos{
+    position: absolute; top: 10%; left: 14%;
+    height: auto;
+	width: 625px;
+    background-color: white;
+}

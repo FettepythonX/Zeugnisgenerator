@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styleMain.css">
+        <script language="javascript" type="text/javascript" src=""></script>
+		<title>Menü</title>
+	</head>
+    <body>
+        <div id="start">
+            <div id="infos">
+                <p>
+                    Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
+                    Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
+                    Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
+                </p>
+                <p></p>
+            </div>
+            <div class="Tabelle">
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Anrede: </label>
+                    </div>
+                    <div class="Zelle">
+                        <form action="#"></form>
+                            <select id="gender" name="Anrede_drop_down" onChange="update()">
+                                <option>Herr</option>
+                                <option>Frau</option>
+                                <option>Diverse</option>
+                            </select>  
+                        </form>
+                    </div>
+                    <div class="Zelle">
+                        <label>Beruf:</label>
+                    </div>
+                    <div class="Zelle">
+                        <form action="#">
+                            <select id="job" name="Berufe_drop_down" onChange="update()">
+                                <option>Bürokraft</option>
+                                <option>Büropraktiker</option>
+                                <option>Elektroniker Automatisierungstechnik</option>
+                                <option>Elektroniker Energie & Gebäude</option>
+                                <option>Fachlagerist</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Nachname: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="nachname" name="Nachname" onChange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Im Praktikum: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()">
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Vorname: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="vorname" name="Vorname" onChange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <form action="#"></form>
+                            <select name="Ausbilder">
+                                <option>Ausbilder</option>
+                                <option>Ausbilderin</option>
+                            </select>  
+                        </form>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="ausbilder" name="input_Ausbilder" onchange="update()">
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Geburtsort: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="geburtsort" name="Geburtsort" onchange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Ausbildungsbeginn: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="ausbildungsbeginn" onchange="update()">
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Geburtstag: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="geburtstag" onchange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Ausbildungsende: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="ausbildungsende" onchange="update()">
+                    </div>
+                </div>
+				<div class="Zeile">
+                    <div class="Zelle">
+                        
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispgender"> </div>
+                    </div>
+                    <div class="Zelle">
+                        
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispjob"> </div>
+                    </div>
+                </div>
+				<div class="Zeile">
+                    <div class="Zelle">
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispnachnam"> </div>
+                    </div>
+                    <div class="Zelle">
+                    </div>
+                    <div class="Zelle">
+                        <div id="disppraktikum"> </div>
+                    </div>
+                </div>
+				<div class="Zeile">
+                    <div class="Zelle">
+                    </div>
+                    <div class="Zelle">
+                         <div id="dispvornam"> </div>
+                    </div>
+                    <div class="Zelle">                        
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispausbilder"> </div>
+                    </div>
+                </div>
+				<div class="Zeile">
+                    <div class="Zelle">                       
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispgeburts"> </div>
+                    </div>
+                    <div class="Zelle">
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispausbildbeginn"> </div>
+                    </div>
+                </div>
+				<div class="Zeile">
+                    <div class="Zelle">                       
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispgeburtstag"> </div>
+                    </div>
+                    <div class="Zelle">
+                    </div>
+                    <div class="Zelle">
+                        <div id="dispausbildende"> </div>
+                    </div>
+                </div>
+            </div>			
+        </div>		
+
+		
+		<script>
+			function update(){
+				let gender = document.getElementById('gender');
+				let valgender = gender.options[gender.selectedIndex];
+				document.getElementById('dispgender').innerHTML = valgender.value;
+		
+				let job = document.getElementById('job');
+				let valjob = job.options[job.selectedIndex];
+				document.getElementById('dispjob').innerHTML = valjob.value;
+				
+				let nachname = document.getElementById('nachname').value;
+				document.getElementById('dispnachnam').innerHTML = nachname;
+				
+				let valpraktikum = document.getElementById("praktikum");
+				if (valpraktikum.checked == true){
+					document.getElementById('disppraktikum').innerHTML = "In Praktikum";
+				} else { 
+					document.getElementById('disppraktikum').innerHTML = "";
+				}
+				
+				let vorname = document.getElementById('vorname').value;
+				document.getElementById('dispvornam').innerHTML = vorname;
+				
+				let ausbilder = document.getElementById('ausbilder').value;
+				document.getElementById('dispausbilder').innerHTML = ausbilder;
+				
+				let geburtsort = document.getElementById('geburtsort').value;
+				document.getElementById('dispgeburts').innerHTML = geburtsort;
+				
+				let ausbildungsbeginn = document.getElementById('ausbildungsbeginn').value;
+				document.getElementById('dispausbildbeginn').innerHTML = ausbildungsbeginn;
+				
+				let geburtstag = document.getElementById('geburtstag').value;
+				document.getElementById('dispgeburtstag').innerHTML = geburtstag;
+				
+				let ausbildungsende = document.getElementById('ausbildungsende').value;
+				document.getElementById('dispausbildende').innerHTML = ausbildungsende;
+			}
+		</script>
+    </body>
+</html> 
