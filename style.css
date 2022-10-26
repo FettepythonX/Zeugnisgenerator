@@ -16,6 +16,13 @@
     vertical-align:middle;
     padding: 1%;
 }
+.zelleRadio{
+    display: table-cell;
+    height: 10px;
+    text-align: center;
+    vertical-align:middle;
+    padding: 1%;
+}
 .zelleBtn{
     display: table-cell;
     height: 30px;

@@ -21,9 +21,11 @@
             </div>
 
             <div class="zeile">
-                <div class="zelle">
-                    <select id="txtBst" class="Dropdown" disabled>
-                    </select>
+                <div class="zelleRadio" onchange="radioFx(this.value)">
+                    <input type="radio" id="r0" name="x"value="0">
+                    <input type="radio" id="r1" name="x"value="1">
+                    <input type="radio" id="r2" name="x"value="2">
+                    <input type="radio" id="r3" name="x"value="3">
                 </div>
                 <div class="zelle">
                     <select id="noten" class="Dropdown" onchange="xFunction(this, txtBst )">
@@ -36,8 +38,11 @@
                 </div>
             </div>
             <div class="zeile">
+                <div class="zelle" id="outputLs">TEXT</div>
+            </div>
+            <div class="zeile">
                 <div class="zelleBtn"> <button class="xy" id="btn5" onclick="xFuntion(this)"> Next</button></div>
-                <!--</button>onclick="xFuntion()">-->
+
                 <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">PDF</button></div>
             </div>
             <input type="button" id="test" value="test" onclick="transfertest()">
@@ -47,6 +52,10 @@
 
 
     <script>
+        function radioFx(value){
+            alert(this.text);
+            document.getElementById("outputLs").value="dasdf";
+        }
         function transfertest() {
             let pra = sessionStorage.getItem("vjob");
             document.getElementById("test").value = pra;
@@ -55,48 +64,47 @@
         function xFunction(sel, y) {
             var text = sel.options[sel.selectedIndex].value;  //send to dropdown-text fx
 
-            var x = document.getElementById("txtBst");
-            x.disabled = false;
+            var x = document.getElementById("r3");
+            x.disabled = true;
 
-            editBewertungsTextBaustein(sel.value, y);
+            editBewertungsTextBaustein(sel.value);
         }
-        function editBewertungsTextBaustein(note, y) {
+        function editBewertungsTextBaustein(note) {
             let x = -1;
             const texte = [];
             switch (note) {
                 case '0':
                     x = 3;
-                    texte [0]= "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
-                    texte [1]= "Er besitzt ein äußerst solides Fachwissen, das er zur Lösung seiner Aufgaben stets sehr sicher und erfolgreich einsetzte. Daher war Herr Mustermann in unserem Hause ein allseits geschätzter Ansprechpartner bei allen fachlichen Problemstellungen.";
-                    texte [2]= "Herr Mustermann besitzt ein umfassendes und hervorragendes, jederzeit verfügbares Fachwissen, mit dessen Hilfe er auch überaus schwierige Fragen sehr erfolgreich löste. Er verband exzellente technische Kompetenz mit ausgezeichnetem wirtschaftlichem Sachverstand.";
+                    texte[0] = "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
+                    texte[1] = "Er besitzt ein äußerst solides Fachwissen, das er zur Lösung seiner Aufgaben stets sehr sicher und erfolgreich einsetzte. Daher war Herr Mustermann in unserem Hause ein allseits geschätzter Ansprechpartner bei allen fachlichen Problemstellungen.";
+                    texte[2] = "Herr Mustermann besitzt ein umfassendes und hervorragendes, jederzeit verfügbares Fachwissen, mit dessen Hilfe er auch überaus schwierige Fragen sehr erfolgreich löste. Er verband exzellente technische Kompetenz mit ausgezeichnetem wirtschaftlichem Sachverstand.";
+                    x.disabled = true;
                     break;
                 case '1':
                     x = 4;
-                    texte [0]= "grf";
-                    texte [1]= "fgr";
-                    texte [2]= "fgr";
-                    texte [3]= "fgr";
+                    texte[0] = "grf";
+                    texte[1] = "fgr";
+                    texte[2] = "fgr";
+                    texte[3] = "fgr";
+                    x.disabled = false;
                     break;
                 case '2':
                     x = 3;
-                    texte [0]= "jlö";
-                    texte [1]= "jlö";
-                    texte [2]= "jlö";
+                    texte[0] = "jlö";
+                    texte[1] = "jlö";
+                    texte[2] = "jlö";
+                    x.disabled = true;
                     break;
                 case '3':
                     x = 4;
-                    texte [0]= "###";
-                    texte [1]= "###";
-                    texte [2]= "###";
-                    texte [3]= "###";
+                    texte[0] = "###";
+                    texte[1] = "###";
+                    texte[2] = "###";
+                    texte[3] = "###";
+                    x.disabled = false;
                     break;
             }
-            var y = document.getElementById("txtBst");
-            removeOptions(y);
-            for (let i = 0; i <= x; i++) {
-
-                y.add(new Option(texte[i],i));
-            }
+            document.getElementById("outputLs").value="dasdf";
             /*for (let index = 0; index <= x && x != -1; index++) {
                 //const newOption = document.createElement('option');
                 const optionText = document.createTextNode('Option Text');
@@ -109,7 +117,7 @@
 
         function removeOptions(selectElement) {
             var i, L = selectElement.options.length - 1;
-            for(i = L; i >= 0; i--) {
+            for (i = L; i >= 0; i--) {
                 selectElement.remove(i);
             }
         }
