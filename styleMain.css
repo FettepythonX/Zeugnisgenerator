@@ -6,8 +6,8 @@ body {
 	margin:auto;
 	display: table;
 	padding: 2%;
-    height: 45%;
-	width: 90%;
+    height: auto%;
+	width: auto%;
     border: 2px solid black;
 
 	
@@ -20,6 +20,7 @@ body {
 .Zelle{
 	display: table-cell;
 	padding:2px;
+	width: 100px;
 }
 
 a{
@@ -29,12 +30,12 @@ a{
 #start{
 	margin:auto;
 	border: 2px solid black;
-    height: 70%;
+    height: auto%;
 	width: 40%;
 }
 #infos{
 	margin:auto;
-    height: auto;
+    height:auto;
 	width:70%;
 	background-color:white;
 }
