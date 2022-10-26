@@ -41,6 +41,7 @@
                                 <option>Elektroniker Automatisierungstechnik</option>
                                 <option>Elektroniker Energie & Gebäude</option>
                                 <option>Fachlagerist</option>
+								<option>Verwaltungsfachangestellter</option>
                             </select>
                         </form>
                     </div>
@@ -106,6 +107,14 @@
                         <input type="date" id="ausbildungsende" onchange="update()">
                     </div>
                 </div>
+				<div class="Zeile">
+					<div class="Zelle">
+					<p id="pr" hidden> Angewandte Programme </p>
+					</div>
+					<div class="Zelle">
+					<input type="text" id="programme" name="programme" onchange="update()" hidden>
+					</div>
+				</div>
             </div>			
         </div>		
 
@@ -119,7 +128,7 @@
 				
 				let job = document.getElementById('job');
 				let valjob = job.options[job.selectedIndex];
-
+				
 				
 				let nachname = document.getElementById('nachname').value;
 
@@ -156,7 +165,20 @@
 					let vgender = valgender.value;
 					let vjob = valjob.value;
 					
+				if(vjob === "Verwaltungsfachangestellter"){
+					document.getElementById("pr").hidden = false;
+					document.getElementById("programme").hidden = false;
+				}
+				else{
+					document.getElementById("pr").hidden = true;
+					document.getElementById("programme").hidden = true;
+				}
 					
+				let programme = document.getElementById('programme').value;	
+				
+				
+				
+				
 					
 					sessionStorage.setItem("vgender", vgender);
 					sessionStorage.setItem("vjob", vjob);
@@ -168,7 +190,7 @@
 					sessionStorage.setItem("ausbildungsbeginn", ausbildungsbeginn);
 					sessionStorage.setItem("geburtstag", geburtstag);
 					sessionStorage.setItem("ausbildungsende", ausbildungsende);
-
+					sessionStorage.setItem("programme", programme);
 					
 					console.log(vgender);
 					console.log(vjob);
@@ -180,12 +202,14 @@
 					console.log(ausbildungsbeginn);
 					console.log(geburtstag);
 					console.log(ausbildungsende);
+					console.log(programme);
 			}	
 			
 			function eraseval(){
 				sessionStorage.clear();
 			}
 				
+
 		</script>
     </body>
 </html> 
