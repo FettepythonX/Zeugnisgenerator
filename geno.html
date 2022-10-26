@@ -21,105 +21,41 @@
                 <div class="zelleT"> Bewertung </div>
             </div>
 
-            <!--     Fachwissen
-            Sehr gut    3
-                Herr Mustermann verfügt über ein sehr großes
-                und beachtliches Fachwissen und fundierte Fachkenntnisse.
-                Er beherrschte seinen Arbeitsbereich stets umfassend und
-                sicher, hatte oft neue Ideen und fand optimale Lösungen.
-
-                Er besitzt ein äußerst solides Fachwissen, das er zur
-                Lösung seiner Aufgaben stets sehr sicher und erfolgreich
-                einsetzte. Daher war Herr Mustermann in unserem Hause ein
-                allseits geschätzter Ansprechpartner bei allen fachlichen
-                Problemstellungen.
-
-                Herr Mustermann besitzt ein umfassendes und hervorragendes,
-                jederzeit verfügbares Fachwissen, mit dessen Hilfe er auch
-                überaus schwierige Fragen sehr erfolgreich löste. Er verband
-                exzellente technische Kompetenz mit ausgezeichnetem
-                wirtschaftlichem Sachverstand.
-
-
-            Gut     4
-                Herr Mustermann verfügt über ein großes und beachtliches
-                Fachwissen. Er beherrschte seinen Arbeitsbereich umfassend
-                und überdurchschnittlich, fand gute Lösungen und hatte neue Ideen.
-
-                Er verfügt über ein solides Fachwissen, das er zur Lösung seiner
-                Aufgaben stets sicher und wirksam einsetzte. Daher war Herr Mustermann
-                in unserem Hause ein allseits geschätzter Ansprechpartner bei allen
-                fachlichen Problemstellungen.
-
-                Herr Mustermann besitzt ein umfassendes und gutes, jederzeit
-                verfügbares Fachwissen, mit dessen Hilfe er auch schwierige Fragen
-                erfolgreich löste. Er verband hohe technische Kompetenz mit gutem
-                wirtschaftlichem Sachverstand.
-
-                Herr Mustermann hat ein umfassendes und detailliertes Fachwissen,
-                das er beim Auftreten neuer Fragen und Entwicklungen sicher einsetzte.
-                Er aktualisierte beständig sein Wissen und hat die erworbenen Kenntnisse
-                stets gut praktisch umgesetzt.
-
-
-            Befriedigend    4
-                Herr Mustermann beherrschte seinen Arbeitsbereich umfassend und fand brauchbare Lösungen.
-
-                Er verfügt über ein solides Fachwissen in seinem Fachgebiet, das er zur Lösung seiner
-                Aufgaben einsetzte. Daher war Herr Mustermann in unserem Hause ein oft gesuchter Ansprechpartner.
-
-                Herr Mustermann besitzt ein jederzeit verfügbares Fachwissen, mit dessen Hilfe er seine Aufgaben
-                erfolgreich löste. Er verband technische Kompetenz mit wirtschaftlichem Sachverstand.
-
-                Herr Mustermann hat ein detailliertes Fachwissen, das er beim Auftreten neuer Fragen und
-                Entwicklungen sicher einsetzte. Er aktualiserte sein Wissen und hat die erworbenen
-                Kenntnisse gut praktisch umgesetzt.
-
-            Ausreichend     2
-                Herr Mustermann beherrschte seinen Arbeitsbereich den Anforderungen entsprechend.
-
-                Herr Mustermann verfügt über ein ausbaufähiges Grundwissen. Seine Leistungen entsprachen im Wesentlichen unseren Anforderungen.
-            -->
-
-
-
-        <div class="zeile">
-            <div class="zelle">
-                <select class="Dropdown">
-                    <option id="ddLeistung1" value="T1" onclick="xFuntion(value)"></option>
-                    <option id="ddLeistung2" value="T2" onclick="xFuntion(value)"></option>
-                    <option id="ddLeistung3" value="T3" onclick="xFuntion(value)"></option>
-                    <option id="ddLeistung4" value="T4" onclick="xFuntion(value)"></option>
-                </select>
+            <div class="zeile">
+                <div class="zelle">
+                    <select class="Dropdown">
+                        <option id="ddLeistung1" value="T1" onclick="xFuntion(value)"></option>
+                        <option id="ddLeistung2" value="T2" onclick="xFuntion(value)"></option>
+                        <option id="ddLeistung3" value="T3" onclick="xFuntion(value)"></option>
+                        <option id="ddLeistung4" value="T4" onclick="xFuntion(value)"></option>
+                    </select>
+                </div>
+                <div class="zelle">
+                    <select class="Dropdown">
+                        <option id="L1" onclick="xFuntion()">Sehr Gut</option>
+                        <option id="L2" onclick="xFuntion()">Gut</option>
+                        <option id="L3" onclick="xFuntion()">Befriedigend</option>
+                        <option id="L4" onclick="xFuntion()">Ausreichend</option>
+                        <option id="L5" onclick="xFuntion()">Mangelhaft</option>
+                        <option id="L6" onclick="xFuntion()">Ungenügend</option>
+                    </select>
+                </div>
             </div>
-            <div class="zelle">
-                <select class="Dropdown">
-                    <option id="L1" onclick="xFuntion()">Sehr Gut</option>
-                    <option id="L2" onclick="xFuntion()">Gut</option>
-                    <option id="L3" onclick="xFuntion()">Befriedigend</option>
-                    <option id="L4" onclick="xFuntion()">Ausreichend</option>
-                    <option id="L5" onclick="xFuntion()">Mangelhaft</option>
-                    <option id="L6" onclick="xFuntion()">Ungenügend</option>
-                </select>
+            <div class="zeile">
+                <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">Next</button></div>
+                <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">PDF</button></div>
             </div>
+            <input type="button" id="test" value="test" onclick="transfertest()">
         </div>
-        <div class="zeile">
-            <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">Next</button></div>
-            <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">PDF</button></div>
-        </div>
-		<input type="button" id="test" value="test" onclick="transfertest()">
     </div>
 
-	</div>
 
 
-
-	<script>
-		function transfertest(){
-			let pra = sessionStorage.getItem("vjob");
-			document.getElementById("test").value = pra;
-
-		}
+    <script>
+        function transfertest(){
+            let pra = sessionStorage.getItem("vjob");
+            document.getElementById("test").value = pra;
+        }
 
         function xFuntion(){
             alert('fff');
@@ -128,7 +64,7 @@
 
 
 
-	</script>
+    </script>
 
 </body>
 </html>
