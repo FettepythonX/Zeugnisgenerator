@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<!-- Test -->
 
 <head>
     <meta charset="utf-8">
@@ -11,26 +10,18 @@
     <title>Buttons</title>
 </head>
 
-<script>
-    function xFuntion(){
-        alert('fff');
-}
 
-
-
-</script>
 <body style="background-color:rgb(255, 140, 0);" onload=sessionStorage.clear();>
 
-	<div id="start">
+    <div id="start">
+        <div id="headline"> Leistung </div>
+        <div class="tabelle">
+            <div class="zeile">
+                <div class="zelleT"> Bereich </div>
+                <div class="zelleT"> Bewertung </div>
+            </div>
 
-	<div id="headline"> Leistung </div>
-    <div class="tabelle">
-
-		<div class="zeile">
-            <div class="zelleT"> Bereich </div>
-            <div class="zelleT"> Bewertung </div>
-        </div>
-		<!--     Fachwissen
+            <!--     Fachwissen
             Sehr gut    3
                 Herr Mustermann verfügt über ein sehr großes
                 und beachtliches Fachwissen und fundierte Fachkenntnisse.
@@ -88,9 +79,8 @@
                 Herr Mustermann beherrschte seinen Arbeitsbereich den Anforderungen entsprechend.
 
                 Herr Mustermann verfügt über ein ausbaufähiges Grundwissen. Seine Leistungen entsprachen im Wesentlichen unseren Anforderungen.
+            -->
 
-
-        -->
 
 
         <div class="zeile">
@@ -128,8 +118,15 @@
 		function transfertest(){
 			let pra = sessionStorage.getItem("vjob");
 			document.getElementById("test").value = pra;
-		
+
 		}
+
+        function xFuntion(){
+            alert('fff');
+}
+
+
+
 
 	</script>
 
