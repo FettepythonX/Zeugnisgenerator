@@ -178,7 +178,7 @@
 
 		
 		<script>
-
+			let prakt;
 			function update(){
 				let gender = document.getElementById('gender');
 				let valgender = gender.options[gender.selectedIndex];
@@ -200,12 +200,12 @@
 				let valpraktikum = document.getElementById("praktikum");
 				if (valpraktikum.checked == true){
 					//--------------
-					let prakt = "Praktikum";
+					prakt = "Praktikum";
 					document.getElementById('disppraktikum').innerHTML = "In Praktikum";
 					//--------------
 				} else { 
 					//--------------
-					let prakt = "";
+					prakt = "";
 					document.getElementById('disppraktikum').innerHTML = "";
 					//--------------
 				}
@@ -248,9 +248,17 @@
 					sessionStorage.setItem("vgender", vgender);
 					sessionStorage.setItem("vjob", vjob);
 					sessionStorage.setItem("nachname", nachname);
-
+					sessionStorage.setItem("prakt", prakt);
+					sessionStorage.setItem("vorname", vorname);
+					sessionStorage.setItem("ausbilder",ausbilder);
+						
+					
 					console.log(vgender);
 					console.log(vjob);
+					console.log(nachname);
+					console.log(prakt);
+					console.log(vorname);
+					console.log(ausbilder);
 			}	
 				function eraseval(){
 					sessionStorage.clear();
