@@ -42,6 +42,7 @@
                                 <option>Elektroniker Energie & Gebäude</option>
                                 <option>Fachlagerist</option>
 								<option>Verwaltungsfachangestellter</option>
+								<option>Technischer Produktdesigner</option>
                             </select>
                         </form>
                     </div>
@@ -57,7 +58,7 @@
                         <label>Im Praktikum: </label>
                     </div>
                     <div class="Zelle">
-                        <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()">
+                        <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
                     </div>
                 </div>
                 <div class="Zeile">
@@ -174,6 +175,16 @@
 					document.getElementById("pr").hidden = true;
 					document.getElementById("programme").hidden = true;
 				}
+					
+				if(vjob === "Technischer Produktdesigner"){
+					document.getElementById("praktikum").disabled = false;
+				}
+				else{
+					document.getElementById("praktikum").disabled = true;
+					document.getElementById("praktikum").checked = false;
+				}
+					
+					
 					
 				let programme = document.getElementById('programme').value;	
 				
