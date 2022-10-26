@@ -117,13 +117,19 @@
             <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">Next</button></div>
             <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">PDF</button></div>
         </div>
-
+		<input type="button" id="test" value="test" onclick="transfertest()">
     </div>
 
 	</div>
 
 
+
 	<script>
+		function transfertest(){
+			let pra = sessionStorage.getItem("vjob");
+			document.getElementById("test").value = pra;
+		
+		}
 
 	</script>
 

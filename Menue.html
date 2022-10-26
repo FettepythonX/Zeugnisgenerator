@@ -178,8 +178,7 @@
 
 		
 		<script>
-			
-		
+
 			function update(){
 				let gender = document.getElementById('gender');
 				let valgender = gender.options[gender.selectedIndex];
@@ -241,17 +240,28 @@
 				document.getElementById('dispausbildende').innerHTML = ausbildungsende;
 				//------------------
 				
-				
+					let vgender = valgender.value;
+					let vjob = valjob.value;
+					
+					
+					
+					sessionStorage.setItem("vgender", vgender);
+					sessionStorage.setItem("vjob", vjob);
+					sessionStorage.setItem("nachname", nachname);
+
+					console.log(vgender);
+					console.log(vjob);
+			}	
 				function eraseval(){
 					sessionStorage.clear();
 				}
 				
-				function checkall(){
-					sessionStorage 
+				//function checkall(){
+					
+					
+				//}
 				
-				}
-				
-			}
+			
 		</script>
     </body>
 </html> 
