@@ -23,7 +23,7 @@
                     </div>
                     <div class="Zelle">
                         <form action="#"></form>
-                            <select id="gender" name="Anrede_drop_down" onChange="update()">
+                            <select id="gender" name="Anrede_drop_down" onChange="update()" style="width: 140px;">
                                 <option>Herr</option>
                                 <option>Frau</option>
                                 <option>Diverse</option>
@@ -35,14 +35,36 @@
                     </div>
                     <div class="Zelle">
                         <form action="#">
-                            <select id="job" name="Berufe_drop_down" onChange="update()">
+                            <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
                                 <option>Bürokraft</option>
                                 <option>Büropraktiker</option>
                                 <option>Elektroniker Automatisierungstechnik</option>
                                 <option>Elektroniker Energie & Gebäude</option>
+								<option>Elektroniker Geräte & Systeme</option>
+								<option>Elektroniker Informations & Systemtechnik</option>
+								<option>Fachangestellter Medien-& Informationsdienst Bibliothek</option>
+								<option>Fachinformatiker Anwendungsentwicklung</option>
+								<option>Fachinformatiker Systemintegration</option>
                                 <option>Fachlagerist</option>
+								<option>Fachkraft für Lagerlogistik</option>
+								<option>Fachkraft f. Metalltechnik FR Montagetechnik</option>
+								<option>Fachpraktiker f. elektr. Geräte und Systemen</option>
+								<option>Fachpraktiker f. Industriemechanik</option>
+								<option>Fachpraktiker für IT-Systemelektronik</option>
+								<option>Fachpraktiker TPD Maschinen- & Anlagenkonstr.</option>
+								<option>Industriekaufmann</option>
+								<option>Industriemechaniker FR Feinwerktechnik</option>
+								<option>Informatikkaufmann</option>
+								<option>IT-Systemelektroniker</option>
+								<option>Kaufmann f. Büromanagement (WQ1-8)</option>
+								<option>Kaufmann f. Büromanagement (WQ9-10)</option>
+								<option>Kaufmann im Einzelhandel</option>
+								<option>Steuerfachangestelter</option>
+								<option>Technischer Produktdesigner Maschinen- & Anlangenkonst</option>
+								<option>Verkäufer</option>
 								<option>Verwaltungsfachangestellter</option>
-								<option>Technischer Produktdesigner</option>
+								<option>Mediengestalter Bild und Ton</option>
+								<option>Mediangestalter Digital und Print</option>
                             </select>
                         </form>
                     </div>
@@ -109,10 +131,10 @@
                     </div>
                 </div>
 				<div class="Zeile">
-					<div class="Zelle colspan-2">
+					<div class="Zelle">
 						<label id="pr" hidden> Programme: </label>
 					</div>
-					<div class="Zelle colspan-2">
+					<div class="Zelle">
 						<input type="text" id="programme" name="programme" onchange="update()" hidden>
 					</div>
 				</div>
@@ -166,7 +188,7 @@
 					let vgender = valgender.value;
 					let vjob = valjob.value;
 					
-				if(vjob === "Verwaltungsfachangestellter"){
+				if(vjob == "Verwaltungsfachangestellter"|| vjob == "Kaufmann f. Büromanagement (WQ1-8)"|| vjob == "Kaufmann f. Büromanagement (WQ9-10)"){
 					document.getElementById("pr").hidden = false;
 					document.getElementById("programme").hidden = false;
 				}
@@ -176,7 +198,8 @@
 					document.getElementById("programme").hidden = true;
 				}
 					
-				if(vjob === "Technischer Produktdesigner"){
+				if(vjob =="Fachangestellter Medien-& Informationsdienst Bibliothek"|| 
+				vjob == "Fachpraktiker TPD Maschinen- & Anlagenkonstr."||vjob == "Technischer Produktdesigner Maschinen- & Anlangenkonst"){
 					document.getElementById("praktikum").disabled = false;
 				}
 				else{
