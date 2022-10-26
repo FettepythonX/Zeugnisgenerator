@@ -31,12 +31,12 @@
                     </div>
                     <div class="zelle">
                     <select  id="noten" class="Dropdown" onchange="xFunction(this)">
-                        <option value="0" >Sehr Gut</option>
-                        <option value="1" >Gut</option>
-                        <option value="2" >Befriedigend</option>
-                        <option value="3" >Ausreichend</option>
-                        <option value="5" >Mangelhaft</option>
-                        <option value="6" >Ungenügend</option>
+                        <option value="0">Sehr Gut</option>
+                        <option value="1">Gut</option>
+                        <option value="2">Befriedigend</option>
+                        <option value="3">Ausreichend</option>
+                        <option value="4">Mangelhaft</option>
+                        <option value="5">Ungenügend</option>
                     </select>
                 </div>
             </div>
@@ -57,7 +57,7 @@
         }
 
         function xFunction(sel){
-            alert();
+            var text=sel.options[sel.selectedIndex].value;  //send to dropdown-text fx
         }
 
 
