@@ -21,11 +21,11 @@
             </div>
 
             <div class="zeile">
-                <div class="zelleRadio" onchange="radioFx(this.value)">
-                    <input type="radio" id="r0" name="x"value="0">
-                    <input type="radio" id="r1" name="x"value="1">
-                    <input type="radio" id="r2" name="x"value="2">
-                    <input type="radio" id="r3" name="x"value="3">
+                <div class="zelleRadio" >
+                    <input type="radio" id="r0" name="x" value="0" onclick="radioFx(0)">
+                    <input type="radio" id="r1" name="x" value="1" onclick="radioFx(1)">
+                    <input type="radio" id="r2" name="x" value="2" onclick="radioFx(2)">
+                    <input type="radio" id="r3" name="x" value="3" onclick="radioFx(3)">
                 </div>
                 <div class="zelle">
                     <select id="noten" class="Dropdown" onchange="xFunction(this, txtBst )">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="zeile">
-                <div class="zelle" id="outputLs">TEXT</div>
+                <div class="zelle" id="outputLs" Value="TEX" /div>
             </div>
             <div class="zeile">
                 <div class="zelleBtn"> <button class="xy" id="btn5" onclick="xFuntion(this)"> Next</button></div>
@@ -53,7 +53,7 @@
 
     <script>
         function radioFx(value){
-            alert(this.text);
+
             document.getElementById("outputLs").value="dasdf";
         }
         function transfertest() {
