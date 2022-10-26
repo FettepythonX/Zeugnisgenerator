@@ -209,7 +209,12 @@
 								<option>Mediengestalterin Bild und Ton</option>
 								<option>Mediangestalterin Digital und Print</option>`;
                         break;
+<<<<<<< Updated upstream
                 }
+=======
+					}
+				
+>>>>>>> Stashed changes
                 update();
             }
 
@@ -257,7 +262,8 @@
 					let vgender = valgender.value;
 					let vjob = valjob.value;
 					
-				if(vjob == "Verwaltungsfachangestellter"|| vjob == "Kaufmann f. Büromanagement (WQ1-8)"|| vjob == "Kaufmann f. Büromanagement (WQ9-10)"){
+				if(vjob == "Verwaltungsfachangestellter"|| vjob == "Kaufmann f. Büromanagement (WQ1-8)"|| vjob == "Kaufmann f. Büromanagement (WQ9-10)"  || 
+				vjob == "Verwaltungsfachangestellte" || vjob == "Kauffrau f. Büromanagement (WQ1-8)" || vjob == "Kauffrau f. Büromanagement (WQ9-10)"){
 					document.getElementById("pr").hidden = false;
 					document.getElementById("programme").hidden = false;
 				}
@@ -267,8 +273,8 @@
 					document.getElementById("programme").hidden = true;
 				}
 					
-				if(vjob =="Fachangestellter Medien-& Informationsdienst Bibliothek"|| 
-				vjob == "Fachpraktiker TPD Maschinen- & Anlagenkonstr."||vjob == "Technischer Produktdesigner Maschinen- & Anlangenkonst"){
+				if(vjob =="Fachangestellter Medien-& Informationsdienst Bibliothek"|| vjob == "Fachpraktiker TPD Maschinen- & Anlagenkonstr."||vjob == "Technischer Produktdesigner Maschinen- & Anlangenkonst" ||
+				vjob == "Fachangestellte Medien-& Informationsdienst Bibliothek" || vjob == "Fachpraktikerin TPD Maschinen- & Anlagenkonstr." || vjob == "Technischer Produktdesignerin Maschinen- & Anlangenkonst"){
 					document.getElementById("praktikum").disabled = false;
 				}
 				else{
