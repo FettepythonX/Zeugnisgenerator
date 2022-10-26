@@ -6,8 +6,8 @@ body {
 	margin:auto;
 	display: table;
 	padding: 2%;
-    height: auto%;
-	width: auto%;
+    height: auto;
+	width: auto;
     border: 2px solid black;
 
 	
@@ -30,7 +30,7 @@ a{
 #start{
 	margin:auto;
 	border: 2px solid black;
-    height: auto%;
+    height: auto;
 	width: 40%;
 }
 #infos{
