@@ -23,7 +23,8 @@
                     </div>
                     <div class="Zelle">
                         <form action="#"></form>
-                            <select id="gender" name="Anrede_drop_down" onChange="updateGender()" style="width: 140px;">
+                            <select id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
+								<option value="3"> 	  </option>
                                 <option value="0">Herr</option>
                                 <option value="1">Frau</option>
                             </select>  
@@ -157,6 +158,7 @@
 						'Kauffrau f. Büromanagement (WQ9-10)','Kauffrau im Einzelhandel','Steuerfachangestelte',
 						'Technischer Produktdesignerin Maschinen- & Anlangenkonst','Verkäuferin','Verwaltungsfachangestellte','Mediengestalterin Bild und Ton',
 						'Mediangestalterin Digital und Print'];
+						
 							for(i=0; i<jobsF.length; i++){
 							let option = document.createElement("option");
 							option.text = jobsF[i];
@@ -168,6 +170,11 @@
 
                         break;
 
+						
+					case "3":
+						document.getElementById('job').innerHTML = "";
+						
+					break;
                 }
 
 					
