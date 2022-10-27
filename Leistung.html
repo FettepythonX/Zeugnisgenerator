@@ -21,18 +21,42 @@
             </div>
 
             <div class="zeile">
-                <form id="XY">
-                    <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst', notenLeistung.value)" checked="true"> <!-- //class="zelle"-->
-                    <input type="radio" id="radioN" name="note" value="1" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                    <input type="radio" id="radioN" name="note" value="2" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                    <input type="radio" id="radioN" name="note" value="3" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                </form>
+<!--
+
+    <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst', notenLeistung.value)" checked="true"> <!-- //class="zelle"-->
+<!--    <input type="radio" id="radioN" name="note" value="1" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+<!--    <input type="radio" id="radioN" name="note" value="2" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+<!--    <input type="radio" id="radioN" name="note" value="3" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+
+
             </div>
 
                 <div class="zeile">
-                    <div id="txtBst" class="zelle">
-                        x
+                    <div class="zelle">
+                        <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst0', notenLeistung.value)" checked="true">
+                        <div id="txtBst0">
+                            xyz
+                        </div>
                     </div>
+                    <div class="zelle">
+                        <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst1', notenLeistung.value)">
+                        <div id="txtBst1">
+                            xyz
+                        </div>
+                    </div>
+                    <div class="zelle">
+                        <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst2', notenLeistung.value)" >
+                        <div id="txtBst2">
+                            xyz
+                        </div>
+                    </div>
+                    <div class="zelle">
+                        <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst3', notenLeistung.value)">
+                        <div id="txtBst3">
+                            xyz
+                        </div>
+                    </div>
+                </div>
 
 
                     <div class="zelle">
@@ -44,7 +68,6 @@
                             <option value="3">Ausreichend</option>
                         </select>
                     </div>
-            </div>
             <div class="zeile">
                 <div class="zelleBtn"> <button class="xy" id="btn5" > Next</button></div> <!--onclick="xFuntion(this)"-->
                 <!--</button>onclick="xFuntion()">-->
