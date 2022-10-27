@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 2</title>
+  <link rel="stylesheet" href="printToPdf.css">
+
+</head>
+
+<body>
+  <!--Everything in this div is ignored by window.print()-->
+  <div class="screen">
+  <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
+    <hr>
+  </div>
+
+  <!--Everything in this div is hidden on the page, but printed out by window.print()-->
+  <div class="print" id="printMe"> 
+
+    <table role="presentation">
+      <thead>
+        <tr>
+          <td>
+            <div class="kopfzeile-platz"></div>
+          </td>
+        </tr>
+      </thead>
+
+      <tbody class="report-content">
+        <tr>
+          <td>
+            <br>
+            <br>
+            <h2>Ausbildungszeugnis</h2>
+
+            <p>
+              @azubiInfo
+            </p>
+
+            <p>
+              @srhInfo
+            </p>
+
+            <p>
+              @individuellText
+            </p>
+
+            <p>
+              @fachwissenText
+            </p>
+
+            <p>
+              @einsatzText
+            </p>
+
+            <p>
+              @arbeitsweiseText
+            </p>
+
+            <p>
+              @pensumText
+            </p>
+
+            <p>
+              @sozialesText
+            </p>
+
+            <p>
+              @abschiedText
+            </p>
+
+
+
+            <div class="ending">
+              <div class="datum"> @datum </div>
+              <div class="ausbildungsleiter"> @ausbildungsleiter <br> <br> <br> <br> @ausbildungsleiterName </div>
+              <div class="ausbilder"> @ausbilder <br> <br> <br> <br> @ausbilderName </div>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>
+            <div class="fusszeile-platz"></div>
+          </td>
+        </tr>
+      </tfoot>
+
+    </table>
+
+    <div class="fusszeile">
+      <div>
+        <div class="fusszeileTitel" style="margin-left: 14.6px">Ein Unternehmen der SRH</div>
+        <img class="fusszeileLogo" src="shr_logo.png">
+        <div class="fusszeileLogoText" style="right: 276px; bottom: 111px; text-align: right;">
+          Organisation der
+          <br>
+          Vereinten Nationen für
+          <br>
+          Bildung, Wissenschaft,
+          <br>
+          Kultur und Kommunikation
+        </div>
+
+        <div class="fusszeileLogoText" style="right: 170px; bottom: 111px; text-align: left;">
+          <b>
+          Berufsbildungswerk <br>
+          Neckargemünd <br>
+          </b>
+          Mitglied des Netzwerks der <br>
+          UNESCO-Projektschulen <br>
+        </div>
+      </div>
+
+      <div>
+        <div class="fusszeileText" style="margin-left: 14.6px">
+          <br>
+          SRH Berufsbildungswerk
+          <br> 
+          Neckargemünd GmbH
+          <br>
+          Im Spitzerfeld 25
+          <br>
+          69151 Neckargemünd
+          <br>
+          Telefon<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-1010
+          <br>
+          Telefax<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-2123
+        </div>
+
+        <div class="fusszeileText" style="margin-left: 35px;">
+          <br>
+          Info.bbwn@srh.de
+          <br>
+          www.bbw-neckargemuend.de
+          <br>
+          Geschäftsführung:
+          <br>
+          Sascha Lohwaßer
+        </div>
+
+        <div class="fusszeileText" style="margin-left: 40px;">
+          <br>
+          HRB 335376 Amtsgericht Mannheim
+          <br>
+          USt.-IdNr.: DE 174 981 459
+        </div>
+
+        <div class="fusszeileText" style="float: right; margin-right: 5px;">
+          <br>
+          Bankverbindung:
+          <br>
+          Evangelische Bank eG
+          <br>
+          BLZ 520 604 10
+          <br>
+          Konto 5 010 357
+          <br>
+          IBAN DE 91 5206 0410 0005 0103 57
+          <br>
+          BIC GENODEF1EK1
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var browser = getBrowserName();
+      //alert(browser);
+    });
+
+    function getBrowserName(){
+      var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+        switch (true) {
+            case test(/edg/i): return "Microsoft Edge";
+            case test(/trident/i): return "Microsoft Internet Explorer";
+            case test(/firefox|fxios/i): return "Mozilla Firefox";
+            case test(/opr\//i): return "Opera";
+            case test(/ucbrowser/i): return "UC Browser";
+            case test(/samsungbrowser/i): return "Samsung Browser";
+            case test(/chrome|chromium|crios/i): return "Google Chrome";
+            case test(/safari/i): return "Apple Safari";
+            default: return "Other";
+        }
+    }
+
+    function printDiv() // printDiv() Parameter entgegennehmen & zuweisen
+    {
+      let azubiInfo = "Während der Ausbildung konnte Herr Mustermann moderne EDV-Systeme sowie die MS-Office-Programme Word, Excel, Outlook und PowerPoint zur Erledigung seiner Aufgaben intensiv nutzen und gute Kenntnisse im Umgang damit erlangen. Herr Mustermann führte kaufmännische, organisatorische und verwaltende Tätigkeiten in den Abteilungen Materialwirtschaft, Absatzwirtschaft, Zahlungsverkehr, Rechnungswesen und Personalwesen aus. Er kann durch seine Mitarbeit Abläufe in Unternehmen und Verwaltungen unterstützen.";
+      let srhInfo = "Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.";
+      let individuellText = "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
+      let fachwissenText = "Herr Mustermann hat sich äußerst engagiert in sein neues Aufgabengebiet eingearbeitet und verfolgte nachhaltig und sehr erfolgreich die vereinbarten Ziele.";
+      let einsatzText = "Der Arbeitsstil von Herrn Mustermann war jederzeit in höchstem Maße geprägt von Zuverlässigkeit, Systematik, Verantwortungs- und Kostenbewusstsein.";
+      let arbeitsweiseText = "Auch höchstem Arbeitsaufwand und Termindruck war er jederzeit gewachsen.";
+      let pensumText = "Herr Mustermann lieferte immer qualitativ und quantitativ hervorragende Ergebnisse.";
+      let arbeitserfolgText = "Herr Mustermann übertraf die Anforderungen und unsere Erwartungen stets in hohem Maße, sodass wir mit seinen Leistungen stets außerordentlich zufrieden waren.";
+      let leistungText = "Herr Mustermann übertraf die Anforderungen und unsere Erwartungen stets in hohem Maße, sodass wir mit seinen Leistungen stets außerordentlich zufrieden waren.";
+      let sozialesText = "Sein Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war jederzeit einwandfrei.";
+      let abschiedText = "Herrn Mustermann danken wir für die stets sehr gute Zusammenarbeit und wünschen ihm für seinen weiteren Berufs- und Lebensweg alles Gute und weiterhin viel Erfolg.";
+
+      let datum = "Neckargemünd, 09. Juni 2022";
+      let ausbildungsleiter = "Ausbildungsleiter";
+      let ausbildungsleiterName = "Jörg Trabold";
+      let ausbilder = "Ausbilderin";
+      let ausbilderName = "Olaf Angenendt";
+
+      let html = document.getElementById("printMe").innerHTML;
+      // Textbausteine in print div einfügen
+      html = html.replace("@azubiInfo", azubiInfo);
+      html = html.replace("@srhInfo", srhInfo);
+      html = html.replace("@individuellText", individuellText);
+      html = html.replace("@fachwissenText", fachwissenText);
+      html = html.replace("@einsatzText", einsatzText);
+      html = html.replace("@arbeitsweiseText", arbeitsweiseText);
+      html = html.replace("@pensumText", pensumText);
+      html = html.replace("arbeitserfolgText", arbeitserfolgText);
+      html = html.replace("@leistungsText", leistungText);
+      html = html.replace("@sozialesText", sozialesText);
+      html = html.replace("@abschiedText", abschiedText);
+
+      // Datum, Ausbildungsleiter und Ausbilder mit variablen ersetzen
+      html = html.replace("@datum", datum);
+      html = html.replace("@ausbildungsleiter", ausbildungsleiter);
+      html = html.replace("@ausbildungsleiterName", ausbildungsleiterName);
+      html = html.replace("@ausbilder", ausbilder);
+      html = html.replace("@ausbilderName", ausbilderName);
+      document.getElementById("printMe").innerHTML = html;
+
+      window.print();
+    }
+  </script>
+
+  
+</body>
+
+</html>
