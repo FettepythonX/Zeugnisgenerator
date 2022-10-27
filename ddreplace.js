@@ -1,12 +1,21 @@
 function xFunction(sel, y) {
     var text = sel.options[sel.selectedIndex].value;  //send to dropdown-text fx
 
-    var x = document.getElementById("txtBst");
-    x.disabled = false;
+    //var x = document.getElementById("txtBst");
+    //x.disabled = false;
 
     editBewertungsTextBaustein(sel.value, y);
 }
-function editBewertungsTextBaustein(note, y) {
+function setTxt(txt, output, note){
+    //alert(txt);
+    //alert(note);
+    //alert(output);
+    //alert(getText(note,txt));
+    var el=document.getElementById(output);//getText(note,txt);
+    el.textContent=getText(note,txt);
+
+}
+function getText(note, txt) {
     let x = -1;
     const texte = [];
     switch (note) {
@@ -37,11 +46,12 @@ function editBewertungsTextBaustein(note, y) {
             texte [1]= "Herr Mustermann verfügt über ein ausbaufähiges Grundwissen. Seine Leistungen entsprachen im Wesentlichen unseren Anforderungen.";
             break;
     }
-    var y = document.getElementById("txtBst");
-    removeOptions(y);
-    for (let i = 0; i <= x; i++) {
-        y.add(new Option(texte[i],i));
-    }
+    return texte[txt];
+    //var y = document.getElementById("txtBst");
+    //removeOptions(y);
+    //for (let i = 0; i <= x; i++) {
+    //    y.add(new Option(texte[i],i));
+    //}
 
 
 }

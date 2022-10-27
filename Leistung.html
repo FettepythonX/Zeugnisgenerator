@@ -21,12 +21,20 @@
             </div>
 
             <div class="zeile">
-                <div class="zelle">
-                    <select id="txtBst" class="Dropdown" disabled>
-                    </select>
+
+                <input type="radio" name="note" value="0" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                <input type="radio" name="note" value="1" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                <input type="radio" name="note" value="2" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                <input type="radio" name="note" value="3" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+
+
+                <div id="txtBst" class="zelle">
+                    x
                 </div>
+
+
                 <div class="zelle">
-                    <select id="noten" class="Dropdown" onchange="xFunction(this, txtBst )">
+                    <select id="notenLeistung" class="Dropdown" )><!-- onchange="xFunction(this, txtBst )">-->
                         <!--</select>onchange="xFunction(this)">-->
                         <option value="0">Sehr Gut</option>
                         <option value="1">Gut</option>
@@ -36,7 +44,7 @@
                 </div>
             </div>
             <div class="zeile">
-                <div class="zelleBtn"> <button class="xy" id="btn5" onclick="xFuntion(this)"> Next</button></div>
+                <div class="zelleBtn"> <button class="xy" id="btn5" > Next</button></div> <!--onclick="xFuntion(this)"-->
                 <!--</button>onclick="xFuntion()">-->
                 <div class="zelleBtn"> <button class="xy" id="btn5" onclick="">PDF</button></div>
             </div>
