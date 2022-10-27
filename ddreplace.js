@@ -40,22 +40,16 @@ function editBewertungsTextBaustein(note, y) {
     var y = document.getElementById("txtBst");
     removeOptions(y);
     for (let i = 0; i <= x; i++) {
-
         y.add(new Option(texte[i],i));
     }
-    /*for (let index = 0; index <= x && x != -1; index++) {
-        //const newOption = document.createElement('option');
-        const optionText = document.createTextNode('Option Text');
-        y.add(optionText);
-        //alert(texte[index]);
-        //selectopt.add(option, selectopt[index+1]);
-    }*/
+
 
 }
 
 function removeOptions(selectElement) {
-    var i, L = selectElement.options.length - 1;
-    for(i = L; i >= 0; i--) {
+    var i, L = selectElement.options.length;
+    alert(L);
+    for(i = L+1; i >= 0; i--) {
         selectElement.remove(i);
     }
 }
