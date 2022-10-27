@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
   <!--Everything in this div is ignored by window.print()-->
   <div class="screen">
-  <input type="button" value="Print" onclick="printDiv()">
+  <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
     <hr>
   </div>
 
@@ -196,7 +196,8 @@
         }
     }
 
-    function printDiv(){
+    function printDiv() // printDiv() Parameter entgegennehmen & zuweisen
+    {
       let azubiInfo = "Während der Ausbildung konnte Herr Mustermann moderne EDV-Systeme sowie die MS-Office-Programme Word, Excel, Outlook und PowerPoint zur Erledigung seiner Aufgaben intensiv nutzen und gute Kenntnisse im Umgang damit erlangen. Herr Mustermann führte kaufmännische, organisatorische und verwaltende Tätigkeiten in den Abteilungen Materialwirtschaft, Absatzwirtschaft, Zahlungsverkehr, Rechnungswesen und Personalwesen aus. Er kann durch seine Mitarbeit Abläufe in Unternehmen und Verwaltungen unterstützen.";
       let srhInfo = "Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.";
       let individuellText = "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
