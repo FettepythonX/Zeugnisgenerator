@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="aufgabe.js"></script>
+    <script src="ddreplace.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -51,69 +51,6 @@
             let pra = sessionStorage.getItem("vjob");
             document.getElementById("test").value = pra;
         }
-
-        function xFunction(sel, y) {
-            var text = sel.options[sel.selectedIndex].value;  //send to dropdown-text fx
-
-            var x = document.getElementById("txtBst");
-            x.disabled = false;
-
-            editBewertungsTextBaustein(sel.value, y);
-        }
-        function editBewertungsTextBaustein(note, y) {
-            let x = -1;
-            const texte = [];
-            switch (note) {
-                case '0':
-                    x = 3;
-                    texte [0]= "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
-                    texte [1]= "Er besitzt ein äußerst solides Fachwissen, das er zur Lösung seiner Aufgaben stets sehr sicher und erfolgreich einsetzte. Daher war Herr Mustermann in unserem Hause ein allseits geschätzter Ansprechpartner bei allen fachlichen Problemstellungen.";
-                    texte [2]= "Herr Mustermann besitzt ein umfassendes und hervorragendes, jederzeit verfügbares Fachwissen, mit dessen Hilfe er auch überaus schwierige Fragen sehr erfolgreich löste. Er verband exzellente technische Kompetenz mit ausgezeichnetem wirtschaftlichem Sachverstand.";
-                    break;
-                case '1':
-                    x = 4;
-                    texte [0]= "grf";
-                    texte [1]= "fgr";
-                    texte [2]= "fgr";
-                    texte [3]= "fgr";
-                    break;
-                case '2':
-                    x = 3;
-                    texte [0]= "jlö";
-                    texte [1]= "jlö";
-                    texte [2]= "jlö";
-                    break;
-                case '3':
-                    x = 4;
-                    texte [0]= "###";
-                    texte [1]= "###";
-                    texte [2]= "###";
-                    texte [3]= "###";
-                    break;
-            }
-            var y = document.getElementById("txtBst");
-            removeOptions(y);
-            for (let i = 0; i <= x; i++) {
-
-                y.add(new Option(texte[i],i));
-            }
-            /*for (let index = 0; index <= x && x != -1; index++) {
-                //const newOption = document.createElement('option');
-                const optionText = document.createTextNode('Option Text');
-                y.add(optionText);
-                //alert(texte[index]);
-                //selectopt.add(option, selectopt[index+1]);
-            }*/
-
-        }
-
-        function removeOptions(selectElement) {
-            var i, L = selectElement.options.length - 1;
-            for(i = L; i >= 0; i--) {
-                selectElement.remove(i);
-            }
-        }
-
     </script>
 
 </body>
