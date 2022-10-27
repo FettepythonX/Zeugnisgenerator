@@ -21,27 +21,29 @@
             </div>
 
             <div class="zeile">
+                <form id="XY">
+                    <input type="radio" id="radioN" name="note" value="0" onchange="setTxt(value, 'txtBst', notenLeistung.value)" checked="true"> <!-- //class="zelle"-->
+                    <input type="radio" id="radioN" name="note" value="1" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                    <input type="radio" id="radioN" name="note" value="2" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                    <input type="radio" id="radioN" name="note" value="3" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                </form>
+            </div>
 
-                <input type="radio" name="note" value="0" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                <input type="radio" name="note" value="1" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                <input type="radio" name="note" value="2" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
-                <input type="radio" name="note" value="3" onchange="setTxt(value, 'txtBst', notenLeistung.value)"> <!-- //class="zelle"-->
+                <div class="zeile">
+                    <div id="txtBst" class="zelle">
+                        x
+                    </div>
 
 
-                <div id="txtBst" class="zelle">
-                    x
-                </div>
-
-
-                <div class="zelle">
-                    <select id="notenLeistung" class="Dropdown" )><!-- onchange="xFunction(this, txtBst )">-->
-                        <!--</select>onchange="xFunction(this)">-->
-                        <option value="0">Sehr Gut</option>
-                        <option value="1">Gut</option>
-                        <option value="2">Befriedigend</option>
-                        <option value="3">Ausreichend</option>
-                    </select>
-                </div>
+                    <div class="zelle">
+                        <select id="notenLeistung" class="Dropdown" onchange="setTxt2('radioN', 'txtBst',  notenLeistung.value)"><!-- onchange="xFunction(this, txtBst )">-->
+                            <!--</select>onchange="xFunction(this)">-->
+                            <option value="0">Sehr Gut</option>
+                            <option value="1">Gut</option>
+                            <option value="2">Befriedigend</option>
+                            <option value="3">Ausreichend</option>
+                        </select>
+                    </div>
             </div>
             <div class="zeile">
                 <div class="zelleBtn"> <button class="xy" id="btn5" > Next</button></div> <!--onclick="xFuntion(this)"-->

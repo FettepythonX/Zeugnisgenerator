@@ -7,7 +7,18 @@ function xFunction(sel, y) {
     editBewertungsTextBaustein(sel.value, y);
 }
 function setTxt(txt, output, note){
+
     //alert(txt);
+    //alert(note);
+    //alert(output);
+    //alert(getText(note,txt));
+    var el=document.getElementById(output);//getText(note,txt);
+    el.textContent=getText(note,txt);
+
+}
+function setTxt2(txt, output, note){
+    var radioVal=document.getElementsByName(txt);
+    alert(radioVal[0]==true);
     //alert(note);
     //alert(output);
     //alert(getText(note,txt));
