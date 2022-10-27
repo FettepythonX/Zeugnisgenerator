@@ -148,7 +148,8 @@
                 let gender = document.getElementById("gender").value;
                 switch(gender){
                     case "0": 
-                        document.getElementById("job").innerHTML = `<option>Bürokraft</option>
+                        document.getElementById("job").innerHTML = `
+								<option>Bürokraft</option>
                                 <option>Büropraktiker</option>
                                 <option>Elektroniker Automatisierungstechnik</option>
                                 <option>Elektroniker Energie & Gebäude</option>
@@ -179,7 +180,8 @@
 								<option>Mediangestalter Digital und Print</option>`;
                             break;
                     case "1":
-                        document.getElementById("job").innerHTML = `<option>Bürokraftin</option>
+                        document.getElementById("job").innerHTML = `
+								<option>Bürokraftin</option>
                                 <option>Büropraktikerin</option>
                                 <option>Elektronikerin Automatisierungstechnik</option>
                                 <option>Elektronikerin Energie & Gebäude</option>
@@ -210,13 +212,13 @@
 								<option>Mediangestalterin Digital und Print</option>`;
                         break;
 
-                }
+				}
 
 					
 				
 
                 update();
-            }
+			}
 
 			function update(){
 				let gender = document.getElementById('gender');
