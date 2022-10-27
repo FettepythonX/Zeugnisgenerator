@@ -35,35 +35,8 @@
                     <div class="Zelle">
                         <form action="#">
                             <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
-                                <option>Bürokraft</option>
-                                <option>Büropraktiker</option>
-                                <option>Elektroniker Automatisierungstechnik</option>
-                                <option>Elektroniker Energie & Gebäude</option>
-								<option>Elektroniker Geräte & Systeme</option>
-								<option>Elektroniker Informations & Systemtechnik</option>
-								<option>Fachangestellter Medien-& Informationsdienst Bibliothek</option>
-								<option>Fachinformatiker Anwendungsentwicklung</option>
-								<option>Fachinformatiker Systemintegration</option>
-                                <option>Fachlagerist</option>
-								<option>Fachkraft für Lagerlogistik</option>
-								<option>Fachkraft f. Metalltechnik FR Montagetechnik</option>
-								<option>Fachpraktiker f. elektr. Geräte und Systemen</option>
-								<option>Fachpraktiker f. Industriemechanik</option>
-								<option>Fachpraktiker für IT-Systemelektronik</option>
-								<option>Fachpraktiker TPD Maschinen- & Anlagenkonstr.</option>
-								<option>Industriekaufmann</option>
-								<option>Industriemechaniker FR Feinwerktechnik</option>
-								<option>Informatikkaufmann</option>
-								<option>IT-Systemelektroniker</option>
-								<option>Kaufmann f. Büromanagement (WQ1-8)</option>
-								<option>Kaufmann f. Büromanagement (WQ9-10)</option>
-								<option>Kaufmann im Einzelhandel</option>
-								<option>Steuerfachangestelter</option>
-								<option>Technischer Produktdesigner Maschinen- & Anlangenkonst</option>
-								<option>Verkäufer</option>
-								<option>Verwaltungsfachangestellter</option>
-								<option>Mediengestalter Bild und Ton</option>
-								<option>Mediangestalter Digital und Print</option>
+
+							
                             </select>
 							
                         </form>
@@ -148,77 +121,82 @@
                 let gender = document.getElementById("gender").value;
                 switch(gender){
                     case "0": 
-                        document.getElementById("job").innerHTML = `
-								<option>Bürokraft</option>
-                                <option>Büropraktiker</option>
-                                <option>Elektroniker Automatisierungstechnik</option>
-                                <option>Elektroniker Energie & Gebäude</option>
-								<option>Elektroniker Geräte & Systeme</option>
-								<option>Elektroniker Informations & Systemtechnik</option>
-								<option>Fachangestellter Medien-& Informationsdienst Bibliothek</option>
-								<option>Fachinformatiker Anwendungsentwicklung</option>
-								<option>Fachinformatiker Systemintegration</option>
-                                <option>Fachlagerist</option>
-								<option>Fachkraft für Lagerlogistik</option>
-								<option>Fachkraft f. Metalltechnik FR Montagetechnik</option>
-								<option>Fachpraktiker f. elektr. Geräte und Systemen</option>
-								<option>Fachpraktiker f. Industriemechanik</option>
-								<option>Fachpraktiker für IT-Systemelektronik</option>
-								<option>Fachpraktiker TPD Maschinen- & Anlagenkonstr.</option>
-								<option>Industriekaufmann</option>
-								<option>Industriemechaniker FR Feinwerktechnik</option>
-								<option>Informatikkaufmann</option>
-								<option>IT-Systemelektroniker</option>
-								<option>Kaufmann f. Büromanagement (WQ1-8)</option>
-								<option>Kaufmann f. Büromanagement (WQ9-10)</option>
-								<option>Kaufmann im Einzelhandel</option>
-								<option>Steuerfachangestelter</option>
-								<option>Technischer Produktdesigner Maschinen- & Anlangenkonst</option>
-								<option>Verkäufer</option>
-								<option>Verwaltungsfachangestellter</option>
-								<option>Mediengestalter Bild und Ton</option>
-								<option>Mediangestalter Digital und Print</option>`;
+						
+						document.getElementById('job').innerHTML = "";
+						
+						
+						let jobsM = ['Bürokraft', 'Büropraktiker', 'Elektroniker Automatisierungstechnik','Elektroniker Energie & Gebäude', 
+						'Elektroniker Geräte & Systeme', 'Elektroniker Informations & Systemtechnik','Fachangestellter Medien-& Informationsdienst Bibliothek',
+						'Fachinformatiker Anwendungsentwicklung','Fachinformatiker Systemintegration','Fachlagerist','Fachkraft für Lagerlogistik',
+						'Fachkraft f. Metalltechnik FR Montagetechnik','Fachpraktiker f. elektr. Geräte und Systemen','Fachpraktiker f. Industriemechanik',
+						'Fachpraktiker für IT-Systemelektronik','Fachpraktiker TPD Maschinen- & Anlagenkonstr.','Industriekaufmann',
+						'Industriemechaniker FR Feinwerktechnik','Informatikkaufmann','IT-Systemelektroniker','Kaufmann f. Büromanagement (WQ1-8)',
+						'Kaufmann f. Büromanagement (WQ9-10)','Kaufmann im Einzelhandel','Steuerfachangestelter',
+						'Technischer Produktdesigner Maschinen- & Anlangenkonst','Verkäufer','Verwaltungsfachangestellter','Mediengestalter Bild und Ton',
+						'Mediangestalter Digital und Print'];
+						
+						for(i=0; i<jobsM.length; i++){
+							let option = document.createElement("option");
+							option.text = jobsM[i];
+								
+							document.getElementById('job').add(option);
+						}
+						
+						console.log(jobsM.length);
                             break;
                     case "1":
-                        document.getElementById("job").innerHTML = `
-								<option>Bürokraftin</option>
-                                <option>Büropraktikerin</option>
-                                <option>Elektronikerin Automatisierungstechnik</option>
-                                <option>Elektronikerin Energie & Gebäude</option>
-								<option>Elektronikerin Geräte & Systeme</option>
-								<option>Elektronikerin Informations & Systemtechnik</option>
-								<option>Fachangestellte Medien-& Informationsdienst Bibliothek</option>
-								<option>Fachinformatikerin Anwendungsentwicklung</option>
-								<option>Fachinformatikerin Systemintegration</option>
-                                <option>Fachlageristin</option>
-								<option>Fachkraft für Lagerlogistik</option>
-								<option>Fachkraft f. Metalltechnik FR Montagetechnik</option>
-								<option>Fachpraktikerin f. elektr. Geräte und Systemen</option>
-								<option>Fachpraktikerin f. Industriemechanik</option>
-								<option>Fachpraktikerin für IT-Systemelektronik</option>
-								<option>Fachpraktikerin TPD Maschinen- & Anlagenkonstr.</option>
-								<option>Industriekauffrau</option>
-								<option>Industriemechanikerin FR Feinwerktechnik</option>
-								<option>Informatikkauffrau</option>
-								<option>IT-Systemelektronikerin</option>
-								<option>Kauffrau f. Büromanagement (WQ1-8)</option>
-								<option>Kauffrau f. Büromanagement (WQ9-10)</option>
-								<option>Kauffrau im Einzelhandel</option>
-								<option>Steuerfachangestelte</option>
-								<option>Technischer Produktdesignerin Maschinen- & Anlangenkonst</option>
-								<option>Verkäuferin</option>
-								<option>Verwaltungsfachangestellte</option>
-								<option>Mediengestalterin Bild und Ton</option>
-								<option>Mediangestalterin Digital und Print</option>`;
+					
+						document.getElementById('job').innerHTML = "";
+					
+						let jobsF = ['Bürokraftin','Büropraktikerin','Elektronikerin Automatisierungstechnik','Elektronikerin Energie & Gebäude',
+						'Elektronikerin Geräte & Systeme','Elektronikerin Informations & Systemtechnik','','','','',];
+							for(i=0; i<jobsF.length; i++){
+							let option = document.createElement("option");
+							option.text = jobsF[i];
+								
+							document.getElementById('job').add(option);
+						}
+						
+						console.log(jobsF.length);
+ 
+								//<option></option>
+                                //<option></option>
+                                //<option></option>
+                                //<option></option>
+								//<option></option>
+								//<option></option>
+								//<option>Fachangestellte Medien-& Informationsdienst Bibliothek</option>
+								//<option>Fachinformatikerin Anwendungsentwicklung</option>
+								//<option>Fachinformatikerin Systemintegration</option>
+								//<option>Fachlageristin</option>
+								//<option>Fachkraft für Lagerlogistik</option>
+								//<option>Fachkraft f. Metalltechnik FR Montagetechnik</option>
+								//<option>Fachpraktikerin f. elektr. Geräte und Systemen</option>
+								//<option>Fachpraktikerin f. Industriemechanik</option>
+								//<option>Fachpraktikerin für IT-Systemelektronik</option>
+								//<option>Fachpraktikerin TPD Maschinen- & Anlagenkonstr.</option>
+								//<option>Industriekauffrau</option>
+								//<option>Industriemechanikerin FR Feinwerktechnik</option>
+								//<option>Informatikkauffrau</option>
+								//<option>IT-Systemelektronikerin</option>
+								//<option>Kauffrau f. Büromanagement (WQ1-8)</option>
+								//<option>Kauffrau f. Büromanagement (WQ9-10)</option>
+								//<option>Kauffrau im Einzelhandel</option>
+								//<option>Steuerfachangestelte</option>
+								//<option>Technischer Produktdesignerin Maschinen- & Anlangenkonst</option>
+								//<option>Verkäuferin</option>
+								//<option>Verwaltungsfachangestellte</option>
+								//<option>Mediengestalterin Bild und Ton</option>
+								//<option>Mediangestalterin Digital und Print</option>`;
                         break;
 
-				}
+                }
 
 					
 				
 
                 update();
-			}
+            }
 
 			function update(){
 				let gender = document.getElementById('gender');
