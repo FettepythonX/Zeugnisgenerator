@@ -1,46 +1,115 @@
-/* Styles go here */
 
-.page-header, .page-header-space {
-    height: 100px;
-  }
-  
-  .page-footer, .page-footer-space {
-    height: 6cm;
-  
-  }
-  
-  .page-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid black; /* for demo */
-    background: yellow; /* for demo */
-  }
-  
-  .page-header {
-    position: fixed;
-    top: 0mm;
-    width: 100%;
-    border-bottom: 1px solid black; /* for demo */
-    background: yellow; /* for demo */
-  }
-  
-  .page {
-    page-break-after: always;
-  }
-  
+
+
+/*
+ * Author: Asko Siitan
+ * Group: 2930
+ * Last Modified: 26.10.2022 
+ * Tested on: Google Chrome Version 107.0.5304.63 (Offizieller Build) (64-Bit)
+ */
+
+
+
+ .print {
+  display: none;
+}
+
+@media print {
   @page {
-    margin: 0mm 17mm 0mm 17mm;
+      size: A4 !important;
+      margin: 0mm 17mm 0mm 17mm !important;
+    }
+
+  .kopfzeile-platz{
+      height: 150px;
+  }
+  .fusszeile-platz{
+      height: 250px;
+  }
+  .whitespace{
+      padding: 0; 
+      margin: 0; 
+      display: inline-block;
+  }
+  .fusszeile{
+      display: block;
+      position: fixed;
+      bottom: 42px;
+      left: 0;
+      width: 100%;
+      padding: 0 13.3px 0 0px;
+  }
+  .fusszeileText{
+      vertical-align: top;
+      display:inline-block;
+      font-size: 9px;
+      line-height: 15px;
+  }
+  .fusszeileTitel{
+      font-size: 9.3px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .fusszeileLogo{
+      position: absolute;
+      right: 79px;
+      bottom: 102px;
+      width: 280px;
+      /*height: 1.92cm;*/
+  }
+  .fusszeileLogoText{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+      position: absolute;
+      font-size: 5.6px;
+      line-height: 6px;
+      letter-spacing: 0.4px;
+      width: 94px;
+  }
+
+  thead {display: table-header-group;} 
+  tfoot {display: table-footer-group;}
+
+  h2{
+      display: block;
+      font-size: 20px;
+      margin-bottom: 50px;
+      font-weight: bold;
+      text-align: center;
   }
   
-  @media print {
-     thead {display: table-header-group;} 
-     tfoot {display: table-footer-group;}
-     
-     button {display: none;}
-     
-
-     .screen{
-        display: none;
-     }
+  p, dt, dd, .datum, .ausbildungsleiter, .ausbilder{
+      display: block;
+      font-size: 15px !important;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: justify !important;
+      font-weight: lighter;
+      line-height: 22px;
+      margin-top: 25px;
   }
+  dd{
+      margin-left: 6.6px;
+      margin-top: 0px;
+  }
+  .datum{
+      margin-top: 60px;
+      margin-bottom: 30px;
+  }
+  .ausbildungsleiter, .ausbilder{
+      display: inline-block;
+      width: 265px;
+  }
+  .ausbilder{
+      float: right;
+  }
+
+ .screen {
+      display: none;
+  }
+
+  .print {
+      display: block;        
+  }
+
+}

@@ -6,61 +6,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test 2</title>
-  <link rel="stylesheet" href="test_2_2.css">
-
-  <script src="jsPDF.js"></script>
+  <link rel="stylesheet" href="test_2.css">
 
 </head>
 
 <body>
   <div class="screen">
-  <input type="button" value="Print" onclick="window.print()">
-  <input type="button" value="Print jsPDF" onclick="printJSPDF_1()">
+  <input type="button" value="Print" onclick="printDivTest()">
     <hr>
   </div>
 
   <div class="print" id="printMe"> 
 
-    <div class="page-header" style="text-align: center;">
-      I'm the header!
-      <button type="button" onClick="window.print()" style="background: pink">
-        PRINT ME!
-      </button>
-    </div>
-
-    <div class="page-footer">
-      I'm the footer!
-    </div>
-
-    <table>
+    <table role="presentation">
       <thead>
         <tr>
           <td>
-            <div class="page-header-space"></div>
+            <div class="kopfzeile-platz"></div>
           </td>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody class="report-content">
         <tr>
           <td>
-            <div class="page" style="font-size: 20px">
-              PAGE 3 - Long Content
-            <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt metus eu consectetur rutrum. Praesent tempor facilisis dapibus. Aliquam cursus diam ac vehicula pulvinar. Integer lacinia non odio et condimentum. Aenean faucibus cursus
-            mi, sed interdum turpis sagittis a. Quisque quis pellentesque mi. Ut erat eros, posuere sed scelerisque ut, pharetra vitae tellus. Suspendisse ligula sapien, laoreet ac hendrerit sit amet, viverra vel mi. Pellentesque faucibus nisl et dolor
-            pharetra, vel mattis massa venenatis. Integer congue condimentum nisi, sed tincidunt velit tincidunt non. Nulla sagittis sed lorem pretium aliquam. Praesent consectetur volutpat nibh, quis pulvinar est volutpat id. Cras maximus odio posuere
-            suscipit venenatis. Donec rhoncus scelerisque metus, in tempus erat rhoncus sed. Morbi massa sapien, porttitor id urna vel, volutpat blandit velit. Cras sit amet sem eros. Quisque commodo facilisis tristique. Proin pellentesque sodales rutrum.
-            Vestibulum purus neque, congue vel dapibus in, venenatis ut felis. Donec et ligula enim. Sed sapien sapien, tincidunt vitae lectus quis, ultricies rhoncus mi. Nunc dapibus nulla tempus nunc interdum, sed facilisis ex pellentesque. Nunc vel
-            lorem leo. Cras pharetra sodales metus. Cras lacus ex, consequat at consequat vel, laoreet ac dui. Curabitur aliquam, sapien quis congue feugiat, nisi nisl feugiat diam, sed vehicula velit nulla ac nisl. Aliquam quis nisi euismod massa blandit
-            pharetra nec eget nunc. Etiam eros ante, auctor sit amet quam vel, fringilla faucibus leo. Morbi a pulvinar nulla. Praesent sed vulputate nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo
-            mollis iaculis. Maecenas consectetur enim vitae mollis venenatis. Ut scelerisque pretium orci id laoreet. In sit amet pharetra diam. Vestibulum in molestie lorem. Nunc gravida, eros non consequat fermentum, ex orci vestibulum orci, non accumsan
-            sem velit ac lectus. Vivamus malesuada lacus nec velit dignissim, ac fermentum nulla pretium. Aenean mi nisi, convallis sed tempor in, porttitor eu libero. Praesent et molestie ante. Duis suscipit vitae purus sit amet aliquam. Vestibulum lectus
-            justo, lobortis a purus a, dapibus efficitur metus. Suspendisse potenti. Duis dictum ex lorem. Suspendisse nec ligula consectetur magna hendrerit ullamcorper et eget mauris. Etiam vestibulum sodales diam, eget venenatis nunc luctus quis. Ut
-            fermentum placerat neque nec elementum. Praesent orci erat, rhoncus vitae est eu, dictum molestie metus. Cras et fermentum elit. Aenean eget augue lacinia, varius ante in, ullamcorper dolor. Cras viverra purus non egestas consectetur. Nulla
-            nec dolor ac lectus convallis aliquet sed a metus. Suspendisse eu imperdiet nunc, id pulvinar risus. Maecenas varius sagittis est, vel fermentum risus accumsan at. Vestibulum sollicitudin dui pharetra sapien volutpat, id convallis mi vestibulum.
-            Phasellus commodo sit amet lorem quis imperdiet. Proin nec diam sed urna euismod ultricies at sed urna. Quisque ornare, nulla et vehicula ultrices, massa purus vehicula urna, ac sodales lacus leo vitae mi. Sed congue placerat justo at placerat.
-            Aenean suscipit fringilla vehicula. Quisque iaculis orci vitae arcu commodo maximus. Maecenas nec nunc rutrum, cursus elit quis, porttitor sapien. Sed ac hendrerit ipsum, lacinia fringilla velit. Donec ultricies feugiat dictum.
+            <br>
+            <br>
+            <h2>Ausbildungszeugnis</h2>
+
+            <p>
+              @azubiInfo
+            </p>
+
+            <p>
+              @srhInfo
+            </p>
+
+            <p>
+              @individuellText
+            </p>
+
+            <p>
+              @fachwissenText
+            </p>
+
+            <p>
+              @einsatzText
+            </p>
+
+            <p>
+              @arbeitsweiseText
+            </p>
+
+            <p>
+              @pensumText
+            </p>
+
+            <p>
+              @sozialesText
+            </p>
+
+            <p>
+              @abschiedText
+            </p>
+
+
+
+            <div class="ending">
+              <div class="datum"> @datum </div>
+              <div class="ausbildungsleiter"> @ausbildungsleiter <br> <br> <br> <br> @ausbildungsleiterName </div>
+              <div class="ausbilder"> @ausbilder <br> <br> <br> <br> @ausbilderName </div>
             </div>
+
           </td>
         </tr>
       </tbody>
@@ -68,11 +85,87 @@
       <tfoot>
         <tr>
           <td>
-            <div class="page-footer-space"></div>
+            <div class="fusszeile-platz"></div>
           </td>
         </tr>
       </tfoot>
+
     </table>
+
+    <div class="fusszeile">
+      <div>
+        <div class="fusszeileTitel" style="margin-left: 14.6px">Ein Unternehmen der SRH</div>
+        <img class="fusszeileLogo" src="shr_logo.png">
+        <div class="fusszeileLogoText" style="right: 276px; bottom: 111px; text-align: right;">
+          Organisation der
+          <br>
+          Vereinten Nationen für
+          <br>
+          Bildung, Wissenschaft,
+          <br>
+          Kultur und Kommunikation
+        </div>
+
+        <div class="fusszeileLogoText" style="right: 170px; bottom: 111px; text-align: left;">
+          <b>
+          Berufsbildungswerk <br>
+          Neckargemünd <br>
+          </b>
+          Mitglied des Netzwerks der <br>
+          UNESCO-Projektschulen <br>
+        </div>
+      </div>
+
+      <div>
+        <div class="fusszeileText" style="margin-left: 14.6px">
+          <br>
+          SRH Berufsbildungswerk
+          <br> 
+          Neckargemünd GmbH
+          <br>
+          Im Spitzerfeld 25
+          <br>
+          69151 Neckargemünd
+          <br>
+          Telefon<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-1010
+          <br>
+          Telefax<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-2123
+        </div>
+
+        <div class="fusszeileText" style="margin-left: 35px;">
+          <br>
+          Info.bbwn@srh.de
+          <br>
+          www.bbw-neckargemuend.de
+          <br>
+          Geschäftsführung:
+          <br>
+          Sascha Lohwaßer
+        </div>
+
+        <div class="fusszeileText" style="margin-left: 40px;">
+          <br>
+          HRB 335376 Amtsgericht Mannheim
+          <br>
+          USt.-IdNr.: DE 174 981 459
+        </div>
+
+        <div class="fusszeileText" style="float: right; margin-right: 5px;">
+          <br>
+          Bankverbindung:
+          <br>
+          Evangelische Bank eG
+          <br>
+          BLZ 520 604 10
+          <br>
+          Konto 5 010 357
+          <br>
+          IBAN DE 91 5206 0410 0005 0103 57
+          <br>
+          BIC GENODEF1EK1
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -81,13 +174,30 @@
 
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var browser = getBrowserName();
+      //alert(browser);
+    });
+
+    function getBrowserName(){
+      var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+        switch (true) {
+            case test(/edg/i): return "Microsoft Edge";
+            case test(/trident/i): return "Microsoft Internet Explorer";
+            case test(/firefox|fxios/i): return "Mozilla Firefox";
+            case test(/opr\//i): return "Opera";
+            case test(/ucbrowser/i): return "UC Browser";
+            case test(/samsungbrowser/i): return "Samsung Browser";
+            case test(/chrome|chromium|crios/i): return "Google Chrome";
+            case test(/safari/i): return "Apple Safari";
+            default: return "Other";
+        }
+    }
+
     function printDiv() {
       let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
 
       mywindow.document.write(`<html><head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Print Me</title><link rel="stylesheet" href="test_2.css" media="print">`);
       mywindow.document.write('</head><body >');
       mywindow.document.write(document.getElementById("printMe").innerHTML);
@@ -95,76 +205,61 @@
 
       mywindow.document.close(); // necessary for IE >= 10
       mywindow.focus(); // necessary for IE >= 10*/
-
-      //mywindow.print();
-      //mywindow.close();
+      
+      mywindow.onload = function(){
+        mywindow.print();
+        mywindow.close();
+      }
 
       return true;
     }
 
-    
+    function printDivTest(){
+      let azubiInfo = "Während der Ausbildung konnte Herr Mustermann moderne EDV-Systeme sowie die MS-Office-Programme Word, Excel, Outlook und PowerPoint zur Erledigung seiner Aufgaben intensiv nutzen und gute Kenntnisse im Umgang damit erlangen. Herr Mustermann führte kaufmännische, organisatorische und verwaltende Tätigkeiten in den Abteilungen Materialwirtschaft, Absatzwirtschaft, Zahlungsverkehr, Rechnungswesen und Personalwesen aus. Er kann durch seine Mitarbeit Abläufe in Unternehmen und Verwaltungen unterstützen.";
+      let srhInfo = "Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.";
+      let individuellText = "Herr Mustermann verfügt über ein sehr großes und beachtliches Fachwissen und fundierte Fachkenntnisse. Er beherrschte seinen Arbeitsbereich stets umfassend und sicher, hatte oft neue Ideen und fand optimale Lösungen.";
+      let fachwissenText = "Herr Mustermann hat sich äußerst engagiert in sein neues Aufgabengebiet eingearbeitet und verfolgte nachhaltig und sehr erfolgreich die vereinbarten Ziele.";
+      let einsatzText = "Der Arbeitsstil von Herrn Mustermann war jederzeit in höchstem Maße geprägt von Zuverlässigkeit, Systematik, Verantwortungs- und Kostenbewusstsein.";
+      let arbeitsweiseText = "Auch höchstem Arbeitsaufwand und Termindruck war er jederzeit gewachsen.";
+      let pensumText = "Herr Mustermann lieferte immer qualitativ und quantitativ hervorragende Ergebnisse.";
+      let arbeitserfolgText = "Herr Mustermann übertraf die Anforderungen und unsere Erwartungen stets in hohem Maße, sodass wir mit seinen Leistungen stets außerordentlich zufrieden waren.";
+      let leistungText = "Herr Mustermann übertraf die Anforderungen und unsere Erwartungen stets in hohem Maße, sodass wir mit seinen Leistungen stets außerordentlich zufrieden waren.";
+      let sozialesText = "Sein Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war jederzeit einwandfrei.";
+      let abschiedText = "Herrn Mustermann danken wir für die stets sehr gute Zusammenarbeit und wünschen ihm für seinen weiteren Berufs- und Lebensweg alles Gute und weiterhin viel Erfolg.";
 
-    
+      let datum = "Neckargemünd, 09. Juni 2022";
+      let ausbildungsleiter = "Ausbildungsleiter";
+      let ausbildungsleiterName = "Jörg Trabold";
+      let ausbilder = "Ausbilderin";
+      let ausbilderName = "Olaf Angenendt";
 
-    (function(API){
-    API.printText = function(txt, options, x, y) {
-        options = options ||{};
-        /* Use the options align property to specify desired text alignment
-         * Param x will be ignored if desired text alignment is 'center'.
-         * Usage of options can easily extend the function to apply different text 
-         * styles and sizes 
-        */
-        if( options.align == "center" ){
-            // Get current font size
-            var fontSize = this.internal.getFontSize();
+      let html = document.getElementById("printMe").innerHTML;
+      // Textbausteine in print div einfügen
+      html = html.replace("@azubiInfo", azubiInfo);
+      html = html.replace("@srhInfo", srhInfo);
+      html = html.replace("@individuellText", individuellText);
+      html = html.replace("@fachwissenText", fachwissenText);
+      html = html.replace("@einsatzText", einsatzText);
+      html = html.replace("@arbeitsweiseText", arbeitsweiseText);
+      html = html.replace("@pensumText", pensumText);
+      html = html.replace("arbeitserfolgText", arbeitserfolgText);
+      html = html.replace("@leistungsText", leistungText);
+      html = html.replace("@sozialesText", sozialesText);
+      html = html.replace("@abschiedText", abschiedText);
 
-            // Get page width
-            var pageWidth = this.internal.pageSize.width;
+      // Datum, Ausbildungsleiter und Ausbilder mit variablen ersetzen
+      html = html.replace("@datum", datum);
+      html = html.replace("@ausbildungsleiter", ausbildungsleiter);
+      html = html.replace("@ausbildungsleiterName", ausbildungsleiterName);
+      html = html.replace("@ausbilder", ausbilder);
+      html = html.replace("@ausbilderName", ausbilderName);
+      document.getElementById("printMe").innerHTML = html;
 
-            // Get the actual text's width
-            /* You multiply the unit width of your string by your font size and divide
-             * by the internal scale factor. The division is necessary
-             * for the case where you use units other than 'pt' in the constructor
-             * of jsPDF.
-            */
-            txtWidth = this.getStringUnitWidth(txt)*fontSize/this.internal.scaleFactor;
-
-            // Calculate text's x coordinate
-            x = ( pageWidth - txtWidth ) / 2;
-        }
-
-        // Draw text at x,y
-        this.text(txt,x,y);
-    }
-    })(jsPDF.API);
-
-    function printJSPDF_0(){
-      var doc = new jsPDF('p', 'pt', 'letter');
-      doc.text(20, 20, 'Hello world!');
-      doc.setFontSize(15);
-      doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
-      doc.addPage();
-      doc.text(20, 20, 'Do you like that?');
-
-      doc.setProperties({
-        title: 'Test',
-        subject: 'This is a test',
-        author: 'Asko Siitan',
-        keywords: 'generated, javascript, web 2.0, ajax',
-        creator: 'Asko Siitan'
-      });
-
-      doc.save('Test.pdf');
-    }
-
-    function printJSPDF_1(){
-      var doc = new jsPDF('p', 'pt', 'letter');
-      doc.setFontSize(11);
-      doc.printText("OI M8, GR8 D8 M8, TOUCH GRASS M8, I WANNA SHOW ZA WARUDO AND MAYBE EVEN EAT YOUR PANCREAS + L + GET RATIOD", {align: "center"}, 20,20);
-
-      doc.save('Test.pdf');
+      window.print();
     }
   </script>
+
+  
 </body>
 
 </html>
