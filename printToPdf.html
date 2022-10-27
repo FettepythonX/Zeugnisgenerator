@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 2</title>
+  <link rel="stylesheet" href="test_2_2.css">
+
+  <script src="jsPDF.js"></script>
+
+</head>
+
+<body>
+  <div class="screen">
+  <input type="button" value="Print" onclick="window.print()">
+  <input type="button" value="Print jsPDF" onclick="printJSPDF_1()">
+    <hr>
+  </div>
+
+  <div class="print" id="printMe"> 
+
+    <div class="page-header" style="text-align: center;">
+      I'm the header!
+      <button type="button" onClick="window.print()" style="background: pink">
+        PRINT ME!
+      </button>
+    </div>
+
+    <div class="page-footer">
+      I'm the footer!
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <div class="page-header-space"></div>
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <div class="page" style="font-size: 20px">
+              PAGE 3 - Long Content
+            <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt metus eu consectetur rutrum. Praesent tempor facilisis dapibus. Aliquam cursus diam ac vehicula pulvinar. Integer lacinia non odio et condimentum. Aenean faucibus cursus
+            mi, sed interdum turpis sagittis a. Quisque quis pellentesque mi. Ut erat eros, posuere sed scelerisque ut, pharetra vitae tellus. Suspendisse ligula sapien, laoreet ac hendrerit sit amet, viverra vel mi. Pellentesque faucibus nisl et dolor
+            pharetra, vel mattis massa venenatis. Integer congue condimentum nisi, sed tincidunt velit tincidunt non. Nulla sagittis sed lorem pretium aliquam. Praesent consectetur volutpat nibh, quis pulvinar est volutpat id. Cras maximus odio posuere
+            suscipit venenatis. Donec rhoncus scelerisque metus, in tempus erat rhoncus sed. Morbi massa sapien, porttitor id urna vel, volutpat blandit velit. Cras sit amet sem eros. Quisque commodo facilisis tristique. Proin pellentesque sodales rutrum.
+            Vestibulum purus neque, congue vel dapibus in, venenatis ut felis. Donec et ligula enim. Sed sapien sapien, tincidunt vitae lectus quis, ultricies rhoncus mi. Nunc dapibus nulla tempus nunc interdum, sed facilisis ex pellentesque. Nunc vel
+            lorem leo. Cras pharetra sodales metus. Cras lacus ex, consequat at consequat vel, laoreet ac dui. Curabitur aliquam, sapien quis congue feugiat, nisi nisl feugiat diam, sed vehicula velit nulla ac nisl. Aliquam quis nisi euismod massa blandit
+            pharetra nec eget nunc. Etiam eros ante, auctor sit amet quam vel, fringilla faucibus leo. Morbi a pulvinar nulla. Praesent sed vulputate nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo
+            mollis iaculis. Maecenas consectetur enim vitae mollis venenatis. Ut scelerisque pretium orci id laoreet. In sit amet pharetra diam. Vestibulum in molestie lorem. Nunc gravida, eros non consequat fermentum, ex orci vestibulum orci, non accumsan
+            sem velit ac lectus. Vivamus malesuada lacus nec velit dignissim, ac fermentum nulla pretium. Aenean mi nisi, convallis sed tempor in, porttitor eu libero. Praesent et molestie ante. Duis suscipit vitae purus sit amet aliquam. Vestibulum lectus
+            justo, lobortis a purus a, dapibus efficitur metus. Suspendisse potenti. Duis dictum ex lorem. Suspendisse nec ligula consectetur magna hendrerit ullamcorper et eget mauris. Etiam vestibulum sodales diam, eget venenatis nunc luctus quis. Ut
+            fermentum placerat neque nec elementum. Praesent orci erat, rhoncus vitae est eu, dictum molestie metus. Cras et fermentum elit. Aenean eget augue lacinia, varius ante in, ullamcorper dolor. Cras viverra purus non egestas consectetur. Nulla
+            nec dolor ac lectus convallis aliquet sed a metus. Suspendisse eu imperdiet nunc, id pulvinar risus. Maecenas varius sagittis est, vel fermentum risus accumsan at. Vestibulum sollicitudin dui pharetra sapien volutpat, id convallis mi vestibulum.
+            Phasellus commodo sit amet lorem quis imperdiet. Proin nec diam sed urna euismod ultricies at sed urna. Quisque ornare, nulla et vehicula ultrices, massa purus vehicula urna, ac sodales lacus leo vitae mi. Sed congue placerat justo at placerat.
+            Aenean suscipit fringilla vehicula. Quisque iaculis orci vitae arcu commodo maximus. Maecenas nec nunc rutrum, cursus elit quis, porttitor sapien. Sed ac hendrerit ipsum, lacinia fringilla velit. Donec ultricies feugiat dictum.
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>
+            <div class="page-footer-space"></div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </div>
+
+
+
+
+
+  <script>
+    function printDiv() {
+      let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+      mywindow.document.write(`<html><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Print Me</title><link rel="stylesheet" href="test_2.css" media="print">`);
+      mywindow.document.write('</head><body >');
+      mywindow.document.write(document.getElementById("printMe").innerHTML);
+      mywindow.document.write('</body></html>');
+
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+
+      //mywindow.print();
+      //mywindow.close();
+
+      return true;
+    }
+
+    
+
+    
+
+    (function(API){
+    API.printText = function(txt, options, x, y) {
+        options = options ||{};
+        /* Use the options align property to specify desired text alignment
+         * Param x will be ignored if desired text alignment is 'center'.
+         * Usage of options can easily extend the function to apply different text 
+         * styles and sizes 
+        */
+        if( options.align == "center" ){
+            // Get current font size
+            var fontSize = this.internal.getFontSize();
+
+            // Get page width
+            var pageWidth = this.internal.pageSize.width;
+
+            // Get the actual text's width
+            /* You multiply the unit width of your string by your font size and divide
+             * by the internal scale factor. The division is necessary
+             * for the case where you use units other than 'pt' in the constructor
+             * of jsPDF.
+            */
+            txtWidth = this.getStringUnitWidth(txt)*fontSize/this.internal.scaleFactor;
+
+            // Calculate text's x coordinate
+            x = ( pageWidth - txtWidth ) / 2;
+        }
+
+        // Draw text at x,y
+        this.text(txt,x,y);
+    }
+    })(jsPDF.API);
+
+    function printJSPDF_0(){
+      var doc = new jsPDF('p', 'pt', 'letter');
+      doc.text(20, 20, 'Hello world!');
+      doc.setFontSize(15);
+      doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
+      doc.addPage();
+      doc.text(20, 20, 'Do you like that?');
+
+      doc.setProperties({
+        title: 'Test',
+        subject: 'This is a test',
+        author: 'Asko Siitan',
+        keywords: 'generated, javascript, web 2.0, ajax',
+        creator: 'Asko Siitan'
+      });
+
+      doc.save('Test.pdf');
+    }
+
+    function printJSPDF_1(){
+      var doc = new jsPDF('p', 'pt', 'letter');
+      doc.setFontSize(11);
+      doc.printText("OI M8, GR8 D8 M8, TOUCH GRASS M8, I WANNA SHOW ZA WARUDO AND MAYBE EVEN EAT YOUR PANCREAS + L + GET RATIOD", {align: "center"}, 20,20);
+
+      doc.save('Test.pdf');
+    }
+  </script>
+</body>
+
+</html>
