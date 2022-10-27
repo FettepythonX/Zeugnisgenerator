@@ -18,12 +18,17 @@ function setTxt(txt, output, note){
 }
 function setTxt2(txt, output, note){
     var radioVal=document.getElementsByName(txt);
-    alert(radioVal[0]==true);
+    var el=document.getElementById(output);//getText(note,txt);
+    //alert(radioVal.length);
+    for(i = 0; i < radioVal.length; i++) {
+        if(radioVal[i].checked)
+            el.textContent=getText(note,radioVal[i].value);
+        //alert( radioVal[i].value);
+    }
+    //alert(radioVal[0]==true);
     //alert(note);
     //alert(output);
     //alert(getText(note,txt));
-    var el=document.getElementById(output);//getText(note,txt);
-    el.textContent=getText(note,txt);
 
 }
 function getText(note, txt) {
