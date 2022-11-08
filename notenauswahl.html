@@ -5,260 +5,390 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_notenauswahl.css">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="printToPdf.css">
     <script src="notenauswahl.js"></script>
     <title>Thing</title>
 </head>
 <body>
-    <!-- Tab links -->
-    <div class="tab">
-        <button id="tabDatenEingabe"    class="tablinks active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
-        <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
-        <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
-        <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
-        <button id="tabPensum"          class="tablinks" onclick="openTab(event, 'Pensum')">Pensum</button>
-        <button id="tabArbeitserfolg"   class="tablinks" onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
-        <button id="tabLeistung"        class="tablinks" onclick="openTab(event, 'Leistung')">Leistung</button>
-        <button id="tabSoziales"        class="tablinks" onclick="openTab(event, 'Soziales')">Soziales</button>
-        <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
-        <button id="tabErstellen"       class="tablinks" onclick="openTab(event, 'Erstellen')">Erstellen</button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="Dateneingabe" class="tabcontent" style="display:block">
-		<center>
-			<embed id="inlineFrameExample"
-				title="Inline Frame Example"
-				width="80%"
-				height="350"
-				src="Menue.html">
-			</embed>
-
-		</center>
-    </div>
-
-    <div id="Fachwissen" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteFachwissen" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteFachwissen" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
+    <div class="screen">
+        <!-- Tab links -->
+        <div class="tab">
+            <button id="tabDatenEingabe"    class="tablinks active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
+            <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
+            <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
+            <button id="tabPensum"          class="tablinks" onclick="openTab(event, 'Pensum')">Pensum</button>
+            <button id="tabArbeitserfolg"   class="tablinks" onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
+            <button id="tabLeistung"        class="tablinks" onclick="openTab(event, 'Leistung')">Leistung</button>
+            <button id="tabSoziales"        class="tablinks" onclick="openTab(event, 'Soziales')">Soziales</button>
+            <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
+            <button id="tabErstellen"       class="tablinks" onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
-        <div>
-            <div class="textAuswahl" name="auswahlFachwissen"> 
-                <input type="radio" name="radioFachwissen"> <div class="textbaustein" id="fachwissen1"></div> 
+
+        <script>
+            //setNachname("Hor");
+        </script>
+
+        <!-- Tab content -->
+        <div id="Dateneingabe" class="tabcontent" style="display:block">
+            <div id="start">
+                <div id="infos">
+                    <p>
+                        Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
+                        Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
+                        Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
+                    </p>
+                    <p></p>
+                </div>
+                <div class="Tabelle">
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label>Anrede: </label>
+                        </div>
+                        <div class="Zelle">
+                            <form action="#"></form>
+                                <select id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
+                                    <option value="0">Herr</option>
+                                    <option value="1">Frau</option>
+                                </select>  
+                            </form>
+                        </div>
+                        <div class="Zelle">
+                            <label>Beruf:</label>
+                        </div>
+                        <div class="Zelle">
+                            <form action="#">
+                                <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
+                                    <option> Bürokraft </option>
+                                    <option> Büropraktiker </option>
+                                    <option> Elektroniker Automatisierungstechnik </option>
+                                    <option> Elektroniker Energie & Gebäude </option>
+                                    <option> Elektroniker Geräte und Systeme </option>
+                                    <option> Elektroniker Informations & Systemtechnik </option>
+                                    <option> Fachangestellter Medien-& Informationsdienst Bibliothek+ </option>
+                                    <option> Fachinformatiker Anwendungsentwicklung </option>
+                                    <option> Fachinformatiker Systemintegration </option>
+                                    <option> Fachlagerist </option>
+                                    <option> Fachkraft für Lagerlogistik </option>
+                                    <option> Fachkraft f. Metalltechnik FR Montagetechnik' </option>
+                                    <option> Fachpraktiker f. elektr. Geräte und Systemen </option>
+                                    <option> Fachpraktiker f. Industriemechanik </option>
+                                    <option> Fachpraktiker für IT-Systemelektronik </option>
+                                    <option> Fachpraktiker TPD Maschinen- & Anlagenkonstr. </option>
+                                    <option> Industriekaufmann </option>
+                                    <option> Industriemechaniker FR Feinwerktechnik </option>
+                                    <option> Informatikkaufmann </option>
+                                    <option> IT-Systemelektroniker </option>
+                                    <option> Kaufmann f. Büromanagement (WQ1-8) </option>
+                                    <option> Kaufmann f. Büromanagement (WQ9-10) </option>
+                                    <option> Kaufmann im Einzelhandel </option>
+                                    <option> Steuerfachangestellter </option>
+                                    <option> Technischer Produktdesigner Maschinen- & Anlangenkonst </option>
+                                    <option> Verkäufer </option>
+                                    <option> Verwaltungsfachangestellter </option>
+                                    <option> Mediengestalter Bild und Ton </option>
+                                    <option> Mediangestalter Digital und Print </option>
+                                </select>						
+                            </form>
+                        </div>
+                    </div>
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label>Nachname: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
+                        </div>
+                        <div class="Zelle">
+                            <label>Im Praktikum: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
+                        </div>
+                    </div>
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label>Vorname: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="text" id="vorname" name="Vorname" onChange="update()">
+                        </div>
+                        <div class="Zelle">
+                            <form action="#"></form>
+                                <select name="Ausbilder">
+                                    <option>Ausbilder</option>
+                                    <option>Ausbilderin</option>
+                                </select>  
+                            </form>
+                        </div>
+                        <div class="Zelle">
+                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label>Geburtsort: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="text" id="geburtsort" name="Geburtsort" onchange="update()">
+                        </div>
+                        <div class="Zelle">
+                            <label>Ausbildungsbeginn: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="date" id="ausbildungsbeginn" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label>Geburtstag: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="date" id="geburtstag" onchange="update()">
+                        </div>
+                        <div class="Zelle">
+                            <label>Ausbildungsende: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="date" id="ausbildungsende" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="Zeile">
+                        <div class="Zelle">
+                            <label id="pr" hidden> Programme: </label>
+                        </div>
+                        <div class="Zelle">
+                            <input type="text" id="programme" name="programme" onchange="update()" hidden>
+                        </div>
+                    </div>
+                </div>			
+            </div>		
+        </div>
+
+
+
+        <div id="Fachwissen" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteFachwissen" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteFachwissen" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
             </div>
+            <div>
+                <div class="textAuswahl" name="auswahlFachwissen"> 
+                    <input type="radio" name="radioFachwissen"> <div class="textbaustein" id="fachwissen1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Einsatz" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteEinsatz" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteEinsatz" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteEinsatz" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlEinsatz"> 
+                    <input type="radio" name="radioEinsatz"> <div class="textbaustein" id="einsatz1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlEinsatz">
+                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlEinsatz">
+                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlEinsatz">
+                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Arbeitsweise" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteArbeitsweise" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteArbeitsweise" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlArbeitsweise"> 
+                    <input type="radio" name="radioArbeitsweise"> <div class="textbaustein" id="arbeitsweise1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Pensum" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNotePensum" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNotePensum" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNotePensum" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlPensum"> 
+                    <input type="radio" name="radioPensum"> <div class="textbaustein" id="pensum1"></div> 
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="Arbeitserfolg" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteArbeitserfolg" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteArbeitserfolg" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteArbeitserfolg" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlArbeitserfolg"> 
+                    <input type="radio" name="radioArbeitserfolg"> <div class="textbaustein" id="arbeitserfolg1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Leistung" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteLeistung" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteLeistung" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteLeistung" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlLeistung"> 
+                    <input type="radio" name="radioLeistung"> <div class="textbaustein" id="leistung1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Soziales" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteSoziales" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteSoziales" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteSoziales" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlSoziales"> 
+                    <input type="radio" name="radioSoziales"> <div class="textbaustein" id="soziales1"></div> 
+                </div>
+                
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales2"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales3"></div>
+                </div>
+
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Abschied" class="tabcontent">
+            <div>
+                <input type="radio" name="radioNoteAbschied" value="1" onclick="changeGrade(value)">
+                <label>Sehr gut</label>
+                <input type="radio" name="radioNoteAbschied" value="2" onclick="changeGrade(value)">
+                <label>Gut</label>
+                <input type="radio" name="radioNoteAbschied" value="3" onclick="changeGrade(value)">
+                <label>Befriedigend</label>
+                <input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)">
+                <label>Ausreichend</label>
+            </div>
+            <div>
+                <div class="textAuswahl" name="auswahlAbschied"> 
+                    <input type="radio" name="radioAbschied"> <div class="textbaustein" id="abschied1"></div> 
+                </div>
+            </div>
+        </div>
+
+        <div id="Erstellen" class="tabcontent">
             
-            <div class="textAuswahl" name="auswahlFachwissen">
-                <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlFachwissen">
-                <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlFachwissen">
-                <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen4"></div>
-            </div>
         </div>
-    </div>
-
-
-
-    <div id="Einsatz" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteEinsatz" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteEinsatz" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteEinsatz" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlEinsatz"> 
-                <input type="radio" name="radioEinsatz"> <div class="textbaustein" id="einsatz1"></div> 
-            </div>
-            
-            <div class="textAuswahl" name="auswahlEinsatz">
-                <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlEinsatz">
-                <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlEinsatz">
-                <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz4"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="Arbeitsweise" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteArbeitsweise" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteArbeitsweise" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlArbeitsweise"> 
-                <input type="radio" name="radioArbeitsweise"> <div class="textbaustein" id="arbeitsweise1"></div> 
-            </div>
-            
-            <div class="textAuswahl" name="auswahlArbeitsweise">
-                <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlArbeitsweise">
-                <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlArbeitsweise">
-                <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise4"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="Pensum" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNotePensum" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNotePensum" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNotePensum" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlPensum"> 
-                <input type="radio" name="radioPensum"> <div class="textbaustein" id="pensum1"></div> 
-            </div>
-            
-        </div>
-    </div>
-
-    <div id="Arbeitserfolg" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteArbeitserfolg" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteArbeitserfolg" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteArbeitserfolg" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlArbeitserfolg"> 
-                <input type="radio" name="radioArbeitserfolg"> <div class="textbaustein" id="arbeitserfolg1"></div> 
-            </div>
-            
-            <div class="textAuswahl" name="auswahlArbeitserfolg">
-                <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlArbeitserfolg">
-                <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlArbeitserfolg">
-                <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg4"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="Leistung" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteLeistung" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteLeistung" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteLeistung" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlLeistung"> 
-                <input type="radio" name="radioLeistung"> <div class="textbaustein" id="leistung1"></div> 
-            </div>
-            
-            <div class="textAuswahl" name="auswahlLeistung">
-                <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlLeistung">
-                <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlLeistung">
-                <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung4"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="Soziales" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteSoziales" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteSoziales" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteSoziales" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlSoziales"> 
-                <input type="radio" name="radioSoziales"> <div class="textbaustein" id="soziales1"></div> 
-            </div>
-            
-            <div class="textAuswahl" name="auswahlSoziales">
-                <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales2"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlSoziales">
-                <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales3"></div>
-            </div>
-
-            <div class="textAuswahl" name="auswahlSoziales">
-                <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales4"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="Abschied" class="tabcontent">
-        <div>
-            <input type="radio" name="radioNoteAbschied" value="1" onclick="changeGrade(value)">
-            <label>Sehr gut</label>
-            <input type="radio" name="radioNoteAbschied" value="2" onclick="changeGrade(value)">
-            <label>Gut</label>
-            <input type="radio" name="radioNoteAbschied" value="3" onclick="changeGrade(value)">
-            <label>Befriedigend</label>
-            <input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)">
-            <label>Ausreichend</label>
-        </div>
-        <div>
-            <div class="textAuswahl" name="auswahlAbschied"> 
-                <input type="radio" name="radioAbschied"> <div class="textbaustein" id="abschied1"></div> 
-            </div>
-        </div>
-    </div>
-
-    <div id="Erstellen" class="tabcontent">
         
-    </div>
-	
-	
+	</div>
 </body>
 </html>

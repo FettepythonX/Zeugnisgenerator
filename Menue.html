@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="styleMain.css">
         <script language="javascript" type="text/javascript" src=""></script>
+		<script src="notenauswahl.js"></script>
 		<title>Menü</title>
 	</head>
     <body style="background-color:rgb(255, 140, 0);" onload="eraseval()">
@@ -24,7 +25,6 @@
                     <div class="Zelle">
                         <form action="#"></form>
                             <select id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
-								<option value="3"> 	  </option>
                                 <option value="0">Herr</option>
                                 <option value="1">Frau</option>
                             </select>  
@@ -36,10 +36,36 @@
                     <div class="Zelle">
                         <form action="#">
                             <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
-
-							
-                            </select>
-							
+								<option> Bürokraft </option>
+								<option> Büropraktiker </option>
+								<option> Elektroniker Automatisierungstechnik </option>
+								<option> Elektroniker Energie & Gebäude </option>
+								<option> Elektroniker Geräte und Systeme </option>
+								<option> Elektroniker Informations & Systemtechnik </option>
+								<option> Fachangestellter Medien-& Informationsdienst Bibliothek+ </option>
+								<option> Fachinformatiker Anwendungsentwicklung </option>
+								<option> Fachinformatiker Systemintegration </option>
+								<option> Fachlagerist </option>
+								<option> Fachkraft für Lagerlogistik </option>
+								<option> Fachkraft f. Metalltechnik FR Montagetechnik' </option>
+								<option> Fachpraktiker f. elektr. Geräte und Systemen </option>
+								<option> Fachpraktiker f. Industriemechanik </option>
+								<option> Fachpraktiker für IT-Systemelektronik </option>
+								<option> Fachpraktiker TPD Maschinen- & Anlagenkonstr. </option>
+								<option> Industriekaufmann </option>
+								<option> Industriemechaniker FR Feinwerktechnik </option>
+								<option> Informatikkaufmann </option>
+								<option> IT-Systemelektroniker </option>
+								<option> Kaufmann f. Büromanagement (WQ1-8) </option>
+								<option> Kaufmann f. Büromanagement (WQ9-10) </option>
+								<option> Kaufmann im Einzelhandel </option>
+								<option> Steuerfachangestellter </option>
+								<option> Technischer Produktdesigner Maschinen- & Anlangenkonst </option>
+								<option> Verkäufer </option>
+								<option> Verwaltungsfachangestellter </option>
+								<option> Mediengestalter Bild und Ton </option>
+								<option> Mediangestalter Digital und Print </option>
+                            </select>						
                         </form>
                     </div>
                 </div>
@@ -115,17 +141,17 @@
             </div>			
         </div>		
 
-		
+
+
 		<script>
+
 			let prakt;
             function updateGender(){
                 let gender = document.getElementById("gender").value;
                 switch(gender){
-                    case "0": 
-						
+                    case "0": 				
 						document.getElementById('job').innerHTML = "";
-						
-						
+
 						let jobsM = ['Bürokraft', 'Büropraktiker', 'Elektroniker Automatisierungstechnik','Elektroniker Energie & Gebäude', 
 						'Elektroniker Geräte & Systeme', 'Elektroniker Informations & Systemtechnik','Fachangestellter Medien-& Informationsdienst Bibliothek',
 						'Fachinformatiker Anwendungsentwicklung','Fachinformatiker Systemintegration','Fachlagerist','Fachkraft für Lagerlogistik',
@@ -143,10 +169,9 @@
 							document.getElementById('job').add(option);
 						}
 						
-						console.log(jobsM.length);
-                            break;
-                    case "1":
-					
+						//console.log(jobsM.length);
+                        break;
+                    case "1":	
 						document.getElementById('job').innerHTML = "";
 					
 						let jobsF = ['Bürokraft','Büropraktikerin','Elektronikerin Automatisierungstechnik','Elektronikerin Energie & Gebäude',
@@ -166,35 +191,18 @@
 							document.getElementById('job').add(option);
 						}
 						
-						console.log(jobsF.length);
-
+						//console.log(jobsF.length);
                         break;
-
-						
-					case "3":
-						document.getElementById('job').innerHTML = "";
-						
-					break;
                 }
-
-					
-				
-
                 update();
             }
 
 			function update(){
 				let gender = document.getElementById('gender');
 				let valgender = gender.options[gender.selectedIndex];
-
-				
 				let job = document.getElementById('job');
-				let valjob = job.options[job.selectedIndex];
-				
-				
+				let valjob = job.options[job.selectedIndex];							
 				let nachname = document.getElementById('nachname').value;
-
-				
 				let valpraktikum = document.getElementById("praktikum");
 				if (valpraktikum.checked == true){
 
@@ -204,28 +212,15 @@
 
 					prakt = "";
 
-				}
-				
-				let vorname = document.getElementById('vorname').value;	
-
-				
-				let ausbilder = document.getElementById('ausbilder').value;
-
-				
-				let geburtsort = document.getElementById('geburtsort').value;
-
-				
-				let ausbildungsbeginn = document.getElementById('ausbildungsbeginn').value;
-
-				
-				let geburtstag = document.getElementById('geburtstag').value;
-
-				
-				let ausbildungsende = document.getElementById('ausbildungsende').value;
-
-				
-					let vgender = valgender.value;
-					let vjob = valjob.value;
+				}				
+				let vorname = document.getElementById('vorname').value;					
+				let ausbilder = document.getElementById('ausbilder').value;				
+				let geburtsort = document.getElementById('geburtsort').value;			
+				let ausbildungsbeginn = document.getElementById('ausbildungsbeginn').value;			
+				let geburtstag = document.getElementById('geburtstag').value;			
+				let ausbildungsende = document.getElementById('ausbildungsende').value;			
+				let vgender = valgender.value;
+				let vjob = valjob.value;
 					
 				if(vjob == "Verwaltungsfachangestellter"|| vjob == "Kaufmann f. Büromanagement (WQ1-8)"|| vjob == "Kaufmann f. Büromanagement (WQ9-10)"  || 
 				vjob == "Verwaltungsfachangestellte" || vjob == "Kauffrau f. Büromanagement (WQ1-8)" || vjob == "Kauffrau f. Büromanagement (WQ9-10)"){
@@ -246,45 +241,37 @@
 					document.getElementById("praktikum").disabled = true;
 					document.getElementById("praktikum").checked = false;
 				}
-					
-					
-					
-				let programme = document.getElementById('programme').value;	
+
+				let programme = document.getElementById('programme').value;		
+				sessionStorage.setItem("vgender", vgender);
+				sessionStorage.setItem("vjob", vjob);
+				sessionStorage.setItem("nachname", nachname);
+				sessionStorage.setItem("prakt", prakt);
+				sessionStorage.setItem("vorname", vorname);
+				sessionStorage.setItem("ausbilder",ausbilder);
+				sessionStorage.setItem("geburtsort", geburtsort);
+				sessionStorage.setItem("ausbildungsbeginn", ausbildungsbeginn);
+				sessionStorage.setItem("geburtstag", geburtstag);
+				sessionStorage.setItem("ausbildungsende", ausbildungsende);
+				sessionStorage.setItem("programme", programme);
 				
-				
-				
-				
-					
-					sessionStorage.setItem("vgender", vgender);
-					sessionStorage.setItem("vjob", vjob);
-					sessionStorage.setItem("nachname", nachname);
-					sessionStorage.setItem("prakt", prakt);
-					sessionStorage.setItem("vorname", vorname);
-					sessionStorage.setItem("ausbilder",ausbilder);
-					sessionStorage.setItem("geburtsort", geburtsort);
-					sessionStorage.setItem("ausbildungsbeginn", ausbildungsbeginn);
-					sessionStorage.setItem("geburtstag", geburtstag);
-					sessionStorage.setItem("ausbildungsende", ausbildungsende);
-					sessionStorage.setItem("programme", programme);
-					
-					//console.log(vgender);
-					//console.log(vjob);
-					//console.log(nachname);
-					//console.log(prakt);
-					//console.log(vorname);
-					//console.log(ausbilder);
-					//console.log(geburtsort);
-					//console.log(ausbildungsbeginn);
-					//console.log(geburtstag);
-					//console.log(ausbildungsende);
-					//console.log(programme);
+				//console.log(vgender);
+				//console.log(vjob);
+				//console.log(sessionStorage.getItem("nachname"));
+				//console.log(prakt);
+				//console.log(vorname);
+				//console.log(ausbilder);
+				//console.log(geburtsort);
+				//console.log(ausbildungsbeginn);
+				//console.log(geburtstag);
+				//console.log(ausbildungsende);
+				//console.log(programme);
 			}	
 			
 			function eraseval(){
 				sessionStorage.clear();
 			}
 				
-
 		</script>
     </body>
 </html> 
