@@ -11,7 +11,8 @@
 <body>
     <!-- Tab links -->
     <div class="tab">
-        <button id="tabFachwissen"      class="tablinks active" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
+        <button id="tabDatenEingabe"    class="tablinks active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+        <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
         <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
         <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
         <button id="tabPensum"          class="tablinks" onclick="openTab(event, 'Pensum')">Pensum</button>
@@ -19,10 +20,15 @@
         <button id="tabLeistung"        class="tablinks" onclick="openTab(event, 'Leistung')">Leistung</button>
         <button id="tabSoziales"        class="tablinks" onclick="openTab(event, 'Soziales')">Soziales</button>
         <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
+        <button id="tabErstellen"       class="tablinks" onclick="openTab(event, 'Erstellen')">Erstellen</button>
     </div>
 
     <!-- Tab content -->
-    <div id="Fachwissen" class="tabcontent" style="display:block">
+    <div id="Dateneingabe" class="tabcontent" style="display:block">
+
+    </div>
+
+    <div id="Fachwissen" class="tabcontent">
         <div>
             <input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)">
             <label>Sehr gut</label>
@@ -239,6 +245,10 @@
                 <input type="radio" name="radioAbschied"> <div class="textbaustein" id="abschied1"></div> 
             </div>
         </div>
+    </div>
+
+    <div id="Erstellen" class="tabcontent">
+        
     </div>
 </body>
 </html>
