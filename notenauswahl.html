@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styleMain.css">
     <link rel="stylesheet" href="printToPdf.css">
     <script src="notenauswahl.js"></script>
+    <script src="printToPDF.js"></script>
+    <script src="textbausteine.js"></script>
     <title>Thing</title>
 </head>
 <body>
@@ -15,6 +17,7 @@
         <!-- Tab links -->
         <div class="tab">
             <button id="tabDatenEingabe"    class="tablinks active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabIndividuell"     class="tablinks" onclick="openTab(event, 'Individuell')">Individuell</button>
             <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
             <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
             <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
@@ -25,10 +28,6 @@
             <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
             <button id="tabErstellen"       class="tablinks" onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
-
-        <script>
-            //setNachname("Hor");
-        </script>
 
         <!-- Tab content -->
         <div id="Dateneingabe" class="tabcontent" style="display:block">
@@ -112,18 +111,18 @@
                             <label>Vorname: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="vorname" name="Vorname" onChange="update()">
+                            <input type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select name="Ausbilder">
+                                <select name="Ausbilder" id="ausbilderGender">
                                     <option>Ausbilder</option>
                                     <option>Ausbilderin</option>
                                 </select>  
                             </form>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="update()">
+                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -131,13 +130,13 @@
                             <label>Geburtsort: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="geburtsort" name="Geburtsort" onchange="update()">
+                            <input type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsbeginn: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="ausbildungsbeginn" onchange="update()">
+                            <input type="date" id="ausbildungsbeginn" onchange="updateAusbildungsbeginn(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -145,13 +144,13 @@
                             <label>Geburtstag: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="geburtstag" onchange="update()">
+                            <input type="date" id="geburtstag" onchange="updateGeburtstag(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsende: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="ausbildungsende" onchange="update()">
+                            <input type="date" id="ausbildungsende" onchange="updateAusbildungsende(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -159,11 +158,28 @@
                             <label id="pr" hidden> Programme: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="programme" name="programme" onchange="update()" hidden>
+                            <input type="text" id="programme" name="programme" onchange="updateProgramme(value)" hidden>
                         </div>
                     </div>
                 </div>			
             </div>		
+        </div>
+
+        <div id="Individuell" class="tabcontent">
+            <div>
+                Der unten stehende Text wurde entsprechend dem Ausbildungsgang des Auszubildenden ausgewählt.
+                Das Feld ganz unten ermöglicht Ihnen den berufsspezifischen Standardtext durch einen eigenen Text zu ersetzen.
+                <br> <br>
+                Bitte geben Sie den Text entweder per Hand ein oder ziehen Sie ihn per Drag & Drop in das Textfeld. Kopieren mithilfe eines Rechtsklicks funktioniert nicht, nur mit Tastenkombination.
+                <br> <br>
+                Wenn Sie keinen eigenen Text eingeben, wird der oben angezeigte Standardtext des Berufes übernommen.
+            </div>
+            <div>Standardtext des Berufes:</div>
+            <hr>
+            <div id="textIndividuell" style="width: 1000px">null</div>
+            <hr>
+            <div>Individueller Text:</div>
+            <textarea id="customTextIndividuell"></textarea>
         </div>
 
 
@@ -386,9 +402,168 @@
         </div>
 
         <div id="Erstellen" class="tabcontent">
-            
+            <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
+            <hr>
+            <textarea id="azubiInfoText"></textarea>
+            <br>
+            <textarea id="srhInfoText" style="width: 1000px; height: 110px;">Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.</textarea>
+            <br>
+            <textarea id="individuellText" style="display: none;"></textarea>
+            <textarea id="fachwissenText"></textarea>
+            <br>
+            <textarea id="einsatzText"></textarea>
+            <br>
+            <textarea id="arbeitsweiseText"></textarea>
+            <br>
+            <textarea id="pensumText"></textarea>
+            <br>
+            <textarea id="arbeitserfolgText"></textarea>
+            <br>
+            <textarea id="leistungText"></textarea>
+            <br>
+            <textarea id="sozialesText"></textarea>
+            <br>
+            <textarea id="abschiedText"></textarea>
         </div>
-        
+  
 	</div>
+
+    <!--Everything in this div is hidden on the page, but printed out by window.print()-->
+    <div class="print" id="printMe"> 
+        <table role="presentation">
+            <thead>
+              <tr>
+                <td>
+                  <div class="kopfzeile-platz"></div>
+                </td>
+              </tr>
+            </thead>
+        
+            <tbody class="report-content">
+              <tr>
+                <td>
+                  <br>
+                  <br>
+                  <h2>Ausbildungszeugnis</h2>
+        
+                  <p>@azubiInfo</p>
+        
+                  <p>@srhInfo</p>
+        
+                  <p>@individuellText</p>
+        
+                  <p>@fachwissenText</p>
+        
+                  <p>@einsatzText</p>
+        
+                  <p>@arbeitsweiseText</p>
+        
+                  <p>@pensumText</p>
+        
+                  <p>@arbeitserfolgText</p>
+        
+                  <p>@leistungText</p>
+        
+                  <p>@sozialesText</p>
+        
+                  <p>@abschiedText</p>
+        
+        
+        
+                  <div class="ending">
+                    <div class="datum">@datum</div>
+                    <div class="ausbildungsleiter">@ausbildungsleiter<br><br><br><br>@ausbildungsleiterName</div>
+                    <div class="ausbilder">@ausbilder<br><br><br><br>@ausbilderName</div>
+                  </div>
+        
+                </td>
+              </tr>
+            </tbody>
+        
+            <tfoot>
+              <tr>
+                <td>
+                  <div class="fusszeile-platz"></div>
+                </td>
+              </tr>
+            </tfoot>
+        
+          </table>
+        
+          <div class="fusszeile">
+            <div>
+              <div class="fusszeileTitel" style="margin-left: 14.6px">Ein Unternehmen der SRH</div>
+              <img class="fusszeileLogo" src="shr_logo.png">
+              <div class="fusszeileLogoText" style="right: 276px; bottom: 111px; text-align: right;">
+                Organisation der
+                <br>
+                Vereinten Nationen für
+                <br>
+                Bildung, Wissenschaft,
+                <br>
+                Kultur und Kommunikation
+              </div>
+        
+              <div class="fusszeileLogoText" style="right: 170px; bottom: 111px; text-align: left;">
+                <b>
+                Berufsbildungswerk <br>
+                Neckargemünd <br>
+                </b>
+                Mitglied des Netzwerks der <br>
+                UNESCO-Projektschulen <br>
+              </div>
+            </div>
+        
+            <div>
+              <div class="fusszeileText" style="margin-left: 14.6px">
+                <br>
+                SRH Berufsbildungswerk
+                <br> 
+                Neckargemünd GmbH
+                <br>
+                Im Spitzerfeld 25
+                <br>
+                69151 Neckargemünd
+                <br>
+                Telefon<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-1010
+                <br>
+                Telefax<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-2123
+              </div>
+        
+              <div class="fusszeileText" style="margin-left: 35px;">
+                <br>
+                Info.bbwn@srh.de
+                <br>
+                www.bbw-neckargemuend.de
+                <br>
+                Geschäftsführung:
+                <br>
+                Sascha Lohwaßer
+              </div>
+        
+              <div class="fusszeileText" style="margin-left: 40px;">
+                <br>
+                HRB 335376 Amtsgericht Mannheim
+                <br>
+                USt.-IdNr.: DE 174 981 459
+              </div>
+        
+              <div class="fusszeileText" style="float: right; margin-right: 5px;">
+                <br>
+                Bankverbindung:
+                <br>
+                Evangelische Bank eG
+                <br>
+                BLZ 520 604 10
+                <br>
+                Konto 5 010 357
+                <br>
+                IBAN DE 91 5206 0410 0005 0103 57
+                <br>
+                BIC GENODEF1EK1
+              </div>
+            </div>
+          </div>
+    </div>
 </body>
 </html>

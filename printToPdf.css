@@ -19,6 +19,9 @@
       size: A4 !important;
       margin: 0mm 17mm 0mm 17mm !important;
     }
+    body{
+        background-color: white;
+    }
 
   .kopfzeile-platz{
       height: 150px;
@@ -87,6 +90,7 @@
       font-weight: lighter;
       line-height: 22px;
       margin-top: 25px;
+      white-space: pre-wrap;
   }
   dd{
       margin-left: 6.6px;
