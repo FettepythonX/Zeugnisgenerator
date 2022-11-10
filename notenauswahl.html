@@ -16,8 +16,8 @@
     <div class="screen">
         <!-- Tab links -->
         <div class="tab">
-            <button id="tabDatenEingabe"    class="tablinks active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
-            <button id="tabIndividuell"     class="tablinks" onclick="openTab(event, 'Individuell')">Individuell</button>
+            <button id="tabDateneingabe"    class="tablinks dateneingabe active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabIndividuell"     class="tablinks individuell" onclick="openTab(event, 'Individuell')">Individuell</button>
             <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
             <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
             <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
@@ -26,7 +26,7 @@
             <button id="tabLeistung"        class="tablinks" onclick="openTab(event, 'Leistung')">Leistung</button>
             <button id="tabSoziales"        class="tablinks" onclick="openTab(event, 'Soziales')">Soziales</button>
             <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
-            <button id="tabErstellen"       class="tablinks" onclick="openTab(event, 'Erstellen')">Erstellen</button>
+            <button id="tabErstellen"       class="tablinks erstellen" onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
 
         <!-- Tab content -->
@@ -197,19 +197,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlFachwissen"> 
-                    <input type="radio" name="radioFachwissen"> <div class="textbaustein" id="fachwissen1"></div> 
+                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)"> 
+                    <div class="textbaustein" id="fachwissen1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen2"></div>
+                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="fachwissen2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen3"></div>
+                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="fachwissen3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen"><div class="textbaustein" id="fachwissen4"></div>
+                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="fachwissen4"></div>
                 </div>
             </div>
         </div>
@@ -227,19 +231,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlEinsatz"> 
-                    <input type="radio" name="radioEinsatz"> <div class="textbaustein" id="einsatz1"></div> 
+                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="einsatz1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz2"></div>
+                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="einsatz2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz3"></div>
+                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="einsatz3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz"><div class="textbaustein" id="einsatz4"></div>
+                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="einsatz4"></div>
                 </div>
             </div>
         </div>
@@ -257,19 +265,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlArbeitsweise"> 
-                    <input type="radio" name="radioArbeitsweise"> <div class="textbaustein" id="arbeitsweise1"></div> 
+                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)"> 
+                    <div class="textbaustein" id="arbeitsweise1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise2"></div>
+                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitsweise2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise3"></div>
+                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitsweise3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise"><div class="textbaustein" id="arbeitsweise4"></div>
+                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitsweise4"></div>
                 </div>
             </div>
         </div>
@@ -287,7 +299,8 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlPensum"> 
-                    <input type="radio" name="radioPensum"> <div class="textbaustein" id="pensum1"></div> 
+                    <input type="radio" name="radioPensum" onclick="changeSelectText(name)">
+                     <div class="textbaustein" id="pensum1"></div> 
                 </div>
                 
             </div>
@@ -306,19 +319,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlArbeitserfolg"> 
-                    <input type="radio" name="radioArbeitserfolg"> <div class="textbaustein" id="arbeitserfolg1"></div> 
+                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)"> 
+                    <div class="textbaustein" id="arbeitserfolg1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg2"></div>
+                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitserfolg2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg3"></div>
+                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitserfolg3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg"><div class="textbaustein" id="arbeitserfolg4"></div>
+                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitserfolg4"></div>
                 </div>
             </div>
         </div>
@@ -336,19 +353,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlLeistung"> 
-                    <input type="radio" name="radioLeistung"> <div class="textbaustein" id="leistung1"></div> 
+                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="leistung1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung2"></div>
+                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="leistung2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung3"></div>
+                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="leistung3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung"><div class="textbaustein" id="leistung4"></div>
+                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="leistung4"></div>
                 </div>
             </div>
         </div>
@@ -366,19 +387,23 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlSoziales"> 
-                    <input type="radio" name="radioSoziales"> <div class="textbaustein" id="soziales1"></div> 
+                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)"> 
+                    <div class="textbaustein" id="soziales1"></div> 
                 </div>
                 
                 <div class="textAuswahl" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales2"></div>
+                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="soziales2"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales3"></div>
+                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="soziales3"></div>
                 </div>
 
                 <div class="textAuswahl" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales"><div class="textbaustein" id="soziales4"></div>
+                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="soziales4"></div>
                 </div>
             </div>
         </div>
@@ -396,7 +421,8 @@
             </div>
             <div>
                 <div class="textAuswahl" name="auswahlAbschied"> 
-                    <input type="radio" name="radioAbschied"> <div class="textbaustein" id="abschied1"></div> 
+                    <input type="radio" name="radioAbschied" onclick="changeSelectText(name)"> 
+                    <div class="textbaustein" id="abschied1"></div> 
                 </div>
             </div>
         </div>

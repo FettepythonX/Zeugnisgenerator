@@ -6,25 +6,42 @@
   }
   
   /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
+  .tablinks {
+    background-color: red;
     float: left;
-    border: none;
+    border: solid;
+    border-color: black;
+    border-width: 2px 1px 2px 1px;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
   }
-  
+
+  .dateneingabe{
+    border-width: 2px 1px 2px 2px;
+  }
+
+  .individuell{
+    background-color: purple;
+  }
+
+  .erstellen{
+    background-color: inherit;
+    border-width: 2px 2px 2px 1px;
+  }
+
   /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
+  .tablinks:hover {
+    border-width: 2px;
+    border-color: #ddd;
   }
   
   /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
+  .tablinks.active {
+    border-width: 2px;
+    border-color: lightblue;
   }
-  
+
   /* Style the tab content */
   .tabcontent {
     display: none;
