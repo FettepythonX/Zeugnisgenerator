@@ -1,5 +1,5 @@
 body {
-    background-color:darkorange;
+    background-color:rgb(216, 119, 0);
 }
 
 .Tabelle{
@@ -8,7 +8,7 @@ body {
 	padding: 2%;
     height: auto;
 	width: 300px;
-    border: 2px solid black;
+    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .Zeile{
@@ -32,7 +32,7 @@ a{
 }
 #start{
 	margin:auto;
-	border: 2px solid black;
+	border: 2px solid rgba(255, 255, 255, 0.4);
     height: 300px;
 	width: 600px;
 }
