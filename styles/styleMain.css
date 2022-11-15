@@ -21,9 +21,9 @@ body {
 	width: 100px;
 }
 
-.textfeld{
-	width: 90%;
-	
+.autosize {
+	resize: none;
+	overflow: hidden;
 }
 
 a{
