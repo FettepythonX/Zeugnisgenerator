@@ -11,6 +11,9 @@ let ausbilder;
 let ausbilderName;
 let praktikum;
 let programme = "";
+let tabColorWrong = "#FF0000";
+let tabColorRight = "#00FF00";
+let categories = ["Fachwissen", "Einsatz", "Arbeitsweise", "Pensum", "Arbeitserfolg", "Leistung", "Soziales", "Abschied"];
 
 
 
@@ -180,7 +183,7 @@ function changeGrade(value){
     if(nachname == null) nachname = "Mustermann"
     switch(currentTab){
         case "Fachwissen":
-            document.getElementById("tabFachwissen").style.backgroundColor = "Red";
+            document.getElementById("tabFachwissen").style.backgroundColor = tabColorWrong;
             tabDone[1] = false;
             textauswahlen = document.getElementsByName("auswahlFachwissen");
             textRadios = document.getElementsByName("radioFachwissen");
@@ -199,7 +202,7 @@ function changeGrade(value){
             }
             break;
         case "Einsatz":
-            document.getElementById("tabEinsatz").style.backgroundColor = "Red";
+            document.getElementById("tabEinsatz").style.backgroundColor = tabColorWrong;
             tabDone[2] = false;
             textauswahlen = document.getElementsByName("auswahlEinsatz");
             textRadios = document.getElementsByName("radioEinsatz");
@@ -218,7 +221,7 @@ function changeGrade(value){
             }
             break;
         case "Arbeitsweise":
-            document.getElementById("tabArbeitsweise").style.backgroundColor = "Red";
+            document.getElementById("tabArbeitsweise").style.backgroundColor = tabColorWrong;
             tabDone[3] = false;
             textauswahlen = document.getElementsByName("auswahlArbeitsweise");
             textRadios = document.getElementsByName("radioArbeitsweise");
@@ -237,7 +240,7 @@ function changeGrade(value){
             }
             break;
         case "Pensum":
-            document.getElementById("tabPensum").style.backgroundColor = "Red";
+            document.getElementById("tabPensum").style.backgroundColor = tabColorWrong;
             tabDone[4] = false;
             textauswahlen = document.getElementsByName("auswahlPensum");
             textRadios = document.getElementsByName("radioPensum");
@@ -256,7 +259,7 @@ function changeGrade(value){
             }
             break;
         case "Arbeitserfolg":
-            document.getElementById("tabArbeitserfolg").style.backgroundColor = "Red";
+            document.getElementById("tabArbeitserfolg").style.backgroundColor = tabColorWrong;
             tabDone[5] = false;
             textauswahlen = document.getElementsByName("auswahlArbeitserfolg");
             textRadios = document.getElementsByName("radioArbeitserfolg");
@@ -275,7 +278,7 @@ function changeGrade(value){
             }
             break;
         case "Leistung":
-            document.getElementById("tabLeistung").style.backgroundColor = "Red";
+            document.getElementById("tabLeistung").style.backgroundColor = tabColorWrong;
             tabDone[6] = false;
             textauswahlen = document.getElementsByName("auswahlLeistung");
             textRadios = document.getElementsByName("radioLeistung");
@@ -294,7 +297,7 @@ function changeGrade(value){
             }
             break;
         case "Soziales":
-            document.getElementById("tabSoziales").style.backgroundColor = "Red";
+            document.getElementById("tabSoziales").style.backgroundColor = tabColorWrong;
             tabDone[7] = false;
             textauswahlen = document.getElementsByName("auswahlSoziales");
             textRadios = document.getElementsByName("radioSoziales");
@@ -313,7 +316,7 @@ function changeGrade(value){
             }
             break;
         case "Abschied":
-            document.getElementById("tabAbschied").style.backgroundColor = "Red";
+            document.getElementById("tabAbschied").style.backgroundColor = tabColorWrong;
             tabDone[8] = false;
             textauswahlen = document.getElementsByName("auswahlAbschied");
             textRadios = document.getElementsByName("radioAbschied");
@@ -337,35 +340,35 @@ function changeGrade(value){
 function changeSelectText(name){
     switch(name){
         case "radioFachwissen":
-            document.getElementById("tabFachwissen").style.backgroundColor = "Green";
+            document.getElementById("tabFachwissen").style.backgroundColor = tabColorRight;
             tabDone[1] = true;
             break;
         case "radioEinsatz":
-            document.getElementById("tabEinsatz").style.backgroundColor = "Green";
+            document.getElementById("tabEinsatz").style.backgroundColor = tabColorRight;
             tabDone[2] = true;
             break;
         case "radioArbeitsweise":
-            document.getElementById("tabArbeitsweise").style.backgroundColor = "Green";
+            document.getElementById("tabArbeitsweise").style.backgroundColor = tabColorRight;
             tabDone[3] = true;
             break;
         case "radioPensum":
-            document.getElementById("tabPensum").style.backgroundColor = "Green";
+            document.getElementById("tabPensum").style.backgroundColor = tabColorRight;
             tabDone[4] = true;
             break;
         case "radioArbeitserfolg":
-            document.getElementById("tabArbeitserfolg").style.backgroundColor = "Green";
+            document.getElementById("tabArbeitserfolg").style.backgroundColor = tabColorRight;
             tabDone[5] = true;
             break;
         case "radioLeistung":
-            document.getElementById("tabLeistung").style.backgroundColor = "Green";
+            document.getElementById("tabLeistung").style.backgroundColor = tabColorRight;
             tabDone[6] = true;
             break;
         case "radioSoziales":
-            document.getElementById("tabSoziales").style.backgroundColor = "Green";
+            document.getElementById("tabSoziales").style.backgroundColor = tabColorRight;
             tabDone[7] = true;
             break;
         case "radioAbschied":
-            document.getElementById("tabAbschied").style.backgroundColor = "Green";
+            document.getElementById("tabAbschied").style.backgroundColor = tabColorRight;
             tabDone[8] = true;
             break;
     }
@@ -402,6 +405,7 @@ function update(){
 
 function updateGender(){
     gender = document.getElementById("gender").value;
+    currentIndex = document.getElementById('job').selectedIndex;
     switch(gender){
         case "0": 				
             document.getElementById('job').innerHTML = "";
@@ -471,6 +475,7 @@ function updateGender(){
             //console.log(jobsF.length);
             break;    
     }
+    document.getElementById('job').selectedIndex = currentIndex;
     updateNachname(nachname);
     update();
 }
@@ -632,45 +637,45 @@ function updateNachname(nachnameNeu){
             textAuswahl.innerHTML = textAuswahl.innerHTML.replace("@nachname", nachname);
         }
     }
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateProgramme(programmeNeu){
     programme = programmeNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateVorname(voranmeNeu){
     vorname = voranmeNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateGeburtsort(geburtsortNeu){
     geburtsort = geburtsortNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateGeburtstag(geburtstagNeu){
     geburtstag = geburtstagNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateAusbilderName(ausbilderNameNeu){
     ausbilderName = ausbilderNameNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateAusbildungsbeginn(ausbildungsbeginnNeu){
     ausbildungsbeginn = ausbildungsbeginnNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
 function updateAusbildungsende(ausbildungsendeNeu){
     ausbildungsende = ausbildungsendeNeu;
-    checkDateineingabeFilled();
+    checkDateneingabeFilled();
 }
 
-function checkDateineingabeFilled(){
+function checkDateneingabeFilled(){
     if(document.getElementById("nachname").value == "" || document.getElementById("nachname").value == null 
         || document.getElementById("vorname").value == "" || document.getElementById("vorname").value == null
         || document.getElementById("geburtsort").value == "" || document.getElementById("geburtsort") == null
@@ -680,11 +685,11 @@ function checkDateineingabeFilled(){
         || document.getElementById("ausbildungsende").value == "" || document.getElementById("ausbildungsende").value == null)
     {
         tabDone[0] = false;
-        document.getElementById("tabDateneingabe").style.backgroundColor = "Red";
+        document.getElementById("tabDateneingabe").style.backgroundColor = tabColorWrong;
     }
     else{
         tabDone[0] = true;
-        document.getElementById("tabDateneingabe").style.backgroundColor = "Green";
+        document.getElementById("tabDateneingabe").style.backgroundColor = tabColorRight;
     }
 }
 
@@ -734,4 +739,44 @@ function getMonthString(monthIndex){
 function getDateString(date){
     let yyyy_mm_dd = date.split('-');
     return yyyy_mm_dd[2] + ". " + getMonthString(yyyy_mm_dd[1]) + " " + yyyy_mm_dd[0]
+}
+
+function zuruecksetzen(){
+    for(i = 0; i < tabDone.length; i++){
+        tabDone[i] = false;
+    }
+    // Change tab from Erstellen to Dateneingabe
+    document.getElementById("Erstellen").style.display = "none";
+    document.getElementById("tabErstellen").className = document.getElementById("tabErstellen").className.replace(" active", "");
+    document.getElementById("Dateneingabe").style.display = "block";
+    document.getElementById("tabDateneingabe").className += " active";
+    currentTab = "Dateneingabe";
+
+    // Change tab colors to red
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        if(tablinks[i].innerHTML != "Individuell" && tablinks[i].innerHTML != "Erstellen"){
+            tablinks[i].style.backgroundColor = tabColorWrong;
+        }
+    }
+
+    // Reset left column in Dateneingabe
+    document.getElementById("gender").value = "0";
+    document.getElementById("nachname").value = "";
+    document.getElementById("vorname").value = "";
+    document.getElementById("geburtsort").value = "";
+    document.getElementById("geburtstag").value = null;
+
+    // Reset individual text
+    document.getElementById("customTextIndividuell").value = "";
+
+    // Reset grade values
+    for(ci = 0; ci < categories.length; ci++){
+        radioTexts = document.getElementsByName("auswahl" + categories[ci]);
+        radioNoten = document.getElementsByName("radioNote" + categories[ci]);
+        for(i = 0; i < radioTexts.length; i++)
+            radioTexts[i].style.display = "none";
+        for(i = 0; i < radioNoten.length; i++)
+            radioNoten[i].checked = false;
+    }
 }
