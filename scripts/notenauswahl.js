@@ -96,6 +96,8 @@ function openTab(evt, tabName) {
             azubiInfo = azubiInfo.replace("@ausbildungsberuf", berufText);
             textauswahl.value = azubiInfo;
 
+            document.getElementById("srhInfoText").value = srhInfoText;
+
             // User has not written any custom text, use the gender specific default text
             textauswahl = document.getElementById("individuellText");
             if(document.getElementById("customTextIndividuell").innerHTML == "null" || document.getElementById("customTextIndividuell").value == ""){
@@ -779,4 +781,21 @@ function zuruecksetzen(){
         for(i = 0; i < radioNoten.length; i++)
             radioNoten[i].checked = false;
     }
+    radioTexts = document.getElementsByClassName("textbaustein");
+    for(i = 0; i < radioTexts.length; i++){
+        radioTexts[i].innerHTML = "";
+    }
+    
+    // Reset final texts
+    document.getElementById("azubiInfoText").value = "";
+    document.getElementById("srhInfoText").value = "";
+    for(i = 0; i < categories.length; i++){
+        document.getElementById(categories[i].toLowerCase() + "Text").value = "";
+    }
+
+    // Reset variables
+    vorname = "Max";
+    nachname = "Mustermann";
+    geburtsort = "";
+    geburtstag = "";
 }
