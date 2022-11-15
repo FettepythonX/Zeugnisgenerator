@@ -1,5 +1,7 @@
 let azubiInfoText = "@anrede @vorname @nachname, geboren am @geburtstag in @geburtsort, hat in der Berufsbildungswerk Neckargemünd GmbH die Ausbildung vom @ausbildungsbeginn bis @ausbildungsende zum @ausbildungsberuf absolviert.";
 
+let azubiInfoTextFrau = "@anrede @vorname @nachname, geboren am @geburtstag in @geburtsort, hat in der Berufsbildungswerk Neckargemünd GmbH die Ausbildung vom @ausbildungsbeginn bis @ausbildungsende zur @ausbildungsberuf absolviert.";
+
 let srhInfoText = "Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.";
 
 let individuellTexts = [
