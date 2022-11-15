@@ -123,7 +123,7 @@
                             </form>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
+                            <input tabindex="9" type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -430,6 +430,7 @@
 
         <div id="Erstellen" class="tabcontent">
             <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
+            <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
             <hr>
             <textarea class="autosize" id="azubiInfoText"></textarea>
             <br>
