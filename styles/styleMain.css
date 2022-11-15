@@ -21,6 +21,11 @@ body {
 	width: 100px;
 }
 
+.textfeld{
+	width: 90%;
+	
+}
+
 a{
     color: black;
     text-decoration: none;
