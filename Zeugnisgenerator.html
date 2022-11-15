@@ -47,10 +47,10 @@
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
+                                <select tabindex="1" id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
                                     <option value="0">Herr</option>
                                     <option value="1">Frau</option>
-                                </select>  
+                                </select>
                             </form>
                         </div>
                         <div class="Zelle">
@@ -58,7 +58,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#">
-                                <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
+                                <select tabindex="6" id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
                                     <option> Bürokraft </option>
                                     <option> Büropraktiker </option>
                                     <option> Elektroniker Automatisierungstechnik </option>
@@ -88,7 +88,7 @@
                                     <option> Verwaltungsfachangestellter </option>
                                     <option> Mediengestalter Bild und Ton </option>
                                     <option> Mediangestalter Digital und Print </option>
-                                </select>						
+                                </select>
                             </form>
                         </div>
                     </div>
@@ -97,13 +97,13 @@
                             <label>Nachname: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
+                            <input tabindex="2" type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
                         </div>
                         <div class="Zelle">
                             <label>Im Praktikum: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
+                            <input tabindex="7" type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
                         </div>
                     </div>
                     <div class="Zeile">
@@ -111,14 +111,14 @@
                             <label>Vorname: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
+                            <input tabindex="3" type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select name="Ausbilder" id="ausbilderGender">
+                                <select tabindex="8" name="Ausbilder" id="ausbilderGender">
                                     <option>Ausbilder</option>
                                     <option>Ausbilderin</option>
-                                </select>  
+                                </select>
                             </form>
                         </div>
                         <div class="Zelle">
@@ -130,13 +130,13 @@
                             <label>Geburtsort: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
+                            <input tabindex="4" type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsbeginn: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="ausbildungsbeginn" onchange="updateAusbildungsbeginn(value)">
+                            <input tabindex="10" type="date" id="ausbildungsbeginn" onchange="updateAusbildungsbeginn(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -144,13 +144,13 @@
                             <label>Geburtstag: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="geburtstag" onchange="updateGeburtstag(value)">
+                            <input tabindex="5" type="date" id="geburtstag" onchange="updateGeburtstag(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsende: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="date" id="ausbildungsende" onchange="updateAusbildungsende(value)">
+                            <input tabindex="11" type="date" id="ausbildungsende" onchange="updateAusbildungsende(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -161,8 +161,8 @@
                             <input type="text" id="programme" name="programme" onchange="updateProgramme(value)" hidden>
                         </div>
                     </div>
-                </div>			
-            </div>		
+                </div>
+            </div>
         </div>
 
         <div id="Individuell" class="tabcontent">
@@ -196,11 +196,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlFachwissen"> 
-                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)"> 
-                    <div class="textbaustein" id="fachwissen1"></div> 
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="fachwissen1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlFachwissen">
                     <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="fachwissen2"></div>
@@ -230,11 +230,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlEinsatz"> 
+                <div class="textAuswahl" name="auswahlEinsatz">
                     <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
-                    <div class="textbaustein" id="einsatz1"></div> 
+                    <div class="textbaustein" id="einsatz1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlEinsatz">
                     <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="einsatz2"></div>
@@ -264,11 +264,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlArbeitsweise"> 
-                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)"> 
-                    <div class="textbaustein" id="arbeitsweise1"></div> 
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitsweise1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlArbeitsweise">
                     <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="arbeitsweise2"></div>
@@ -298,11 +298,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlPensum"> 
+                <div class="textAuswahl" name="auswahlPensum">
                     <input type="radio" name="radioPensum" onclick="changeSelectText(name)">
-                     <div class="textbaustein" id="pensum1"></div> 
+                     <div class="textbaustein" id="pensum1"></div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -318,11 +318,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlArbeitserfolg"> 
-                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)"> 
-                    <div class="textbaustein" id="arbeitserfolg1"></div> 
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="arbeitserfolg1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
                     <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="arbeitserfolg2"></div>
@@ -352,11 +352,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlLeistung"> 
+                <div class="textAuswahl" name="auswahlLeistung">
                     <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
-                    <div class="textbaustein" id="leistung1"></div> 
+                    <div class="textbaustein" id="leistung1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlLeistung">
                     <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="leistung2"></div>
@@ -386,11 +386,11 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlSoziales"> 
-                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)"> 
-                    <div class="textbaustein" id="soziales1"></div> 
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="soziales1"></div>
                 </div>
-                
+
                 <div class="textAuswahl" name="auswahlSoziales">
                     <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
                     <div class="textbaustein" id="soziales2"></div>
@@ -420,9 +420,9 @@
                 <label>Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl" name="auswahlAbschied"> 
-                    <input type="radio" name="radioAbschied" onclick="changeSelectText(name)"> 
-                    <div class="textbaustein" id="abschied1"></div> 
+                <div class="textAuswahl" name="auswahlAbschied">
+                    <input type="radio" name="radioAbschied" onclick="changeSelectText(name)">
+                    <div class="textbaustein" id="abschied1"></div>
                 </div>
             </div>
         </div>
@@ -451,7 +451,7 @@
             <br>
             <textarea id="abschiedText"></textarea>
         </div>
-  
+
 	</div>
 
     <div class="loadFont">loadme</div>
