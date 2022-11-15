@@ -22,7 +22,7 @@ Er übte die Tätigkeiten unter Beachtung ökonomischer und ökologischer Aspekt
     <dd>- Einrichten des Arbeitsplatzes,</dd>
     <dd>- Montieren und Installieren,</dd>
     <dd>- Installieren von Systemkomponenten und Netzwerken,</dd>
-    <dd>- Planen, Aufbauen, Messen und Analysieren, TARGET V17 mit versch. Messgeräten und Oszilloscop,</dd>
+    <dd>- Planen, Aufbauen, Messen und Analysieren, TARGET V17 mit versch. Messgeräten und Oszilloskop,</dd>
     <dd>- Prüfen der Schutzmaßnahmen, mittels Messgeräten nach VDE 0100 und VDE 0701/702,</dd>
     <dd>- Aufbauen und Prüfen von Steuerungen, mit Siemens Software LOGO! 8.1,</dd>
     <dd>- Durchführen von Serviceleistungen,
@@ -43,7 +43,7 @@ Begleitet wurde die Ausbildung durch die hardwareseitige Generierung elektronisc
     ,
     "Begleitet wurde die Ausbildung durch die hardwareseitige Generierung elektronischer Schaltungen durch CAD-gestützter Applikationen wie Target!3001, unter Berücksichtigung der gültigen Normen der Leiterplattenfertigung. Die Entwicklung von Software fand in den Hochsprachen C und C++ nach den Regeln der „Unified Modeling Language“ statt. Die Konfiguration der betrieblich verwendeten Hardware (Atmel 89c51cc03) erfolgte im maschinennahem Assembler so wie in der Hochsprache C."
     ,
-    "Im Laufe der Ausbildung konnte sich Herr @nachname vertiefte Fachkenntnisse in allen Bereichen der bibliotheksspezifischen Arbeit aneignen, darunter Erwerbung, formale und inhaltliche Erschließung, bibliothekstechnische Medienbearbeitung, Beschaffen und Bereitstellen von Medien und Informationen, Benutzungsdienst, Beratung, Öffentlichkeits- und Veranstaltungsarbeit, sowie in der Nutzung der Bibliothekssoftware bibliothecaPlus von OCLC."
+    "Im Laufe der Ausbildung konnte sich Herr @nachname vertiefte Fachkenntnisse in allen Bereichen der bibliotheksspezifischen Arbeit aneignen, darunter Erwerbung, formale und inhaltliche Erschließung, bibliothekstechnische Medienbearbeitung, Beschaffen und Bereitstellen von Medien und Informationen, Benutzungsdienst, Beratung, Öffentlichkeits- und Veranstaltungsarbeit, sowie in der Nutzung der Bibliothekssoftware BibliothecaPlus von OCLC."
     ,
     "Während der Ausbildung erwarb Herr @nachname erweiterte Kenntnisse in den Programmiersprachen Java und C++. Er erstellte serverseitige Webapplikationen mit der Scriptsprache PHP und HTML/CSS. Als Datenbankmanagementsysteme wurden Microsoft Access und Oracle MySQL verwendet. Darüber hinaus konnte er sich weitreichende Anwenderkenntnisse in Microsoft Desktop- und Serverbetriebssystemen sowie Grundlagen in Linux und Netzwerktechnik aneignen."
     ,
@@ -110,7 +110,7 @@ Wareneingangskontrolle, Auszeichnung, Verräumung und Lagerhaltung der Waren nac
     ,
     `<dt><dd>- Lohnabrechnungen manuell und mit dem Programm DATEV Lohn- und Gehalt,</dd>
     <dd>- Einkommensteuererklärungen mit den Programmen DATEV Einkommensteuer und TAX,</dd>
-    <dd>- Kleinere Buchhaltungen mit den Programmen DATEV Rewe und mms,</dd>
+    <dd>- Kleinere Buchhaltungen mit den Programmen DATEV Rewe und MMS,</dd>
     <dd>- Musterfall DATEV zur Erstellung eines Jahresabschlusses mit Steuererklärungen mit den DATEV-Programmen.</dd></dt>`
     ,
     `Im ersten Ausbildungsjahr wurden Herr @nachname mittels Ausbildungsmodulen und Projektarbeiten grundlegende Kenntnisse und Fertigkeiten des technischen Zeichnens und der Metalltechnik vermittelt. Schwerpunkte der fachlichen Qualifizierung war das Kennenlernen von fertigungs- und montagetechnischen Abläufen durch gezielte Projekte im Bereich Neu- und Umkonstruktion. Unter Berücksichtigung von Gestaltungsvorgaben für Bauteilformen wurden mittels CAD virtuelle Bauteile und Baugruppen, Fertigungszeichnungen und Stücklisten erstellt.
@@ -124,7 +124,7 @@ Wareneingangskontrolle, Auszeichnung, Verräumung und Lagerhaltung der Waren nac
     `,
     "In der Ausbildung zum Verwaltungsfachangestellten wurden insbesondere Kenntnisse in der Rechtsanwendung in den Bereichen Organisation, Personalwesen, Finanzwesen und Sozialrecht vermittelt und berufliche Inhalte vertraut gemacht. Weiterhin wurden Fertigkeiten und Kenntnisse der wichtigsten MS-Office-Produkte, wie Word, Excel, Outlook und auch PowerPoint weitergegeben. Während eines 6-monatigen Praktikums wurden überdies die in der kommunalen Praxis eingesetzten Programme - @programme - angewendet."
     ,
-    `Während der Ausbildung konnte Herr @nachname vertiefte Programmkenntnisse erwerben, insbesondere durch die intensive Nutzung der Programme FinalCut 10, Adobe After Effects, Cubase sowie dem Programm DramaQueen zur Drehbucherstellung. Bei Liveproduktionen wurde er an der Bildregie und als Kameramann eingesetzt. Dort lernte er unter realen Arbeitsbedingungen die Abläufe von Liveproduktionen kennen.
+    `Während der Ausbildung konnte Herr @nachname vertiefte Programmkenntnisse erwerben, insbesondere durch die intensive Nutzung der Programme Final Cut 10, Adobe After Effects, Cubase sowie dem Programm DramaQueen zur Drehbucherstellung. Bei Liveproduktionen wurde er an der Bildregie und als Kameramann eingesetzt. Dort lernte er unter realen Arbeitsbedingungen die Abläufe von Liveproduktionen kennen.
 
 Bei allen Produktionen zeigte Herr @nachname großes Interesse und überzeugte durch seine gewissenhafte, analytische und präzise Mitarbeit, unter anderem bei der Filmproduktion eines Imagefilms für das Technische Hilfswerk für die er die gesamte Leitung übernahm.
     
@@ -132,7 +132,7 @@ Für die Schauspielproduktion Der Prozess des Theater und Orchester Heidelberg p
     
 Im Jahresprojekt GoTango übernahm er die Planung, Regie und den Live-Schnitt während der Veranstaltung. Das Multimedia-Event war mit 500 Besuchern ein voller Erfolg.`
     ,
-    "Während der Ausbildungszeit konnte Herr @nachname vertiefte Fachkenntnisse erwerben, insbesondere durch die Adobe Programme InDesign, Illustrator, sowie im EBV Bereich mit Photoshop. Mit Hilfe dieses Wissens konnte er seine kreativen Stärken optimal in die Auftragsbearbeitung einfliessen lassen. Er konnte Kundenwünsche schnell erfassen und lieferte so sehr effektiv passgenaue Lösungen. Darüber hinaus konnte er weitreichende Anwenderkenntnisse mit dem Apple iPad und dem digitalen Arbeiten damit erlangen. Insbesondere im Bereich Gestaltung zeigte Herr @nachname großes Interesse und überzeugte durch seine kreative, gewissenhafte, analytische und präzise Mitarbeit.",
+    "Während der Ausbildungszeit konnte Herr @nachname vertiefte Fachkenntnisse erwerben, insbesondere durch die Adobe Programme InDesign, Illustrator, sowie im EBV Bereich mit Photoshop. Mit Hilfe dieses Wissens konnte er seine kreativen Stärken optimal in die Auftragsbearbeitung einfließen lassen. Er konnte Kundenwünsche schnell erfassen und lieferte so sehr effektiv passgenaue Lösungen. Darüber hinaus konnte er weitreichende Anwenderkenntnisse mit dem Apple iPad und dem digitalen Arbeiten damit erlangen. Insbesondere im Bereich Gestaltung zeigte Herr @nachname großes Interesse und überzeugte durch seine kreative, gewissenhafte, analytische und präzise Mitarbeit.",
 ]
 let individuellTextsFrau = [
     `Während der Ausbildung konnte Frau @nachname moderne EDV-Systeme sowie die MS-Office-Programme Word, Excel, Outlook und PowerPoint zur Erledigung ihrer Aufgaben intensiv nutzen und gute Kenntnisse im Umgang damit erlangen. Frau @nachname führte kaufmännische, organisatorische und verwaltende Tätigkeiten in den Abteilungen Materialwirtschaft, Absatzwirtschaft, Zahlungsverkehr, Rechnungswesen und Personalwesen aus. Sie kann durch ihre Mitarbeit Abläufe in Unternehmen und Verwaltungen unterstützen.`
@@ -154,7 +154,7 @@ Sie übte die Tätigkeiten unter Beachtung ökonomischer und ökologischer Aspek
       <dd>- Einrichten des Arbeitsplatzes,</dd>
       <dd>- Montieren und Installieren,</dd>
       <dd>- Installieren von Systemkomponenten und Netzwerken,</dd>
-      <dd>- Planen, Aufbauen, Messen und Analysieren, TARGET V17 mit versch. Messgeräten und Oszilloscop,</dd>
+      <dd>- Planen, Aufbauen, Messen und Analysieren, TARGET V17 mit versch. Messgeräten und Oszilloskop,</dd>
       <dd>- Prüfen der Schutzmaßnahmen, mittels Messgeräten nach VDE 0100 und VDE 0701/702,</dd>
       <dd>- Aufbauen und Prüfen von Steuerungen, mit Siemens Software LOGO! 8.1,</dd>
       <dd>- Durchführen von Serviceleistungen,
@@ -174,7 +174,7 @@ Begleitet wurde die Ausbildung durch die hardwareseitige Generierung elektronisc
     ,
     `Begleitet wurde die Ausbildung durch die hardwareseitige Generierung elektronischer Schaltungen durch CAD-gestützter Applikationen wie Target!3001, unter Berücksichtigung der gültigen Normen der Leiterplattenfertigung. Die Entwicklung von Software fand in den Hochsprachen C und C++ nach den Regeln der „Unified Modeling Language“ statt. Die Konfiguration der betrieblich verwendeten Hardware (Atmel 89c51cc03) erfolgte im maschinennahem Assembler so wie in der Hochsprache C.`
     ,
-    `Im Laufe der Ausbildung konnte sich Frau @nachname vertiefte Fachkenntnisse in allen Bereichen der bibliotheksspezifischen Arbeit aneignen, darunter Erwerbung, formale und inhaltliche Erschließung, bibliothekstechnische Medienbearbeitung, Beschaffen und Bereitstellen von Medien und Informationen, Benutzungsdienst, Beratung, Öffentlichkeits- und Veranstaltungsarbeit, sowie in der Nutzung der Bibliothekssoftware bibliothecaPlus von OCLC.`
+    `Im Laufe der Ausbildung konnte sich Frau @nachname vertiefte Fachkenntnisse in allen Bereichen der bibliotheksspezifischen Arbeit aneignen, darunter Erwerbung, formale und inhaltliche Erschließung, bibliothekstechnische Medienbearbeitung, Beschaffen und Bereitstellen von Medien und Informationen, Benutzungsdienst, Beratung, Öffentlichkeits- und Veranstaltungsarbeit, sowie in der Nutzung der Bibliothekssoftware BibliothecaPlus von OCLC.`
     ,
     `Während der Ausbildung erwarb Frau @nachname erweiterte Kenntnisse in den Programmiersprachen Java und C++. Sie erstellte serverseitige Webapplikationen mit der Scriptsprache PHP und HTML/CSS. Als Datenbankmanagementsysteme wurden Microsoft Access und Oracle MySQL verwendet. Darüber hinaus konnte sie sich weitreichende Anwenderkenntnisse in Microsoft Desktop- und Serverbetriebssystemen sowie Grundlagen in Linux und Netzwerktechnik aneignen.`
     ,
@@ -241,7 +241,7 @@ Wareneingangskontrolle, Auszeichnung, Verräumung und Lagerhaltung der Waren nac
     ,
     `<dt><dd>- Lohnabrechnungen manuell und mit dem Programm DATEV Lohn- und Gehalt,</dd>
     <dd>- Einkommensteuererklärungen mit den Programmen DATEV Einkommensteuer und TAX,</dd>
-    <dd>- Kleinere Buchhaltungen mit den Programmen DATEV Rewe und mms,</dd>
+    <dd>- Kleinere Buchhaltungen mit den Programmen DATEV Rewe und MMS,</dd>
     <dd>- Musterfall DATEV zur Erstellung eines Jahresabschlusses mit Steuererklärungen mit den DATEV-Programmen.</dd></dt>`
     ,
     `Im ersten Ausbildungsjahr wurden Frau @nachname mittels Ausbildungsmodulen und Projektarbeiten grundlegende Kenntnisse und Fertigkeiten des technischen Zeichnens und der Metalltechnik vermittelt. Schwerpunkte der fachlichen Qualifizierung war das Kennenlernen von fertigungs- und montagetechnischen Abläufen durch gezielte Projekte im Bereich Neu- und Umkonstruktion. Unter Berücksichtigung von Gestaltungsvorgaben für Bauteilformen wurden mittels CAD virtuelle Bauteile und Baugruppen, Fertigungszeichnungen und Stücklisten erstellt.
@@ -255,7 +255,7 @@ Wareneingangskontrolle, Auszeichnung, Verräumung und Lagerhaltung der Waren nac
     ,
     `In der Ausbildung zur Verwaltungsfachangestellten wurden insbesondere Kenntnisse in der Rechtsanwendung in den Bereichen Organisation, Personalwesen, Finanzwesen und Sozialrecht vermittelt und berufliche Inhalte vertraut gemacht. Weiterhin wurden Fertigkeiten und Kenntnisse der wichtigsten MS-Office-Produkte, wie Word, Excel, Outlook und auch PowerPoint weitergegeben. Während eines 6-monatigen Praktikums wurden überdies die in der kommunalen Praxis eingesetzten Programme - @programme - angewendet.`
     ,
-    `Während der Ausbildung konnte Frau @nachname vertiefte Programmkenntnisse erwerben, insbesondere durch die intensive Nutzung der Programme FinalCut 10, Adobe After Effects, Cubase sowie dem Programm DramaQueen zur Drehbucherstellung. Bei Liveproduktionen wurde sie an der Bildregie und als Kamerafrau eingesetzt. Dort lernte sie unter realen Arbeitsbedingungen die Abläufe von Liveproduktionen kennen.
+    `Während der Ausbildung konnte Frau @nachname vertiefte Programmkenntnisse erwerben, insbesondere durch die intensive Nutzung der Programme Final Cut 10, Adobe After Effects, Cubase sowie dem Programm DramaQueen zur Drehbucherstellung. Bei Liveproduktionen wurde sie an der Bildregie und als Kamerafrau eingesetzt. Dort lernte sie unter realen Arbeitsbedingungen die Abläufe von Liveproduktionen kennen.
 
 Bei allen Produktionen zeigte Frau @nachname großes Interesse und überzeugte durch ihre gewissenhafte, analytische und präzise Mitarbeit, unter anderem bei der Filmproduktion eines Imagefilms für das Technische Hilfswerk für die sie die gesamte Leitung übernahm.
     
@@ -263,7 +263,7 @@ Für die Schauspielproduktion Der Prozess des Theater und Orchester Heidelberg p
     
 Im Jahresprojekt GoTango übernahm sie die Planung, Regie und den Live-Schnitt während der Veranstaltung. Das Multimedia-Event war mit 500 Besuchern ein voller Erfolg.`
     ,
-    `Während der Ausbildungszeit konnte Frau @nachname vertiefte Fachkenntnisse erwerben, insbesondere durch die Adobe Programme InDesign, Illustrator, sowie im EBV Bereich mit Photoshop. Mit Hilfe dieses Wissens konnte sie ihre kreativen Stärken optimal in die Auftragsbearbeitung einfliessen lassen. Sie konnte Kundenwünsche schnell erfassen und lieferte so sehr effektiv passgenaue Lösungen. Darüber hinaus konnte sie weitreichende Anwenderkenntnisse mit dem Apple iPad und dem digitalen Arbeiten damit erlangen. Insbesondere im Bereich Gestaltung zeigte Frau @nachname großes Interesse und überzeugte durch ihre kreative, gewissenhafte, analytische und präzise Mitarbeit.`
+    `Während der Ausbildungszeit konnte Frau @nachname vertiefte Fachkenntnisse erwerben, insbesondere durch die Adobe Programme InDesign, Illustrator, sowie im EBV Bereich mit Photoshop. Mit Hilfe dieses Wissens konnte sie ihre kreativen Stärken optimal in die Auftragsbearbeitung einfließen lassen. Sie konnte Kundenwünsche schnell erfassen und lieferte so sehr effektiv passgenaue Lösungen. Darüber hinaus konnte sie weitreichende Anwenderkenntnisse mit dem Apple iPad und dem digitalen Arbeiten damit erlangen. Insbesondere im Bereich Gestaltung zeigte Frau @nachname großes Interesse und überzeugte durch ihre kreative, gewissenhafte, analytische und präzise Mitarbeit.`
 ]
 
 let fachwissenTexts = [
@@ -285,7 +285,7 @@ let fachwissenTexts = [
         "Herr @nachname beherrschte seinen Arbeitsbereich umfassend und fand brauchbare Lösungen.",
         "Er verfügt über ein solides Fachwissen in seinem Fachgebiet, das er zur Lösung seiner Aufgaben einsetzte. Daher war Herr @nachname in unserem Hause ein oft gesuchter Ansprechpartner.",
         "Herr @nachname besitzt ein jederzeit verfügbares Fachwissen, mit dessen Hilfe er seine Aufgaben erfolgreich löste. Er verband technische Kompetenz mit wirtschaftlichem Sachverstand.",
-        "Herr @nachname hat ein detailliertes Fachwissen, das er beim Auftreten neuer Fragen und Entwicklungen sicher einsetzte. Er aktualiserte sein Wissen und hat die erworbenen Kenntnisse gut praktisch umgesetzt."
+        "Herr @nachname hat ein detailliertes Fachwissen, das er beim Auftreten neuer Fragen und Entwicklungen sicher einsetzte. Er aktualisierte sein Wissen und hat die erworbenen Kenntnisse gut praktisch umgesetzt."
     ],
     // Ausreichend 
     [
@@ -312,7 +312,7 @@ let fachwissenTextsFrau = [
         "Frau @nachname beherrschte ihren Arbeitsbereich umfassend und fand brauchbare Lösungen.",
         "Sie verfügt über ein solides Fachwissen in ihrem Fachgebiet, das sie zur Lösung ihrer Aufgaben einsetzte. Daher war Frau @nachname in unserem Hause eine oft gesuchte Ansprechpartnerin.",
         "Frau @nachname besitzt ein jederzeit verfügbares Fachwissen, mit dessen Hilfe sie ihre Aufgaben erfolgreich löste. Sie verband technische Kompetenz mit wirtschaftlichem Sachverstand.",
-        "Frau @nachname hat ein detailliertes Fachwissen, das sie beim Auftreten neuer Fragen und Entwicklungen sicher einsetzte. Sie aktualiserte ihr Wissen und hat die erworbenen Kenntnisse gut praktisch umgesetzt."
+        "Frau @nachname hat ein detailliertes Fachwissen, das sie beim Auftreten neuer Fragen und Entwicklungen sicher einsetzte. Sie aktualisierte ihr Wissen und hat die erworbenen Kenntnisse gut praktisch umgesetzt."
     ],
     // Ausreichend
     [
@@ -604,7 +604,7 @@ let sozialesTexts = [
         "Sein Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war stets ausgezeichnet.",
         "Herr @nachname war ein allseits beliebter Auszubildender. Sein Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war stets vorbildlich.",
         "Aufgrund seines hilfsbereiten und freundlichen Wesens erfreute Herr @nachname sich hoher Wertschätzung seiner Kunden, Vorgesetzten und Kollegen. Sein Verhalten war stets vorbildlich.",
-        "Wegen seiner freundlichen und zuvorkommenden Art wurde er von Kunden, Vorgesetzten und Kollegen stets hoch geschätzt und respektiert."
+        "Wegen seiner freundlichen und zuvorkommenden Art wurde er von Kunden, Vorgesetzten und Kollegen stets hochgeschätzt und respektiert."
     ],
     // Gut
     [
@@ -634,7 +634,7 @@ let sozialesTextsFrau = [
         "Ihr Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war stets ausgezeichnet.",
         "Frau @nachname war eine allseits beliebte Auszubildende. Ihr Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war stets vorbildlich.",
         "Aufgrund ihres hilfsbereiten und freundlichen Wesens erfreute Frau @nachname sich hoher Wertschätzung ihrer Kunden, Vorgesetzten und Kollegen. Ihr Verhalten war stets vorbildlich.",
-        "Wegen ihrer freundlichen und zuvorkommenden Art wurde sie von Kunden, Vorgesetzten und Kollegen stets hoch geschätzt und respektiert."
+        "Wegen ihrer freundlichen und zuvorkommenden Art wurde sie von Kunden, Vorgesetzten und Kollegen stets hochgeschätzt und respektiert."
     ],
     // Gut
     [
