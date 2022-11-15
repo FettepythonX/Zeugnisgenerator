@@ -1,3 +1,7 @@
+@font-face {
+	font-family: 'SRH Text Regular';
+	src: url('../fonts/SRHText_Rg.ttf');
+}
 body {
     background-color:rgb(223, 72, 7);
 }
@@ -9,6 +13,8 @@ body {
     height: auto;
 	width: 300px;
     border: 2px solid rgba(255, 255, 255, 0.4);
+	
+	
 }
 
 .Zeile{
@@ -43,3 +49,24 @@ a{
 	background-color:white;
 }
 
+#gender{
+	width: 160px; 
+	font-family: 'SRH Text Regular';
+	height: 20px;
+  }
+  
+  #job{
+	width: 140px; 
+	font-family: 'SRH Text Regular';
+	height: 20px;
+  }
+  #nachname{
+	font-family: 'SRH Text Regular';
+	
+  }
+  #vorname{
+	font-family: 'SRH Text Regular';
+  }
+  #ausbilderGender{
+	font-family: 'SRH Text Regular';
+  }

@@ -8,6 +8,7 @@
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  font-family: 'SRH Text Regular';
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -26,8 +27,12 @@
 
 .dateneingabe{
   border-width: 2px 1px 2px 2px;
+  
 }
+#Dateneingabe{
+  font-family: 'SRH Text Regular';
 
+}
 .individuell{
   background-color: darkorange;
 }
@@ -74,4 +79,15 @@
 #customTextIndividuell{
   width: 1000px;
   height: 300px;
+}
+#gender{
+  width: 140px; 
+  font-family: 'SRH Text Regular';
+  height: 20px;
+}
+
+#job{
+  width: 140px; 
+  font-family: 'SRH Text Regular';
+  height: 20px;
 }
