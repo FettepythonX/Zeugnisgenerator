@@ -12,7 +12,7 @@ let ausbilderName;
 let praktikum;
 let programme = "";
 let tabColorWrong = "#FF0000";
-let tabColorRight = "#00FF00";
+let tabColorRight = "rgb(15, 148, 53)";
 let categories = ["Fachwissen", "Einsatz", "Arbeitsweise", "Pensum", "Arbeitserfolg", "Leistung", "Soziales", "Abschied"];
 
 
