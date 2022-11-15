@@ -1,4 +1,4 @@
-autosize();
+
 function autosize(){
     var text = $('.autosize');
 
