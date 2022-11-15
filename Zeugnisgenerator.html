@@ -12,6 +12,12 @@
     <script src="scripts/textbausteine.js"></script>
     <title>Zeugnisgenerator</title>
 </head>
+<script>
+    function textAreaAdjust(element) {
+      element.style.height = "1px";
+      element.style.height = (25+element.scrollHeight)+"px";
+    }
+</script>
 <body>
     <div class="screen">
         <!-- Tab links -->
@@ -427,8 +433,22 @@
                 </div>
             </div>
         </div>
+<!--
 
-        <div id="Erstellen" class="tabcontent">
+    onload="textAreaAdjust(azubiInfoText)"
+    onload="textAreaAdjust(srhInfoText)"
+    onload="textAreaAdjust(individuellText)"
+    onload="textAreaAdjust(fachwissenText)"
+    onload="textAreaAdjust(einsatzText)"
+    onload="textAreaAdjust(arbeitsweiseText)"
+    onload="textAreaAdjust(pensumText)"
+    onload="textAreaAdjust(arbeitserfolgText)"
+    onload="textAreaAdjust(leistungText)"
+    onload="textAreaAdjust(sozialesText)"
+    onload="textAreaAdjust(abschiedText)"
+-->
+
+        <div id="Erstellen" class="tabcontent" onload="textAreaAdjust(srhInfoText)" >
             <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
             <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
             <hr>
