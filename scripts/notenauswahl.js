@@ -64,6 +64,7 @@ function openTab(evt, tabName) {
             if(gender == 0)
                 azubiInfo = azubiInfo.replace("@anrede", "Herr");
             else
+                azubiInfo = azubiInfoTextFrau;
                 azubiInfo = azubiInfo.replace("@anrede", "Frau");
             azubiInfo = azubiInfo.replace("@vorname", vorname);
             azubiInfo = azubiInfo.replace("@nachname", nachname);
