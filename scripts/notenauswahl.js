@@ -112,48 +112,56 @@ function openTab(evt, tabName) {
             
             // Write selected grade text into textarea, if something is selected
             textRadios = document.getElementsByName("radioFachwissen");
+            document.getElementById("fachwissenText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("fachwissenText").value = document.getElementById("fachwissen"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioEinsatz");
+            document.getElementById("einsatzText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("einsatzText").value = document.getElementById("einsatz"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioArbeitsweise");
+            document.getElementById("arbeitsweiseText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("arbeitsweiseText").value = document.getElementById("arbeitsweise"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioPensum");
+            document.getElementById("pensumText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("pensumText").value = document.getElementById("pensum"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioArbeitserfolg");
+            document.getElementById("arbeitserfolgText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("arbeitserfolgText").value = document.getElementById("arbeitserfolg"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioLeistung");
+            document.getElementById("leistungText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("leistungText").value = document.getElementById("leistung"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioSoziales");
+            document.getElementById("sozialesText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("sozialesText").value = document.getElementById("soziales"+(i+1)).innerHTML;
                 }
             }
             textRadios = document.getElementsByName("radioAbschied");
+            document.getElementById("abschiedText").value = "";
             for(i = 0; i < textRadios.length; i++){
                 if(textRadios[i].checked == true){
                     document.getElementById("abschiedText").value = document.getElementById("abschied"+(i+1)).innerHTML;

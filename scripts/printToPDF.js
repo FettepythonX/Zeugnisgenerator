@@ -19,8 +19,8 @@ function getBrowserName(){
     // if not, inform user and exit function
     for(i = 0; i < tabDone.length; i++){
       if(tabDone[i] == false){
-        alert("All tabs must be green");
-        return;
+        //alert("All tabs must be green");
+        //return;
       }
     }
 
@@ -88,8 +88,8 @@ function getBrowserName(){
   <div class="fusszeile">
     <div>
       <div class="fusszeileTitel" style="margin-left: 14.6px">Ein Unternehmen der SRH</div>
-      <img class="fusszeileLogo" src="shr_logo.png">
-      <div class="fusszeileLogoText" style="right: 276px; bottom: 111px; text-align: right;">
+      <img class="fusszeileLogo" src="styles/shr_logo.png">
+      <div class="fusszeileLogoText" style="right: 286px; bottom: 111px; text-align: right;">
         Organisation der
         <br>
         Vereinten Nationen für
@@ -99,7 +99,7 @@ function getBrowserName(){
         Kultur und Kommunikation
       </div>
 
-      <div class="fusszeileLogoText" style="right: 170px; bottom: 111px; text-align: left;">
+      <div class="fusszeileLogoText" style="right: 182px; bottom: 111px; text-align: left;">
         <b>
         Berufsbildungswerk <br>
         Neckargemünd <br>
@@ -125,7 +125,7 @@ function getBrowserName(){
         Telefax<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-2123
       </div>
 
-      <div class="fusszeileText" style="margin-left: 35px;">
+      <div class="fusszeileText" style="margin-left: 20px;">
         <br>
         Info.bbwn@srh.de
         <br>
@@ -136,14 +136,14 @@ function getBrowserName(){
         Sascha Lohwaßer
       </div>
 
-      <div class="fusszeileText" style="margin-left: 40px;">
+      <div class="fusszeileText" style="margin-left: 20px;">
         <br>
         HRB 335376 Amtsgericht Mannheim
         <br>
         USt.-IdNr.: DE 174 981 459
       </div>
 
-      <div class="fusszeileText" style="float: right; margin-right: 5px;">
+      <div class="fusszeileText" style="float: right; margin-right: 0px;">
         <br>
         Bankverbindung:
         <br>

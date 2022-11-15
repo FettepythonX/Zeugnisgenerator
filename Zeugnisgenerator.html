@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_notenauswahl.css">
-    <link rel="stylesheet" href="styleMain.css">
-    <link rel="stylesheet" href="printToPdf.css">
-    <script src="notenauswahl.js"></script>
-    <script src="printToPDF.js"></script>
-    <script src="textbausteine.js"></script>
-    <title>Thing</title>
+    <link rel="stylesheet" href="styles/style_notenauswahl.css">
+    <link rel="stylesheet" href="styles/styleMain.css">
+    <link rel="stylesheet" href="styles/printToPdf.css">
+    <script src="scripts/notenauswahl.js"></script>
+    <script src="scripts/printToPDF.js"></script>
+    <script src="scripts/textbausteine.js"></script>
+    <title>Zeugnisgenerator</title>
 </head>
 <body>
     <div class="screen">
         <!-- Tab links -->
         <div class="tab">
-            <button id="tabDateneingabe"    class="tablinks dateneingabe active" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
-            <button id="tabIndividuell"     class="tablinks individuell" onclick="openTab(event, 'Individuell')">Individuell</button>
-            <button id="tabFachwissen"      class="tablinks" onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
-            <button id="tabEinsatz"         class="tablinks" onclick="openTab(event, 'Einsatz')">Einsatz</button>
-            <button id="tabArbeitsweise"    class="tablinks" onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
-            <button id="tabPensum"          class="tablinks" onclick="openTab(event, 'Pensum')">Pensum</button>
-            <button id="tabArbeitserfolg"   class="tablinks" onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
-            <button id="tabLeistung"        class="tablinks" onclick="openTab(event, 'Leistung')">Leistung</button>
-            <button id="tabSoziales"        class="tablinks" onclick="openTab(event, 'Soziales')">Soziales</button>
-            <button id="tabAbschied"        class="tablinks" onclick="openTab(event, 'Abschied')">Abschied</button>
-            <button id="tabErstellen"       class="tablinks erstellen" onclick="openTab(event, 'Erstellen')">Erstellen</button>
+            <button id="tabDateneingabe"    class="tablinks dateneingabe active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabIndividuell"     class="tablinks individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
+            <button id="tabFachwissen"      class="tablinks"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
+            <button id="tabEinsatz"         class="tablinks"                        onclick="openTab(event, 'Einsatz')">Einsatz</button>
+            <button id="tabArbeitsweise"    class="tablinks"                        onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
+            <button id="tabPensum"          class="tablinks"                        onclick="openTab(event, 'Pensum')">Pensum</button>
+            <button id="tabArbeitserfolg"   class="tablinks"                        onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
+            <button id="tabLeistung"        class="tablinks"                        onclick="openTab(event, 'Leistung')">Leistung</button>
+            <button id="tabSoziales"        class="tablinks"                        onclick="openTab(event, 'Soziales')">Soziales</button>
+            <button id="tabAbschied"        class="tablinks"                        onclick="openTab(event, 'Abschied')">Abschied</button>
+            <button id="tabErstellen"       class="tablinks erstellen"              onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
 
         <!-- Tab content -->
@@ -122,7 +122,7 @@
                             </form>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)">
+                            <input type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -454,142 +454,11 @@
   
 	</div>
 
+    <div class="loadFont">loadme</div>
     <!--Everything in this div is hidden on the page, but printed out by window.print()-->
     <div class="print" id="printMe"> 
-        <table role="presentation">
-            <thead>
-              <tr>
-                <td>
-                  <div class="kopfzeile-platz"></div>
-                </td>
-              </tr>
-            </thead>
-        
-            <tbody class="report-content">
-              <tr>
-                <td>
-                  <br>
-                  <br>
-                  <h2>Ausbildungszeugnis</h2>
-        
-                  <p>@azubiInfo</p>
-        
-                  <p>@srhInfo</p>
-        
-                  <p>@individuellText</p>
-        
-                  <p>@fachwissenText</p>
-        
-                  <p>@einsatzText</p>
-        
-                  <p>@arbeitsweiseText</p>
-        
-                  <p>@pensumText</p>
-        
-                  <p>@arbeitserfolgText</p>
-        
-                  <p>@leistungText</p>
-        
-                  <p>@sozialesText</p>
-        
-                  <p>@abschiedText</p>
-        
-        
-        
-                  <div class="ending">
-                    <div class="datum">@datum</div>
-                    <div class="ausbildungsleiter">@ausbildungsleiter<br><br><br><br>@ausbildungsleiterName</div>
-                    <div class="ausbilder">@ausbilder<br><br><br><br>@ausbilderName</div>
-                  </div>
-        
-                </td>
-              </tr>
-            </tbody>
-        
-            <tfoot>
-              <tr>
-                <td>
-                  <div class="fusszeile-platz"></div>
-                </td>
-              </tr>
-            </tfoot>
-        
-          </table>
-        
-          <div class="fusszeile">
-            <div>
-              <div class="fusszeileTitel" style="margin-left: 14.6px">Ein Unternehmen der SRH</div>
-              <img class="fusszeileLogo" src="shr_logo.png">
-              <div class="fusszeileLogoText" style="right: 276px; bottom: 111px; text-align: right;">
-                Organisation der
-                <br>
-                Vereinten Nationen für
-                <br>
-                Bildung, Wissenschaft,
-                <br>
-                Kultur und Kommunikation
-              </div>
-        
-              <div class="fusszeileLogoText" style="right: 170px; bottom: 111px; text-align: left;">
-                <b>
-                Berufsbildungswerk <br>
-                Neckargemünd <br>
-                </b>
-                Mitglied des Netzwerks der <br>
-                UNESCO-Projektschulen <br>
-              </div>
-            </div>
-        
-            <div>
-              <div class="fusszeileText" style="margin-left: 14.6px">
-                <br>
-                SRH Berufsbildungswerk
-                <br> 
-                Neckargemünd GmbH
-                <br>
-                Im Spitzerfeld 25
-                <br>
-                69151 Neckargemünd
-                <br>
-                Telefon<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-1010
-                <br>
-                Telefax<pre class="whitespace" style="font-size: 6px;">    </pre>+49 (0) 6223 89-2123
-              </div>
-        
-              <div class="fusszeileText" style="margin-left: 35px;">
-                <br>
-                Info.bbwn@srh.de
-                <br>
-                www.bbw-neckargemuend.de
-                <br>
-                Geschäftsführung:
-                <br>
-                Sascha Lohwaßer
-              </div>
-        
-              <div class="fusszeileText" style="margin-left: 40px;">
-                <br>
-                HRB 335376 Amtsgericht Mannheim
-                <br>
-                USt.-IdNr.: DE 174 981 459
-              </div>
-        
-              <div class="fusszeileText" style="float: right; margin-right: 5px;">
-                <br>
-                Bankverbindung:
-                <br>
-                Evangelische Bank eG
-                <br>
-                BLZ 520 604 10
-                <br>
-                Konto 5 010 357
-                <br>
-                IBAN DE 91 5206 0410 0005 0103 57
-                <br>
-                BIC GENODEF1EK1
-              </div>
-            </div>
-          </div>
+        <!--Load image for print-->
+        <img class="fusszeileLogo" src="styles/shr_logo.png">
     </div>
 </body>
 </html>
