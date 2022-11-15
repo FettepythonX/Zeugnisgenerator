@@ -51,7 +51,7 @@
   } 
 
   .textbaustein {
-    display: inline-block;
+    display: inline-flex;
     width: 500px;
   }
 
