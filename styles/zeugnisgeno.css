@@ -6,8 +6,12 @@
 
    /* Style the tab */
    .tab {
+    display: table;
     overflow: hidden;
     border:none;
+    margin: auto;
+color: aqua;
+    align-items: center;
     /*background-color: #f1f1f1;*/
     background-color: #404040;
 
