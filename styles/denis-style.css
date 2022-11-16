@@ -192,10 +192,10 @@ a{
    
    /* Style the tab */
    .tab {
-    padding-left: 1%;
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    background-color: rgb(223,72,7);    
+        display: table;
+	    margin: auto;
+        overflow: hidden;
+        background-color: rgb(223,72,7);    
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -223,7 +223,6 @@ a{
   /* Create an active/current tablink class */
   .tablinks.active {
     border-width: 2px;
-    border-color: lightblue;
   }
   
   /* Style the tab content */
@@ -231,8 +230,6 @@ a{
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
-    
   } 
   
   .textbaustein {
