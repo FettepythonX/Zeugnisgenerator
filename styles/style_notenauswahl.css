@@ -21,7 +21,6 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
 }
 
 
@@ -41,13 +40,13 @@
 
 /* Change background color of buttons on hover */
 .tablinks:hover {
-  border-width: 2px;
+  border-width: 4px 2px 2px 4px;
   border-color: #ddd;
 }
 
 /* Create an active/current tablink class */
 .tablinks.active {
-  border-width: 2px;
+  border-width: 2px 4px 4px 2px;
   border-color: lightblue;
 }
 
