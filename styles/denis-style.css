@@ -2,6 +2,7 @@
 	font-family: 'SRH Text Regular';
 	src: url('../fonts/SRHText_Rg.ttf');
 }
+
 body {
     background-color:rgb(223, 72, 7);
 }
@@ -13,8 +14,6 @@ body {
     height: auto;
 	width: 300px;
     border: 2px solid rgba(255, 255, 255, 0.4);
-	
-	
 }
 
 .Zeile{
@@ -28,13 +27,15 @@ body {
 }
 
 .autosize {
-	width: 90%;
+	width: 100%;
+    resize: vertical;
 }
 
 a{
     color: black;
     text-decoration: none;
 }
+
 #start{
     padding-top: 3px;
 	margin: auto;
@@ -42,6 +43,7 @@ a{
     height: 270px;
 	width: 600px;
 }
+
 #infos{
     margin: auto;
 	width: 99%;
@@ -72,7 +74,6 @@ a{
   }
   
   .loadFont{
-     
       visibility: hidden;
       position: absolute;
   }
@@ -82,6 +83,7 @@ a{
           size: A4 !important;
           margin: 0mm 17mm 0mm 17mm !important;
       }
+
       body{
           background-color: white;
           font-family: 'SRH Text Regular';
@@ -90,14 +92,17 @@ a{
       .kopfzeile-platz{
           height: 150px;
       }
+
       .fusszeile-platz{
           height: 250px;
       }
+
       .whitespace{
           padding: 0; 
           margin: 0; 
           display: inline-block;
       }
+
       .fusszeile{
           display: block;
           position: fixed;
@@ -106,6 +111,7 @@ a{
           width: 100%;
           padding: 0 13.3px 0 0px;
       }
+
       .fusszeileText{
           vertical-align: top;
           display:inline-block;
@@ -113,12 +119,14 @@ a{
           font-family: inherit;
           line-height: 15px;
       }
+
       .fusszeileTitel{
           font-size: 9px;
           font-family: inherit;
           font-weight: bold;
           display: inline-block;
       }
+
       .fusszeileLogo{
           position: absolute;
           right: 89px;
@@ -126,6 +134,7 @@ a{
           width: 280px;
           /*height: 1.92cm;*/
       }
+
       .fusszeileLogoText{
           font-family: inherit;
           background-color: white;
@@ -158,18 +167,22 @@ a{
           margin-top: 25px;
           white-space: pre-wrap;
       }
+
       dd{
           margin-left: 6.6px;
           margin-top: 0px;
       }
+
       .datum{
           margin-top: 60px;
           margin-bottom: 30px;
       }
+
       .ausbildungsleiter, .ausbilder{
           display: inline-block;
           width: 265px;
       }
+
       .ausbilder{
           float: right;
       }
@@ -181,8 +194,6 @@ a{
       .print {
           display: block;        
       }
-      
-  
   }
 
   @font-face {
@@ -230,6 +241,9 @@ a{
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
+
+    height: calc(100vh - 110px);
+    overflow: auto; /* Scrollbar wegen fester Größe*/
   } 
   
   .textbaustein {
@@ -248,6 +262,7 @@ a{
     width: 1000px;
     height: 300px;
   }
+
   .schriftformat{
       font-family: 'SRH Text Regular';
       /* Komplementärfarbe zum Hintergrund */
