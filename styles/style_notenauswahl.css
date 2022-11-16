@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
   font-family: 'SRH Text Regular';
   src: url('../fonts/SRHText_Rg.ttf');
  }
@@ -7,28 +7,24 @@
  .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  
+  background-color: rgb(204, 204, 204);
+  padding: 10px;
+  width: 80%;
+  margin: auto; 
+  border-radius: 20px;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tablinks {
-  background-color: rgb(223,72,7);
-  border-width: 2px;
+  background-color: rgb(255,0,0); /* Komplementärfarbe: rgb(32,183,248)*/
+  border-width: 2px 4px 4px 2px;
   border-color: rgb(190, 189, 189);
   color: rgb(255, 255, 255);
   padding: 12px 16px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
 }
-
-
-.dateneingabe{
-  border-width: 2px;
-}
-
 
 .individuell{
   background-color: darkorange;
@@ -36,46 +32,120 @@
 
 .erstellen{
   background-color:rgb(223,72,7);
-  border-width: 2px;
 }
 
-/* Change background color of buttons on hover */
+/* Change border color of buttons on hover */
 .tablinks:hover {
-  border-width: 2px;
-  border-color: #ddd;
+  border-width: 4px 2px 2px 4px;
+  border-color: blue;
 }
 
 /* Create an active/current tablink class */
 .tablinks.active {
-  border-width: 2px;
-  border-color: lightblue;
+  border-width: 4px 2px 2px 4px;
+  border-color: white;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  padding: 0px 12px;
+  width: 80%;
+  margin: auto;
   border-top: none;
-  
 } 
 
 .textbaustein {
   display: inline-flex;
-  width: 500px;
-  
+  vertical-align: middle;
+  width: 95%;
 }
 
 .textAuswahl{
   display: none;
-  margin: 20px 0 20px 0;
- 
+  font-family: 'SRH Text Regular';
+  font-size: 18px;
+  margin: 20px 0 20px 32px;
+  width: 80%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;  
+  background-color: whitesmoke;
+  padding: 5px;
 }
 
 #customTextIndividuell{
-  width: 1000px;
+  width: 210mm;
+  padding: 10px;
   height: 300px;
 }
-.schriftformat{
-	font-family: 'SRH Text Regular';
+
+#textIndividuell{
+  background-color: white;
+  width: 210mm;
+  padding: 10px;
+  padding-bottom: 40px;
+  text-align: justify;
+  font-family: 'SRH Text Regular';
+  font-size: 15px;
+  line-height: 22px;
+  white-space: pre-wrap;
+  border: black solid 1px;
+}
+
+dd { 
+  margin-bottom: -40px;
+}
+
+.divInfoText, .divButtonField, .divNoten{
+  font-family: 'SRH Text Regular';
+  font-size: 18px;
+  background-color: #ccc;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.divButtonField{
+  height: 50px;
+  clear: both;
+}
+
+h3 {
+  font-family: 'SRH Text Regular';
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.labelNote{
+  font-family: 'SRH Text Regular';
+  font-size: 22px;
+  margin-right: 25px;
+}
+
+textarea{
+  font-family: 'SRH Text Regular';
+  font-size: 16px;
+}
+
+.buttonTabErstellen{
+  font-family: 'SRH Text Regular';
+  font-size: 24px;
+  color: white;
+  background-color: rgb(223,72,7);
+  border-color: white;
+  border-width: 2px 4px 4px 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 25px;
+  vertical-align: top;
+  float: right;
+}
+
+.buttonTabErstellen:hover{
+  border-width: 4px 2px 2px 4px;
+  border-color: blue;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +15,8 @@
 <body>
     <div class="screen">
         <!-- Tab links -->
-        <div class="tab schriftformat">
-            <button id="tabDateneingabe"    class="tablinks dateneingabe active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+        <div class="tab">
+            <button id="tabDateneingabe"    class="tablinks active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
             <button id="tabIndividuell"     class="tablinks individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
             <button id="tabFachwissen"      class="tablinks"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
             <button id="tabEinsatz"         class="tablinks"                        onclick="openTab(event, 'Einsatz')">Einsatz</button>
@@ -30,17 +30,17 @@
         </div>
 
         <!-- Tab content -->
-        <div id="Dateneingabe" class="tabcontent schriftformat" style="display:block">
+        <div id="Dateneingabe" class="tabcontent" style="display:block">
+            <div class="divInfoText">
+                Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
+                <br>
+                <br>
+                Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
+                <br>
+                <br>
+                Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
+            </div>
             <div id="start">
-                <div id="infos">
-                      <!-- test -->
-                    <p>
-                        Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
-                        Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
-                        Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
-                    </p>
-                    <p></p>
-                </div>
                 <div class="Tabelle">
                     <div class="Zeile">
                         <div class="Zelle">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select tabindex="1" id="gender" class="schriftformat" name="Anrede_drop_down" onClick="updateGender()" >
+                                <select tabindex="1" id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
                                     <option value="0">Herr</option>
                                     <option value="1">Frau</option>
                                 </select>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#">
-                                <select tabindex="6" id="job" class="schriftformat" name="Berufe_drop_down" onChange="update()">
+                                <select tabindex="6" id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
                                     <option> Bürokraft </option>
                                     <option> Büropraktiker </option>
                                     <option> Elektroniker Automatisierungstechnik </option>
@@ -98,13 +98,13 @@
                             <label>Nachname: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="2" type="text" id="nachname" class="schriftformat" name="Nachname"  onchange="updateNachname(value)">
+                            <input tabindex="2" type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
                         </div>
                         <div class="Zelle">
                             <label>mit Praktikum: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="7" type="checkbox" id="praktikum" class="schriftformat" value="im_Praktikum" onclick="update()" disabled>
+                            <input tabindex="7" type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
                         </div>
                     </div>
                     <div class="Zeile">
@@ -112,18 +112,18 @@
                             <label>Vorname: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="3" type="text" id="vorname" class="schriftformat" name="Vorname" onchange="updateVorname(value)">
+                            <input tabindex="3" type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select tabindex="8" name="Ausbilder" id="ausbilderGender" class="schriftformat">
+                                <select tabindex="8" name="Ausbilder" id="ausbilderGender">
                                     <option>Ausbilder</option>
                                     <option>Ausbilderin</option>
                                 </select>
                             </form>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="9" type="text" id="ausbilder" class="schriftformat" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
+                            <input tabindex="9" type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -131,13 +131,13 @@
                             <label>Geburtsort: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="4" type="text" id="geburtsort" class="schriftformat" name="Geburtsort" onchange="updateGeburtsort(value)">
+                            <input tabindex="4" type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsbeginn: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="10" type="date" id="ausbildungsbeginn" class="schriftformat" onchange="updateAusbildungsbeginn(value)">
+                            <input tabindex="10" type="date" id="ausbildungsbeginn" onchange="updateAusbildungsbeginn(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -145,13 +145,13 @@
                             <label>Geburtstag: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="5" type="date" id="geburtstag" class="schriftformat" onchange="updateGeburtstag(value)">
+                            <input tabindex="5" type="date" id="geburtstag" onchange="updateGeburtstag(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsende: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="11" type="date" id="ausbildungsende" class="schriftformat" onchange="updateAusbildungsende(value)">
+                            <input tabindex="11" type="date" id="ausbildungsende" onchange="updateAusbildungsende(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -159,15 +159,15 @@
                             <label id="pr" hidden> Programme: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="programme" name="programme"  onchange="updateProgramme(value)" hidden>
+                            <input type="text" id="programme" name="programme" onchange="updateProgramme(value)" hidden>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="Individuell" class="tabcontent schriftformat">
-            <div>
+        <div id="Individuell" class="tabcontent">
+            <div class="divInfoText">
                 Der untenstehende Text wurde entsprechend dem Ausbildungsgang des Auszubildenden ausgewählt.
                 Das Feld ganz unten ermöglicht Ihnen den berufsspezifischen Standardtext durch einen eigenen Text zu ersetzen.
                 <br> <br>
@@ -175,283 +175,251 @@
                 <br> <br>
                 Wenn Sie keinen eigenen Text eingeben, wird der oben angezeigte Standardtext des Berufes übernommen.
             </div>
-            <div><b>Standardtext des Berufes:</b></div>
-            <hr>
-            <div id="textIndividuell" style="width: 1000px">null</div>
-            <hr>
-            <div>Individueller Text:</div>
+            <h3>Standardtext des Berufes:</h3>
+            <div id="textIndividuell">null</div>
+            <h3>Individueller Text:</h3>
             <textarea id="customTextIndividuell"></textarea>
         </div>
 
 
 
-        <div id="Fachwissen" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteFachwissen" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteFachwissen" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Fachwissen" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="fachwissen1"></div>
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input id="radioFachwissen1" type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="fachwissen1" for="radioFachwissen1"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="fachwissen2"></div>
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input id="radioFachwissen2" type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="fachwissen2" for="radioFachwissen2"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="fachwissen3"></div>
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input id="radioFachwissen3" type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="fachwissen3" for="radioFachwissen3"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlFachwissen">
-                    <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="fachwissen4"></div>
+                <div class="textAuswahl" name="auswahlFachwissen">
+                    <input id="radioFachwissen4" type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="fachwissen4" for="radioFachwissen4"><label>
                 </div>
             </div>
         </div>
 
-        <div id="Einsatz" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteEinsatz" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteEinsatz" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteEinsatz" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Einsatz" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="einsatz1"></div>
+                <div class="textAuswahl" name="auswahlEinsatz">
+                    <input id="radioEinsatz1" type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="einsatz1" for="radioEinsatz1"></label>
                 </div>
 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="einsatz2"></div>
+                    <input id="radioEinsatz2" type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="einsatz2" for="radioEinsatz2"></label>
                 </div>
 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="einsatz3"></div>
+                    <input id="radioEinsatz3" type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="einsatz3" for="radioEinsatz3"></label>
                 </div>
 
                 <div class="textAuswahl" name="auswahlEinsatz">
-                    <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="einsatz4"></div>
+                    <input id="radioEinsatz4" type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="einsatz4" for="radioEinsatz4"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Arbeitsweise" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteArbeitsweise" value="1"  onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteArbeitsweise" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Arbeitsweise" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitsweise1"></div>
-                </div>
-
-                <div class="textAuswahl schriftformat" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitsweise2"></div>
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input id="radioArbeitsweise1" type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitsweise1" for="radioArbeitsweise1"></label>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitsweise3"></div>
+                    <input id="radioArbeitsweise2" type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitsweise2" for="radioArbeitsweise2"></label>
                 </div>
 
                 <div class="textAuswahl" name="auswahlArbeitsweise">
-                    <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitsweise4"></div>
+                    <input id="radioArbeitsweise3" type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitsweise3" for="radioArbeitsweise3"></label>
+                </div>
+
+                <div class="textAuswahl" name="auswahlArbeitsweise">
+                    <input id="radioArbeitsweise4" type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitsweise4" for="radioArbeitsweise4"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Pensum" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNotePensum" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNotePensum" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNotePensum" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Pensum" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNotePensum" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNotePensum" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNotePensum" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlPensum">
-                    <input type="radio" name="radioPensum" onclick="changeSelectText(name)">
-                     <div class="textbaustein schriftformat" id="pensum1"></div>
+                <div class="textAuswahl" name="auswahlPensum">
+                    <input id="radioPensum1" type="radio" name="radioPensum" onclick="changeSelectText(name)">
+                     <label class="textbaustein" id="pensum1" for="radioPensum1"></lable>
                 </div>
 
             </div>
         </div>
 
-        <div id="Arbeitserfolg" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteArbeitserfolg" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteArbeitserfolg" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteArbeitserfolg" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Arbeitserfolg" class="tabcontent">
+            <div class="divNoten"> 
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitserfolg1"></div>
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input id="radioArbeitserfolg1" type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitserfolg1" for="radioArbeitserfolg1"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitserfolg2"></div>
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input id="radioArbeitserfolg2" type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitserfolg2" for="radioArbeitserfolg2"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitserfolg3"></div>
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input id="radioArbeitserfolg3" type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitserfolg3" for="radioArbeitserfolg3"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlArbeitserfolg">
-                    <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="arbeitserfolg4"></div>
+                <div class="textAuswahl" name="auswahlArbeitserfolg">
+                    <input id="radioArbeitserfolg4" type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="arbeitserfolg4" for="radioArbeitserfolg4"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Leistung" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteLeistung" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteLeistung" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteLeistung" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Leistung" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="leistung1"></div>
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input id="radioLeistung1" type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="leistung1" for="radioLeistung1"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="leistung2"></div>
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input id="radioLeistung2" type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="leistung2" for="radioLeistung2"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="leistung3"></div>
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input id="radioLeistung3" type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="leistung3" for="radioLeistung3"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlLeistung">
-                    <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="leistung4"></div>
+                <div class="textAuswahl" name="auswahlLeistung">
+                    <input id="radioLeistung4" type="radio" name="radioLeistung" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="leistung4" for="radioLeistung4"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Soziales" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteSoziales" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteSoziales" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteSoziales" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Soziales" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="soziales1"></div>
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input id="radioSoziales1" type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="soziales1" for="radioSoziales1"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="soziales2"></div>
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input id="radioSoziales2" type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="soziales2" for="radioSoziales2"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="soziales3"></div>
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input id="radioSoziales3" type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="soziales3" for="radioSoziales3"></label>
                 </div>
 
-                <div class="textAuswahl schriftformat" name="auswahlSoziales">
-                    <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="soziales4"></div>
+                <div class="textAuswahl" name="auswahlSoziales">
+                    <input id="radioSoziales4" type="radio" name="radioSoziales" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="soziales4" for="radioSoziales4"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Abschied" class="tabcontent schriftformat">
-            <div>
-                <input type="radio" name="radioNoteAbschied" value="1" onclick="changeGrade(value)">
-                <label>Sehr gut</label>
-                <input type="radio" name="radioNoteAbschied" value="2" onclick="changeGrade(value)">
-                <label>Gut</label>
-                <input type="radio" name="radioNoteAbschied" value="3" onclick="changeGrade(value)">
-                <label>Befriedigend</label>
-                <input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)">
-                <label>Ausreichend</label>
+        <div id="Abschied" class="tabcontent">
+            <div class="divNoten">
+                <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="1" onclick="changeGrade(value)"> Sehr gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="2" onclick="changeGrade(value)"> Gut</label>
+                <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="3" onclick="changeGrade(value)"> Befriedigend</label>
+                <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
             <div>
-                <div class="textAuswahl schriftformat" name="auswahlAbschied">
-                    <input type="radio" name="radioAbschied" onclick="changeSelectText(name)">
-                    <div class="textbaustein schriftformat" id="abschied1"></div>
+                <div class="textAuswahl" name="auswahlAbschied">
+                    <input id="radioAbschied1" type="radio" name="radioAbschied" onclick="changeSelectText(name)">
+                    <label class="textbaustein" id="abschied1" for="radioAbschied1"></label>
                 </div>
             </div>
         </div>
 
-        <div id="Erstellen" class="tabcontent schriftformat" onload="textAreaAdjust(srhInfoText)" >
-            <input type="button" value="Print" onclick="printDiv()">
-            <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
-            <hr>
-            <textarea class="autosize schriftformat" rows=4 id="azubiInfoText"></textarea>
+        <div id="Erstellen" class="tabcontent" onload="textAreaAdjust(srhInfoText)" >
+            <div class="divButtonField">
+                <input type="button" class="buttonTabErstellen" value="Zurücksetzen" onclick="zuruecksetzen()">
+                <input type="button" class="buttonTabErstellen" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
+            </div>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="srhInfoText">Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.</textarea>
+            <textarea class="autosize" rows=4 id="azubiInfoText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="individuellText"></textarea>
-            <textarea class="autosize schriftformat" rows=4 id="fachwissenText"></textarea>
+            <textarea class="autosize" rows=4 id="srhInfoText">Die SRH ist eine überregional tätige Unternehmensgruppe in den Bereichen Bildung, Gesundheit und Rehabilitation und beschäftigt insgesamt 15.000 Mitarbeiter. Dazu gehört auch die Berufsbildungswerk Neckargemünd GmbH mit rund 700 Mitarbeitern. Die Berufsbildungswerk Neckargemünd GmbH ist ein Unternehmen der außerbetrieblichen Berufsausbildung. Sie bietet vielfältige stationäre und ambulante Dienstleistungen der beruflichen Rehabilitation, der Jugendhilfe und Arbeitsmarktintegration. Darüber hinaus stehen umfangreiche medizinische, therapeutische, psychologische und sozialpädagogische Fachdienste zur Verfügung. Die Berufsbildungswerk Neckargemünd GmbH mit ihrer privaten, staatlich anerkannten Berufsschule verfügt derzeit über rund 900 Ausbildungsplätze und bildet in mehr als 40 staatlich anerkannten Berufen qualifiziert und zukunftsorientiert aus.</textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="einsatzText"></textarea>
+            <textarea class="autosize" rows=4 id="individuellText"></textarea>
+            <textarea class="autosize" rows=4 id="fachwissenText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="arbeitsweiseText"></textarea>
+            <textarea class="autosize" rows=4 id="einsatzText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="pensumText"></textarea>
+            <textarea class="autosize" rows=4 id="arbeitsweiseText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="arbeitserfolgText"></textarea>
+            <textarea class="autosize" rows=4 id="pensumText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="leistungText"></textarea>
+            <textarea class="autosize" rows=4 id="arbeitserfolgText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="sozialesText"></textarea>
+            <textarea class="autosize" rows=4 id="leistungText"></textarea>
             <br>
-            <textarea class="autosize schriftformat" rows=4 id="abschiedText"></textarea>
+            <textarea class="autosize" rows=4 id="sozialesText"></textarea>
+            <br>
+            <textarea class="autosize" rows=4 id="abschiedText"></textarea>
         </div>
 
 	</div>
