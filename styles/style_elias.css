@@ -1,0 +1,279 @@
+/*style_notenauswahl.css*/
+@font-face {
+    font-family: 'SRH Text Regular';
+    src: url('../fonts/SRHText_Rg.ttf');
+}
+   
+   /* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: rgb(223,72,7);
+    display: flex;
+    margin:auto;
+    /*beim großen Bildschirm
+    padding-left: 20%;
+    padding-right: 10%;*/
+}
+  
+  /* Style the buttons that are used to open the tab content */
+.tablinks{
+    background-color: rgb(223,72,7);
+    border-width: 2px;
+    border-color: rgb(190, 189, 189);
+    color: rgb(255, 255, 255);
+    padding:12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    display: flex;
+    margin: auto;
+    
+}
+#Dateneingabe{
+    display: flex;
+    margin:auto;
+}
+.dateneingabe{
+    border-width: 2px;
+}
+
+.individuell{
+    background-color: darkorange;
+}
+  
+.erstellen{
+    background-color:darkorange;
+    border-width: 2px;
+}
+  
+  /* Change background color of buttons on hover */
+.tablinks:hover{
+    border-width: 2px;
+    border-color: #ddd;
+}
+  
+  /* Create an active/current tablink class */
+.tablinks.active{
+    border-width: 2px;
+    border-color: lightblue;
+}
+  
+  /* Style the tab content */
+.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+   
+    
+} 
+  
+.textbaustein{
+    display: inline-flex;
+    width: 500px;
+    
+}
+  
+.textAuswahl{
+    display: none;
+    margin: 20px 0px;
+   
+}
+  
+#customTextIndividuell{
+    width: 1000px;
+    height: 300px;
+}
+.schriftformat{
+      font-family: 'SRH Text Regular';
+     /* color: rgb(19, 0, 190);
+      background-color: rgb(223,72,7);*/
+}
+
+
+
+
+
+/*styleMain.css*/
+body{
+    background-color:rgb(223, 72, 7);
+}
+
+.Tabelle{
+	margin:auto;
+	display: table;
+	padding: 2%;
+    height: auto;
+	width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.Zeile{
+	display: table-row;
+}
+
+.Zelle{
+	display: table-cell;
+	padding:2px;
+	
+}
+
+.autosize{
+	width: 90%;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+#start{
+	margin:auto;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+    height: 273px;
+	width: 600px;
+}
+#infos{
+	
+    height:auto;
+	width:99%;
+    margin:auto;
+    margin-top: 3px;
+	background-color:white;
+}
+
+#gender, #job{
+	width: 160px; 
+	height: 20px;
+}
+#ausbildungsbeginn, #ausbildungsende, #geburtstag{
+	width: 155px;
+}
+
+/*printToPdf.css*/
+
+.print{
+    display: none;
+  }
+  
+@font-face{
+      font-family: 'SRH Text Light'; /*a name to be used later*/
+      src: url('../fonts/SRHText_Lt.ttf') format('truetype'); /*URL to font*/
+      font-weight: normal;
+      font-style: normal;
+}
+  
+.loadFont{
+      font-family: 'SRH Text Light';
+      visibility: hidden;
+      position: absolute;
+}
+  
+@media print{
+    @page {
+        size: A4 !important;
+        margin: 0mm 17mm 0mm 17mm !important;
+    }
+    body{
+        background-color: white;
+        font-family: 'SRH Text Light';
+    }
+
+    .kopfzeile-platz{
+        height: 150px;
+    }
+    .fusszeile-platz{
+        height: 250px;
+    }
+    .whitespace{
+        padding: 0; 
+        margin: 0; 
+        display: inline-block;
+    }
+    .fusszeile{
+        display: block;
+        position: fixed;
+        bottom: 42px;
+        left: 0;
+        width: 100%;
+        padding: 0 13.3px 0 0px;
+    }
+    .fusszeileText{
+        vertical-align: top;
+        display:inline-block;
+        font-size: 9px;
+        font-family: inherit;
+        line-height: 15px;
+    }
+    .fusszeileTitel{
+        font-size: 9px;
+        font-family: inherit;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .fusszeileLogo{
+        position: absolute;
+        right: 89px;
+        bottom: 102px;
+        width: 280px;
+        /*height: 1.92cm;*/
+    }
+    .fusszeileLogoText{
+        font-family: inherit;
+        background-color: white;
+        position: absolute;
+        font-size: 5.6px;
+        line-height: 6px;
+        letter-spacing: 0.4px;
+        width: 94px;
+    }
+
+    thead {display: table-header-group;} 
+    tfoot {display: table-footer-group;}
+
+    h2{
+        font-family: inherit;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    p, dt, dd, .datum, .ausbildungsleiter, .ausbilder{
+        display: block;
+        font-size: 15px !important;
+        font-family: inherit;
+        text-align: justify !important;
+        font-weight: lighter;
+        line-height: 22px;
+        margin-top: 25px;
+        white-space: pre-wrap;
+    }
+    dd{
+        margin-left: 6.6px;
+        margin-top: 0px;
+    }
+    .datum{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .ausbildungsleiter, .ausbilder{
+        display: inline-block;
+        width: 265px;
+    }
+    .ausbilder{
+        float: right;
+    }
+
+    .screen {
+        display: none;
+    }
+
+    .print {
+        display: block;        
+    }
+
+  
+}
+  
