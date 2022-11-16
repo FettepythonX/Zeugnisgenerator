@@ -7,14 +7,14 @@
 }
 
 @font-face{
-    font-family: 'SRH Text Regular'; /*a name to be used later*/
-    src: url('../fonts/SRHText_Rg.ttf') format('truetype'); /*URL to font*/
+    font-family: 'SRH Text Light'; /*a name to be used later*/
+    src: url('../fonts/SRHText_Lt.ttf') format('truetype'); /*URL to font*/
     font-weight: normal;
     font-style: normal;
 }
 
 .loadFont{
-   
+    font-family: 'SRH Text Light';
     visibility: hidden;
     position: absolute;
 }
@@ -26,7 +26,7 @@
     }
     body{
         background-color: white;
-        font-family: 'SRH Text Regular';
+        font-family: 'SRH Text Light';
     }
 
     .kopfzeile-platz{
@@ -123,6 +123,6 @@
     .print {
         display: block;        
     }
-    
+
 
 }
