@@ -48,7 +48,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select tabindex="1" id="gender" name="Anrede_drop_down" onClick="updateGender()" >
+                                <select tabindex="1" id="gender" class="schriftformat" name="Anrede_drop_down" onClick="updateGender()" >
                                     <option value="0">Herr</option>
                                     <option value="1">Frau</option>
                                 </select>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#">
-                                <select tabindex="6" id="job" name="Berufe_drop_down" onChange="update()">
+                                <select tabindex="6" id="job" class="schriftformat" name="Berufe_drop_down" onChange="update()">
                                     <option> Bürokraft </option>
                                     <option> Büropraktiker </option>
                                     <option> Elektroniker Automatisierungstechnik </option>
@@ -98,13 +98,13 @@
                             <label>Nachname: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="2" type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
+                            <input tabindex="2" type="text" id="nachname" class="schriftformat" name="Nachname"  onchange="updateNachname(value)">
                         </div>
                         <div class="Zelle">
                             <label>mit Praktikum: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="7" type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
+                            <input tabindex="7" type="checkbox" id="praktikum" class="schriftformat" value="im_Praktikum" onclick="update()" disabled>
                         </div>
                     </div>
                     <div class="Zeile">
@@ -112,18 +112,18 @@
                             <label>Vorname: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="3" type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
+                            <input tabindex="3" type="text" id="vorname" class="schriftformat" name="Vorname" onchange="updateVorname(value)">
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select tabindex="8" name="Ausbilder" id="ausbilderGender">
+                                <select tabindex="8" name="Ausbilder" id="ausbilderGender" class="schriftformat">
                                     <option>Ausbilder</option>
                                     <option>Ausbilderin</option>
                                 </select>
                             </form>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="9" type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
+                            <input tabindex="9" type="text" id="ausbilder" class="schriftformat" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -131,13 +131,13 @@
                             <label>Geburtsort: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="4" type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
+                            <input tabindex="4" type="text" id="geburtsort" class="schriftformat" name="Geburtsort" onchange="updateGeburtsort(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsbeginn: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="10" type="date" id="ausbildungsbeginn" onchange="updateAusbildungsbeginn(value)">
+                            <input tabindex="10" type="date" id="ausbildungsbeginn" class="schriftformat" onchange="updateAusbildungsbeginn(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -145,13 +145,13 @@
                             <label>Geburtstag: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="5" type="date" id="geburtstag" onchange="updateGeburtstag(value)">
+                            <input tabindex="5" type="date" id="geburtstag" class="schriftformat" onchange="updateGeburtstag(value)">
                         </div>
                         <div class="Zelle">
                             <label>Ausbildungsende: </label>
                         </div>
                         <div class="Zelle">
-                            <input tabindex="11" type="date" id="ausbildungsende" onchange="updateAusbildungsende(value)">
+                            <input tabindex="11" type="date" id="ausbildungsende" class="schriftformat" onchange="updateAusbildungsende(value)">
                         </div>
                     </div>
                     <div class="Zeile">
@@ -159,7 +159,7 @@
                             <label id="pr" hidden> Programme: </label>
                         </div>
                         <div class="Zelle">
-                            <input type="text" id="programme" name="programme" onchange="updateProgramme(value)" hidden>
+                            <input type="text" id="programme" name="programme"  onchange="updateProgramme(value)" hidden>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                 <br> <br>
                 Wenn Sie keinen eigenen Text eingeben, wird der oben angezeigte Standardtext des Berufes übernommen.
             </div>
-            <div>Standardtext des Berufes:</div>
+            <div><b>Standardtext des Berufes:</b></div>
             <hr>
             <div id="textIndividuell" style="width: 1000px">null</div>
             <hr>
@@ -255,7 +255,7 @@
 
         <div id="Arbeitsweise" class="tabcontent">
             <div>
-                <input type="radio" name="radioNoteArbeitsweise" value="1" onclick="changeGrade(value)">
+                <input type="radio" name="radioNoteArbeitsweise" value="1"  onclick="changeGrade(value)">
                 <label>Sehr gut</label>
                 <input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)">
                 <label>Gut</label>
