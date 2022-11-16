@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test 2</title>
-  <link rel="stylesheet" href="printToPdf.css">
+  <link rel="stylesheet" href="styles\zeugnisgeno.css">
 
 </head>
 
@@ -36,11 +36,11 @@
   <textarea id="sozialesText">Sein Verhalten gegenüber Kunden, Vorgesetzten und Kollegen war jederzeit einwandfrei.</textarea>
   <br>
   <textarea id="abschiedText">Herrn Mustermann danken wir für die stets sehr gute Zusammenarbeit und wünschen ihm für seinen weiteren Berufs- und Lebensweg alles Gute und weiterhin viel Erfolg.</textarea>
-  
+
 </div>
 
   <!--Everything in this div is hidden on the page, but printed out by window.print()-->
-  <div class="print" id="printMe"> 
+  <div class="print" id="printMe">
 
     <table role="presentation">
       <thead>
@@ -152,7 +152,7 @@
         <div class="fusszeileText" style="margin-left: 14.6px">
           <br>
           SRH Berufsbildungswerk
-          <br> 
+          <br>
           Neckargemünd GmbH
           <br>
           Im Spitzerfeld 25
@@ -339,7 +339,7 @@
         <div class="fusszeileText" style="margin-left: 14.6px">
           <br>
           SRH Berufsbildungswerk
-          <br> 
+          <br>
           Neckargemünd GmbH
           <br>
           Im Spitzerfeld 25
@@ -405,7 +405,7 @@
       let ausbilder = "Ausbilderin";
       let ausbilderName = "Olaf Angenendt";
 
-      
+
       // Textbausteine in print div einfügen
       html = html.replace("@azubiInfo", azubiInfo);
       html = html.replace("@srhInfo", srhInfo);
@@ -431,7 +431,7 @@
     }
   </script>
 
-  
+
 </body>
 
 </html>

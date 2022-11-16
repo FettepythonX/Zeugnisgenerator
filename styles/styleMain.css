@@ -13,8 +13,8 @@ body {
     height: auto;
 	width: 300px;
     border: 2px solid rgba(255, 255, 255, 0.4);
-	
-	
+
+
 }
 
 .Zeile{
@@ -46,22 +46,22 @@ a{
 	margin:auto;
     height:auto;
 	width:70%;
-	background-color:white;
+	background-color:rgb(21, 200, 255);
 }
 
 #gender{
-	width: 160px; 
+	width: 160px;
 	height: 20px;
 }
-  
+
 #job{
-	width: 160px; 
+	width: 160px;
 	height: 20px;
 }
 
 #geburtstag{
-	width: 155px; 
-	
+	width: 155px;
+
 }
 
 
