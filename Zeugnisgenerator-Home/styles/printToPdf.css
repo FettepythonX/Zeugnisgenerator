@@ -1,0 +1,128 @@
+/*
+ * Tested on: Google Chrome Version 107.0.5304.63 (Offizieller Build) (64-Bit)
+ */
+
+ .print {
+  display: none;
+}
+
+@font-face{
+    font-family: 'SRH Text Light'; /*a name to be used later*/
+    src: url('../fonts/SRHText_Lt.ttf') format('truetype'); /*URL to font*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loadFont{
+    font-family: 'SRH Text Light';
+    visibility: hidden;
+    position: absolute;
+}
+
+@media print {
+    @page {
+        size: A4 !important;
+        margin: 0mm 17mm 0mm 17mm !important;
+    }
+    body{
+        background-color: white;
+        font-family: 'SRH Text Light';
+    }
+
+    .kopfzeile-platz{
+        height: 150px;
+    }
+    .fusszeile-platz{
+        height: 250px;
+    }
+    .whitespace{
+        padding: 0; 
+        margin: 0; 
+        display: inline-block;
+    }
+    .fusszeile{
+        display: block;
+        position: fixed;
+        bottom: 42px;
+        left: 0;
+        width: 100%;
+        padding: 0 13.3px 0 0px;
+    }
+    .fusszeileText{
+        vertical-align: top;
+        display:inline-block;
+        font-size: 9px;
+        font-family: inherit;
+        line-height: 15px;
+    }
+    .fusszeileTitel{
+        font-size: 9px;
+        font-family: inherit;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .fusszeileLogo{
+        position: absolute;
+        right: 89px;
+        bottom: 102px;
+        width: 280px;
+        /*height: 1.92cm;*/
+    }
+    .fusszeileLogoText{
+        font-family: inherit;
+        background-color: white;
+        position: absolute;
+        font-size: 5.6px;
+        line-height: 6px;
+        letter-spacing: 0.4px;
+        width: 94px;
+    }
+
+    thead {display: table-header-group;} 
+    tfoot {display: table-footer-group;}
+
+    h2{
+        font-family: inherit;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    p, dt, dd, .datum, .ausbildungsleiter, .ausbilder{
+        display: block;
+        font-size: 15px !important;
+        font-family: inherit;
+        text-align: justify !important;
+        font-weight: lighter;
+        line-height: 22px;
+        margin-top: 25px;
+        white-space: pre-wrap;
+    }
+    dd{
+        margin-left: 6.6px;
+        margin-top: 0px;
+    }
+    .datum{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .ausbildungsleiter, .ausbilder{
+        display: inline-block;
+        width: 265px;
+    }
+    .ausbilder{
+        float: right;
+    }
+
+    .screen {
+        display: none;
+    }
+
+    .print {
+        display: block;        
+    }
+
+
+}

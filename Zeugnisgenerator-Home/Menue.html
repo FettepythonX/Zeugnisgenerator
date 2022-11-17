@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styleMain.css">
+        <script language="javascript" type="text/javascript" src=""></script>
+		<script src="notenauswahl.js"></script>
+		<title>Menü</title>
+	</head>
+    <body style="background-color:rgb(255, 140, 0);" onload="eraseval()">
+        <div id="start">
+            <div id="infos">
+                <p>
+                    Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
+                    Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
+                    Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
+                </p>
+                <p></p>
+            </div>
+            <div class="Tabelle">
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Anrede: </label>
+                    </div>
+                    <div class="Zelle">
+                        <form action="#"></form>
+                            <select id="gender" name="Anrede_drop_down" onClick="updateGender()" style="width: 140px;">
+                                <option value="0">Herr</option>
+                                <option value="1">Frau</option>
+                            </select>  
+                        </form>
+                    </div>
+                    <div class="Zelle">
+                        <label>Beruf:</label>
+                    </div>
+                    <div class="Zelle">
+                        <form action="#">
+                            <select id="job" name="Berufe_drop_down" onChange="update()" style="width: 140px;">
+								<option> Bürokraft </option>
+								<option> Büropraktiker </option>
+								<option> Elektroniker Automatisierungstechnik </option>
+								<option> Elektroniker Energie & Gebäude </option>
+								<option> Elektroniker Geräte und Systeme </option>
+								<option> Elektroniker Informations & Systemtechnik </option>
+								<option> Fachangestellter Medien-& Informationsdienst Bibliothek+ </option>
+								<option> Fachinformatiker Anwendungsentwicklung </option>
+								<option> Fachinformatiker Systemintegration </option>
+								<option> Fachlagerist </option>
+								<option> Fachkraft für Lagerlogistik </option>
+								<option> Fachkraft f. Metalltechnik FR Montagetechnik' </option>
+								<option> Fachpraktiker f. elektr. Geräte und Systemen </option>
+								<option> Fachpraktiker f. Industriemechanik </option>
+								<option> Fachpraktiker für IT-Systemelektronik </option>
+								<option> Fachpraktiker TPD Maschinen- & Anlagenkonstr. </option>
+								<option> Industriekaufmann </option>
+								<option> Industriemechaniker FR Feinwerktechnik </option>
+								<option> Informatikkaufmann </option>
+								<option> IT-Systemelektroniker </option>
+								<option> Kaufmann f. Büromanagement (WQ1-8) </option>
+								<option> Kaufmann f. Büromanagement (WQ9-10) </option>
+								<option> Kaufmann im Einzelhandel </option>
+								<option> Steuerfachangestellter </option>
+								<option> Technischer Produktdesigner Maschinen- & Anlagenkonst </option>
+								<option> Verkäufer </option>
+								<option> Verwaltungsfachangestellter </option>
+								<option> Mediengestalter Bild und Ton </option>
+								<option> Mediangestalter Digital und Print </option>
+                            </select>						
+                        </form>
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Nachname: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="nachname" name="Nachname" onChange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Im Praktikum: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Vorname: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="vorname" name="Vorname" onChange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <form action="#"></form>
+                            <select name="Ausbilder">
+                                <option>Ausbilder</option>
+                                <option>Ausbilderin</option>
+                            </select>  
+                        </form>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="ausbilder" name="input_Ausbilder" onchange="update()">
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Geburtsort: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="text" id="geburtsort" name="Geburtsort" onchange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Ausbildungsbeginn: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="ausbildungsbeginn" onchange="update()">
+                    </div>
+                </div>
+                <div class="Zeile">
+                    <div class="Zelle">
+                        <label>Geburtstag: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="geburtstag" onchange="update()">
+                    </div>
+                    <div class="Zelle">
+                        <label>Ausbildungsende: </label>
+                    </div>
+                    <div class="Zelle">
+                        <input type="date" id="ausbildungsende" onchange="update()">
+                    </div>
+                </div>
+				<div class="Zeile">
+					<div class="Zelle">
+						<label id="pr" hidden> Programme: </label>
+					</div>
+					<div class="Zelle">
+						<input type="text" id="programme" name="programme" onchange="update()" hidden>
+					</div>
+				</div>
+            </div>			
+        </div>		
+
+
+
+		<script>
+
+			let prakt;
+            function updateGender(){
+                let gender = document.getElementById("gender").value;
+                switch(gender){
+                    case "0": 				
+						document.getElementById('job').innerHTML = "";
+
+						let jobsM = ['Bürokraft', 'Büropraktiker', 'Elektroniker Automatisierungstechnik','Elektroniker Energie & Gebäude', 
+						'Elektroniker Geräte & Systeme', 'Elektroniker Informations & Systemtechnik','Fachangestellter Medien-& Informationsdienst Bibliothek',
+						'Fachinformatiker Anwendungsentwicklung','Fachinformatiker Systemintegration','Fachlagerist','Fachkraft für Lagerlogistik',
+						'Fachkraft f. Metalltechnik FR Montagetechnik','Fachpraktiker f. elektr. Geräte und Systemen','Fachpraktiker f. Industriemechanik',
+						'Fachpraktiker für IT-Systemelektronik','Fachpraktiker TPD Maschinen- & Anlagenkonstr.','Industriekaufmann',
+						'Industriemechaniker FR Feinwerktechnik','Informatikkaufmann','IT-Systemelektroniker','Kaufmann f. Büromanagement (WQ1-8)',
+						'Kaufmann f. Büromanagement (WQ9-10)','Kaufmann im Einzelhandel','Steuerfachangestellter',
+						'Technischer Produktdesigner Maschinen- & Anlangenkonst','Verkäufer','Verwaltungsfachangestellter','Mediengestalter Bild und Ton',
+						'Mediangestalter Digital und Print'];
+						
+						for(i=0; i<jobsM.length; i++){
+							let option = document.createElement("option");
+							option.text = jobsM[i];
+								
+							document.getElementById('job').add(option);
+						}
+						
+						//console.log(jobsM.length);
+                        break;
+                    case "1":	
+						document.getElementById('job').innerHTML = "";
+					
+						let jobsF = ['Bürokraft','Büropraktikerin','Elektronikerin Automatisierungstechnik','Elektronikerin Energie & Gebäude',
+						'Elektronikerin Geräte & Systeme','Elektronikerin Informations & Systemtechnik','Fachangestellte Medien-& Informationsdienst Bibliothek',
+						'Fachinformatikerin Anwendungsentwicklung','Fachinformatikerin Systemintegration','Fachlageristin','Fachkraft für Lagerlogistik',
+						'Fachkraft f. Metalltechnik FR Montagetechnik','Fachpraktikerin f. elektr. Geräte und Systemen','Fachpraktikerin f. Industriemechanik',
+						'Fachpraktikerin für IT-Systemelektronik','Fachpraktikerin TPD Maschinen- & Anlagenkonstr.','Industriekauffrau',
+						'Industriemechanikerin FR Feinwerktechnik','Informatikkauffrau','IT-Systemelektronikerin','Kauffrau f. Büromanagement (WQ1-8)',
+						'Kauffrau f. Büromanagement (WQ9-10)','Kauffrau im Einzelhandel','Steuerfachangestellte',
+						'Technischer Produktdesignerin Maschinen- & Anlangenkonst','Verkäuferin','Verwaltungsfachangestellte','Mediengestalterin Bild und Ton',
+						'Mediangestalterin Digital und Print'];
+						
+							for(i=0; i<jobsF.length; i++){
+							let option = document.createElement("option");
+							option.text = jobsF[i];
+								
+							document.getElementById('job').add(option);
+						}
+						
+						//console.log(jobsF.length);
+                        break;
+                }
+                update();
+            }
+
+			function update(){
+				let gender = document.getElementById('gender');
+				let valgender = gender.options[gender.selectedIndex];
+				let job = document.getElementById('job');
+				let valjob = job.options[job.selectedIndex];							
+				let nachname = document.getElementById('nachname').value;
+				let valpraktikum = document.getElementById("praktikum");
+				if (valpraktikum.checked == true){
+
+					prakt = "Praktikum";
+
+				} else { 
+
+					prakt = "";
+
+				}				
+				let vorname = document.getElementById('vorname').value;					
+				let ausbilder = document.getElementById('ausbilder').value;				
+				let geburtsort = document.getElementById('geburtsort').value;			
+				let ausbildungsbeginn = document.getElementById('ausbildungsbeginn').value;			
+				let geburtstag = document.getElementById('geburtstag').value;			
+				let ausbildungsende = document.getElementById('ausbildungsende').value;			
+				let vgender = valgender.value;
+				let vjob = valjob.value;
+					
+				if(vjob == "Verwaltungsfachangestellter"|| vjob == "Kaufmann f. Büromanagement (WQ1-8)"|| vjob == "Kaufmann f. Büromanagement (WQ9-10)"  || 
+				vjob == "Verwaltungsfachangestellte" || vjob == "Kauffrau f. Büromanagement (WQ1-8)" || vjob == "Kauffrau f. Büromanagement (WQ9-10)"){
+					document.getElementById("pr").hidden = false;
+					document.getElementById("programme").hidden = false;
+				}
+				else{
+					document.getElementById("programme").value = "";
+					document.getElementById("pr").hidden = true;
+					document.getElementById("programme").hidden = true;
+				}
+					
+				if(vjob =="Fachangestellter Medien-& Informationsdienst Bibliothek"|| vjob == "Fachpraktiker TPD Maschinen- & Anlagenkonstr."||vjob == "Technischer Produktdesigner Maschinen- & Anlangenkonst" ||
+				vjob == "Fachangestellte Medien-& Informationsdienst Bibliothek" || vjob == "Fachpraktikerin TPD Maschinen- & Anlagenkonstr." || vjob == "Technischer Produktdesignerin Maschinen- & Anlangenkonst"){
+					document.getElementById("praktikum").disabled = false;
+				}
+				else{
+					document.getElementById("praktikum").disabled = true;
+					document.getElementById("praktikum").checked = false;
+				}
+
+				let programme = document.getElementById('programme').value;		
+				sessionStorage.setItem("vgender", vgender);
+				sessionStorage.setItem("vjob", vjob);
+				sessionStorage.setItem("nachname", nachname);
+				sessionStorage.setItem("prakt", prakt);
+				sessionStorage.setItem("vorname", vorname);
+				sessionStorage.setItem("ausbilder",ausbilder);
+				sessionStorage.setItem("geburtsort", geburtsort);
+				sessionStorage.setItem("ausbildungsbeginn", ausbildungsbeginn);
+				sessionStorage.setItem("geburtstag", geburtstag);
+				sessionStorage.setItem("ausbildungsende", ausbildungsende);
+				sessionStorage.setItem("programme", programme);
+				
+				//console.log(vgender);
+				//console.log(vjob);
+				//console.log(sessionStorage.getItem("nachname"));
+				//console.log(prakt);
+				//console.log(vorname);
+				//console.log(ausbilder);
+				//console.log(geburtsort);
+				//console.log(ausbildungsbeginn);
+				//console.log(geburtstag);
+				//console.log(ausbildungsende);
+				//console.log(programme);
+			}	
+			
+			function eraseval(){
+				sessionStorage.clear();
+			}
+				
+		</script>
+    </body>
+</html> 
