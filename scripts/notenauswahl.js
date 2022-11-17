@@ -18,6 +18,17 @@ let categories = ["Fachwissen", "Einsatz", "Arbeitsweise", "Pensum", "Arbeitserf
 
 
 function openTab(evt, tabName) {
+    if(evt.currentTarget.innerHTML == "Erstellen"){
+        // Check if all tabs have something selected
+        // if not, inform user and exit function
+        for(i = 0; i < tabDone.length; i++){
+            if(tabDone[i] == false){
+                //alert("No tabs can be red");
+                //return;
+            }
+        }
+    }
+
     // Declare all variables
     var i, tabcontent, tablinks;
 

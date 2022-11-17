@@ -17,6 +17,7 @@
     font-family: 'SRH Text Light';
     visibility: hidden;
     position: absolute;
+    top:0;
 }
 
 @media print {

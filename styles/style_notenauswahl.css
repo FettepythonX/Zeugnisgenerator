@@ -3,11 +3,16 @@
   src: url('../fonts/SRHText_Rg.ttf');
  }
  
+ html, body{
+  height: 99.5%;
+  
+ }
+
  /* Style the tab */
  .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
   background-color: rgb(204, 204, 204);
+  background-color: rgb(223,72,7);
   padding: 10px;
   width: 80%;
   margin: auto; 
@@ -65,8 +70,9 @@
   display: none;
   font-family: 'SRH Text Regular';
   font-size: 18px;
-  margin: 20px 0 20px 32px;
-  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  width: 88%;
   border-style: solid;
   border-color: black;
   border-width: 1px;
@@ -101,7 +107,8 @@ dd {
 .divInfoText, .divButtonField, .divNoten{
   font-family: 'SRH Text Regular';
   font-size: 18px;
-  background-color: #ccc;
+  background-color: rgb(223,72,7);
+  color: white;
   width: 90%;
   margin: auto;
   padding: 10px;
@@ -143,9 +150,35 @@ textarea{
   margin-right: 25px;
   vertical-align: top;
   float: right;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .buttonTabErstellen:hover{
   border-width: 4px 2px 2px 4px;
   border-color: blue;
+}
+
+.container{
+  min-height: 100%;
+  position: relative;
+}
+
+.content{
+  padding-bottom: 180px;
+}
+
+.srhLogoFooter{
+  background-color: rgb(223,72,7);
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.srhLogo{
+  height: 125px;
+  width: 125px;
+  margin: 15px 0 0 50px;
 }

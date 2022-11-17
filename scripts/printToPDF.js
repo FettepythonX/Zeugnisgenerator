@@ -15,6 +15,7 @@ function getBrowserName(){
 
   function printDiv() // printDiv() Parameter entgegennehmen & zuweisen
   {
+    /*
     // Check if all tabs have something selected
     // if not, inform user and exit function
     for(i = 0; i < tabDone.length; i++){
@@ -22,7 +23,7 @@ function getBrowserName(){
         //alert("All tabs must be green");
         //return;
       }
-    }
+    }*/
 
     document.getElementById("printMe").innerHTML = `
   <table role="presentation">
