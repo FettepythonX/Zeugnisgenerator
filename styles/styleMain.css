@@ -3,16 +3,16 @@
 	src: url('../fonts/SRHText_Rg.ttf');
 }
 body {
-    background-color:rgb(151, 148, 146);
+    background-color:rgb(27,27,27);
 }
 
 .Tabelle{
+
 	margin:auto;
 	display: table;
 	padding: 2%;
     height: auto;
 	width: 300px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
 	
 	
 }
@@ -25,6 +25,7 @@ body {
 	display: table-cell;
 	padding:2px;
 	width: 100px;
+	color: white;
 }
 
 .autosize {
@@ -38,15 +39,16 @@ a{
 }
 #start{
 	margin:auto;
-	border: 2px solid rgba(255, 255, 255, 0.4);
-    height: 300px;
-	width: 600px;
+
+    height: 90%;
+	width: 80%;
 }
 #infos{
 	margin:auto;
-    height:auto;
-	width:70%;
-	background-color:white;
+    height:100%;
+	width:35%;
+	background-color:grey;
+	
 }
 
 #gender, #job{
@@ -57,3 +59,6 @@ a{
 	width: 155px;
 }
 
+.Screen{
+	color: white;
+}

@@ -6,8 +6,8 @@
  /* Style the tab */
  .tab {
   overflow: hidden;
+  background-color: rgb(27,27,27);
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
   
 }
 
@@ -21,6 +21,7 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 15px;
+
 }
 
 
@@ -56,7 +57,7 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  
+  color: white;
 } 
 
 .textbaustein {
