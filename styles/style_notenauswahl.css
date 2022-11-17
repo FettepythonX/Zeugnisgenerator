@@ -14,7 +14,7 @@
   background-color: rgb(204, 204, 204);
   background-color: rgb(223,72,7);
   padding: 10px;
-  width: 80%;
+  width: 90%;
   margin: auto; 
   border-radius: 20px;
 }
@@ -29,6 +29,9 @@
   font-size: 20px;
   cursor: pointer;
   border-radius: 15px;
+  vertical-align: top;
+  margin-top: 23px;
+  margin-left: 5px;
 }
 
 .individuell{
@@ -41,8 +44,7 @@
 
 /* Change border color of buttons on hover */
 .tablinks:hover {
-  border-width: 4px 2px 2px 4px;
-  border-color: blue;
+  color: yellow;
 }
 
 /* Create an active/current tablink class */
@@ -70,7 +72,7 @@
   display: none;
   font-family: 'SRH Text Regular';
   font-size: 18px;
-  margin: auto;
+  margin-left: auto;
   margin-top: 20px;
   width: 88%;
   border-style: solid;
@@ -82,38 +84,37 @@
 }
 
 #customTextIndividuell{
+  margin-left: 22%;
   width: 210mm;
   padding: 10px;
   height: 300px;
 }
 
 #textIndividuell{
-  background-color: white;
+  margin-left: 22%;
   width: 210mm;
-  padding: 10px;
   padding-bottom: 40px;
   text-align: justify;
   font-family: 'SRH Text Regular';
   font-size: 15px;
   line-height: 22px;
   white-space: pre-wrap;
-  border: black solid 1px;
 }
 
-dd { 
+.screen dd { 
   margin-bottom: -40px;
 }
 
 .divInfoText, .divButtonField, .divNoten{
   font-family: 'SRH Text Regular';
   font-size: 18px;
-  background-color: rgb(223,72,7);
+  background-color: gray;
   color: white;
   width: 90%;
   margin: auto;
+  margin-top: 20px;
   padding: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
 }
 
 .divButtonField{
@@ -125,6 +126,7 @@ h3 {
   font-family: 'SRH Text Regular';
   margin-top: 25px;
   margin-bottom: 5px;
+  margin-left: 22%;
 }
 
 .labelNote{
@@ -144,7 +146,7 @@ textarea{
   color: white;
   background-color: rgb(223,72,7);
   border-color: white;
-  border-width: 2px 4px 4px 2px;
+  border-width: 2px;
   cursor: pointer;
   padding: 5px 10px;
   margin-right: 25px;
@@ -156,8 +158,7 @@ textarea{
 }
 
 .buttonTabErstellen:hover{
-  border-width: 4px 2px 2px 4px;
-  border-color: blue;
+  color: yellow;
 }
 
 .container{
@@ -174,11 +175,11 @@ textarea{
   width: 100%;
   height: 150px;
   position: absolute;
-  bottom: 5px;
+  top: 5px;
 }
 
 .srhLogo{
-  height: 125px;
-  width: 125px;
-  margin: 15px 0 0 50px;
+  height: 75px;
+  width: 75px;
+  margin: 13px 15px 0 25px;
 }

@@ -17,6 +17,7 @@
         <div class="content">
         <!-- Tab links -->
         <div class="tab">
+            <img class="srhLogo" src="styles/SRH_Heidelberg_logo.png">
             <button id="tabDateneingabe"    class="tablinks active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
             <button id="tabIndividuell"     class="tablinks individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
             <button id="tabFachwissen"      class="tablinks"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
@@ -32,6 +33,7 @@
 
         <!-- Tab content -->
         <div id="Dateneingabe" class="tabcontent" style="display:block">
+            <!--
             <div class="divInfoText">
                 Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
                 <br>
@@ -40,7 +42,7 @@
                 <br>
                 <br>
                 Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
-            </div>
+            </div>-->
             <div id="start">
                 <div class="Tabelle">
                     <div class="Zeile">
@@ -167,6 +169,7 @@
         </div>
 
         <div id="Individuell" class="tabcontent">
+            <!--
             <div class="divInfoText">
                 Der untenstehende Text wurde entsprechend dem Ausbildungsgang des Auszubildenden ausgewählt.
                 Das Feld ganz unten ermöglicht Ihnen den berufsspezifischen Standardtext durch einen eigenen Text zu ersetzen.
@@ -174,11 +177,11 @@
                 Bitte geben Sie den Text entweder per Hand ein oder ziehen Sie ihn per Drag & Drop in das Textfeld. Kopieren mithilfe eines Rechtsklicks funktioniert nicht, nur mit Tastenkombination.
                 <br> <br>
                 Wenn Sie keinen eigenen Text eingeben, wird der oben angezeigte Standardtext des Berufes übernommen.
-            </div>
+            </div>-->
             <h3>Standardtext des Berufes:</h3>
             <div id="textIndividuell">null</div>
             <h3>Individueller Text:</h3>
-            <textarea id="customTextIndividuell"></textarea>
+            <textarea id="customTextIndividuell" placeholder="Individueller Text überschreibt Standardtext"></textarea>
         </div>
 
 
@@ -422,10 +425,11 @@
             <textarea class="autosize"  id="abschiedText"></textarea>
         </div>
         </div>
-        <!-- SRH Logo -->
+
+        <!-- SRH Logo
         <div class="srhLogoFooter">
             <img class="srhLogo" src="styles/SRH_Heidelberg_logo.png">
-        </div>
+        </div> -->
 	</div>
 
     <div class="loadFont">loadme</div>
