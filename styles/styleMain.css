@@ -43,7 +43,8 @@ input[type="date"]{
 
 select{
 	font-family: 'SRH Text Regular';
-	font-size: 18px;
+	font-size: 16px;
+	padding: 3px 2px;
 }
 
 
