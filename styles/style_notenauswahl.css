@@ -34,7 +34,7 @@
 }
 
 .erstellen{
-  background-color:rgb(223,72,7);
+  background-color:darkorange;
   border-width: 2px;
 }
 
@@ -54,7 +54,7 @@
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1% solid #ccc;
   border-top: none;
   
 } 
@@ -66,6 +66,7 @@
 }
 
 .textAuswahl{
+  color: #ccc;
   display: none;
   margin: 20px 0 20px 0;
  
