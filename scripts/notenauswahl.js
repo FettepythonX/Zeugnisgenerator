@@ -23,8 +23,8 @@ function openTab(evt, tabName) {
         // if not, inform user and exit function
         for(i = 0; i < tabDone.length; i++){
             if(tabDone[i] == false){
-                //alert("No tabs can be red");
-                //return;
+                alert("Erst alle Punkten bearbeiten");
+                return;
             }
         }
     }
