@@ -8,6 +8,11 @@
     background-color:rgb(223, 72, 7); /* Komplementärfarbe: rgb(32,183,248) */
 }
 
+.srh-color-transparent
+{
+    background-color:rgba(223, 72, 7, 0.6);
+}
+
 .Tabelle{
 	margin:auto;
 	display: table;
@@ -241,7 +246,7 @@ a{
     padding: 6px 12px;
     border: 1px solid #ccc;
 
-    height: calc(100vh - 150px);
+    height: calc(100vh - 150px); /* Variable Breite abhängig der Bildschirmhöhe */
     overflow: auto; /* Scrollbar wegen fester Größe*/
   } 
   
