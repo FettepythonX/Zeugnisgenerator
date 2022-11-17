@@ -21,6 +21,17 @@ function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
+    // zeige/verstecke Print-Buttons
+
+    if(tabName=="Erstellen")
+    {
+        document.getElementById("pdf_printer").style.display="block";
+    }
+    else
+    {
+        document.getElementById("pdf_printer").style.display="none";
+    }
+
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -763,6 +774,9 @@ function getDateString(date){
 }
 
 function zuruecksetzen(){
+
+    document.getElementById("pdf_printer").style.display="none"; // Print-Buttons wieder verbergen
+
     for(i = 0; i < tabDone.length; i++){
         tabDone[i] = false;
     }

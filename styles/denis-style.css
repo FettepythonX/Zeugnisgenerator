@@ -3,8 +3,9 @@
 	src: url('../fonts/SRHText_Rg.ttf');
 }
 
-body {
-    background-color:rgb(223, 72, 7);
+.srh-color
+{
+    background-color:rgb(223, 72, 7); /* Komplementärfarbe: rgb(32,183,248) */
 }
 
 .Tabelle{
@@ -206,12 +207,10 @@ a{
         display: table;
 	    margin: auto;
         overflow: hidden;
-        background-color: rgb(223,72,7);
   }
   
   /* Style the buttons that are used to open the tab content */
   .tablinks {
-    background-color: rgb(223,72,7); /* Komplementärfarbe: rgb(32,183,248) */
     border-width: 2px;
     border-color: rgb(190, 189, 189);
     color: rgb(255, 255, 255);
@@ -232,7 +231,7 @@ a{
   }
   
   /* Create an active/current tablink class */
-  .tablinks.active {
+  .tablinks .active {
     border-width: 2px;
   }
   
@@ -242,7 +241,7 @@ a{
     padding: 6px 12px;
     border: 1px solid #ccc;
 
-    height: calc(100vh - 110px);
+    height: calc(100vh - 150px);
     overflow: auto; /* Scrollbar wegen fester Größe*/
   } 
   
@@ -271,3 +270,23 @@ a{
       /*color: rgb(0,0,0);*/
   }
   
+  #fuss
+  {
+    float: left;
+  }
+
+  #pdf_printer
+  {
+    display: none;
+    float: right;
+  }
+
+  .erstellenButtons
+  {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 35px;
+    width: 120px;
+    border-width: 1px;
+    border-radius: 3px;
+  }

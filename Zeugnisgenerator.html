@@ -10,21 +10,21 @@
     <script src="scripts/textbausteine.js"></script>
     <title>Zeugnisgenerator</title>
 </head>
-<body>
+<body class="srh-color">
     <div class="screen">
         <!-- Tab links -->
-        <div class="tab schriftformat">
-            <button id="tabDateneingabe"    class="tablinks dateneingabe active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
-            <button id="tabIndividuell"     class="tablinks individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
-            <button id="tabFachwissen"      class="tablinks"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
-            <button id="tabEinsatz"         class="tablinks"                        onclick="openTab(event, 'Einsatz')">Einsatz</button>
-            <button id="tabArbeitsweise"    class="tablinks"                        onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
-            <button id="tabPensum"          class="tablinks"                        onclick="openTab(event, 'Pensum')">Pensum</button>
-            <button id="tabArbeitserfolg"   class="tablinks"                        onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
-            <button id="tabLeistung"        class="tablinks"                        onclick="openTab(event, 'Leistung')">Leistung</button>
-            <button id="tabSoziales"        class="tablinks"                        onclick="openTab(event, 'Soziales')">Soziales</button>
-            <button id="tabAbschied"        class="tablinks"                        onclick="openTab(event, 'Abschied')">Abschied</button>
-            <button id="tabErstellen"       class="tablinks erstellen"              onclick="openTab(event, 'Erstellen')">Erstellen</button>
+        <div class="tab schriftformat srh-color">
+            <button id="tabDateneingabe"    class="tablinks srh-color dateneingabe active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabIndividuell"     class="tablinks srh-color individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
+            <button id="tabFachwissen"      class="tablinks srh-color"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
+            <button id="tabEinsatz"         class="tablinks srh-color"                        onclick="openTab(event, 'Einsatz')">Einsatz</button>
+            <button id="tabArbeitsweise"    class="tablinks srh-color"                        onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
+            <button id="tabPensum"          class="tablinks srh-color"                        onclick="openTab(event, 'Pensum')">Pensum</button>
+            <button id="tabArbeitserfolg"   class="tablinks srh-color"                        onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
+            <button id="tabLeistung"        class="tablinks srh-color"                        onclick="openTab(event, 'Leistung')">Leistung</button>
+            <button id="tabSoziales"        class="tablinks srh-color"                        onclick="openTab(event, 'Soziales')">Soziales</button>
+            <button id="tabAbschied"        class="tablinks srh-color"                        onclick="openTab(event, 'Abschied')">Abschied</button>
+            <button id="tabErstellen"       class="tablinks srh-color erstellen"              onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
         <!-- Tab content -->
         <div id="Dateneingabe" class="tabcontent schriftformat" style="display:block">
@@ -43,7 +43,7 @@
                         </div>
                         <div class="Zelle">
                             <form action="#"></form>
-                                <select tabindex="1" id="gender" class="schriftformat" name="Anrede_drop_down" onClick="updateGender()" >
+                                <select tabindex="1" id="gender" class="schriftformat" name="Anrede_drop_down" onClick="updateGender()">
                                     <option value="0">Herr</option>
                                     <option value="1">Frau</option>
                                 </select>
@@ -423,9 +423,8 @@
             </div>
         </div>
 
-        <div id="Erstellen" class="tabcontent schriftformat" onload="textAreaAdjust(srhInfoText)" >
-            <input type="button" value="Print" onclick="printDiv()">
-            <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
+        <div id="Erstellen" class="tabcontent schriftformat" onload="textAreaAdjust(srhInfoText)">
+            Anpassung der einzelnen Texte:
             <hr>
             <textarea class="autosize schriftformat" rows=4 id="azubiInfoText"></textarea>
             <br>
@@ -449,7 +448,17 @@
             <textarea class="autosize schriftformat" rows=4 id="abschiedText"></textarea>
         </div>
 
-	</div>
+        <div id="fuss">
+            <p></p>
+            <img src="SRH Logo.png" alt="SRH-Logo" width="autosize" height="40">
+        </div>
+        <div id="pdf_printer">
+            <p></p>
+            <input type="button" value="Print" onclick="printDiv()" class="erstellenButtons">
+            <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()" class="erstellenButtons">
+        </div>
+
+	</div> <!-- Screen Ende -->
 
     <div class="loadFont schriftformat">loadme</div>
     <!--Everything in this div is hidden on the page, but printed out by window.print()-->
