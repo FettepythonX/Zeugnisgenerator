@@ -15,33 +15,32 @@
 <body>
     <div class="screen">
         <!-- Tab links -->
-        <div class="tab">
-            <button id="tabDateneingabe"    class="tablinks dateneingabe active"    onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
-            <button id="tabIndividuell"     class="tablinks individuell"            onclick="openTab(event, 'Individuell')">Individuell</button>
-            <button id="tabFachwissen"      class="tablinks"                        onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
-            <button id="tabEinsatz"         class="tablinks"                        onclick="openTab(event, 'Einsatz')">Einsatz</button>
-            <button id="tabArbeitsweise"    class="tablinks"                        onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
-            <button id="tabPensum"          class="tablinks"                        onclick="openTab(event, 'Pensum')">Pensum</button>
-            <button id="tabArbeitserfolg"   class="tablinks"                        onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
-            <button id="tabLeistung"        class="tablinks"                        onclick="openTab(event, 'Leistung')">Leistung</button>
-            <button id="tabSoziales"        class="tablinks"                        onclick="openTab(event, 'Soziales')">Soziales</button>
-            <button id="tabAbschied"        class="tablinks"                        onclick="openTab(event, 'Abschied')">Abschied</button>
-            <button id="tabErstellen"       class="tablinks erstellen"              onclick="openTab(event, 'Erstellen')">Erstellen</button>
+        <div class="tab t_color">
+            <button id="tabDateneingabe"    class="tablinks dateneingabe active tl_color" onclick="openTab(event, 'Dateneingabe')">Dateneingabe</button>
+            <button id="tabIndividuell"     class="tablinks color"                  onclick="openTab(event, 'Individuell')">Individuell</button>
+            <button id="tabFachwissen"      class="tablinks tl_color"                     onclick="openTab(event, 'Fachwissen')">Fachwissen</button>
+            <button id="tabEinsatz"         class="tablinks tl_color"                     onclick="openTab(event, 'Einsatz')">Einsatz</button>
+            <button id="tabArbeitsweise"    class="tablinks tl_color"                     onclick="openTab(event, 'Arbeitsweise')">Arbeitsweise</button>
+            <button id="tabPensum"          class="tablinks tl_color"                     onclick="openTab(event, 'Pensum')">Pensum</button>
+            <button id="tabArbeitserfolg"   class="tablinks tl_color"                     onclick="openTab(event, 'Arbeitserfolg')">Arbeitserfolg</button>
+            <button id="tabLeistung"        class="tablinks tl_color"                     onclick="openTab(event, 'Leistung')">Leistung</button>
+            <button id="tabSoziales"        class="tablinks tl_color"                     onclick="openTab(event, 'Soziales')">Soziales</button>
+            <button id="tabAbschied"        class="tablinks tl_color"                     onclick="openTab(event, 'Abschied')">Abschied</button>
+            <button id="tabErstellen"       class="tablinks color"                    onclick="openTab(event, 'Erstellen')">Erstellen</button>
         </div>
 
         <!-- Tab content -->
         <div id="Dateneingabe" class="tabcontent" style="display:block">
             <div id="start">
                 <div id="infos">
-                      <!-- test -->
+                    <!-- test -->
                     <p>
                         Hier tragen Sie den Auszubildenden mit seinen persönlichen Daten, Ausbildungsgang und -dauer ein.
                         Der Name des Auszubildenden wird Ihnen ab dem nächsten Tab oben links im Fenster angezeigt werden.
                         Bitte geben Sie im Feld 'Ausbilder' Ihren Vor- und Zunamen an.
                     </p>
-                    <p></p>
                 </div>
-                <div class="Tabelle">
+                <div class="Tabelle color">
                     <div class="Zeile">
                         <div class="Zelle">
                             <label>Anrede: </label>
@@ -196,6 +195,7 @@
                 <input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlFachwissen">
                     <input type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
@@ -230,6 +230,7 @@
                 <input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlEinsatz">
                     <input type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
@@ -264,6 +265,7 @@
                 <input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlArbeitsweise">
                     <input type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
@@ -298,6 +300,7 @@
                 <input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlPensum">
                     <input type="radio" name="radioPensum" onclick="changeSelectText(name)">
@@ -318,6 +321,7 @@
                 <input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
                     <input type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
@@ -352,6 +356,7 @@
                 <input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlLeistung">
                     <input type="radio" name="radioLeistung" onclick="changeSelectText(name)">
@@ -386,6 +391,7 @@
                 <input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlSoziales">
                     <input type="radio" name="radioSoziales" onclick="changeSelectText(name)">
@@ -420,6 +426,7 @@
                 <input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)">
                 <label>Ausreichend</label>
             </div>
+            <hr>
             <div>
                 <div class="textAuswahl" name="auswahlAbschied">
                     <input type="radio" name="radioAbschied" onclick="changeSelectText(name)">
@@ -429,8 +436,8 @@
         </div>
 
         <div id="Erstellen" class="tabcontent">
-            <input type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
-            <input type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
+            <input  class = "button" type="button" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
+            <input class="button" type="button" value="Zurücksetzen" onclick="zuruecksetzen()">
             <hr>
             <textarea class="autosize" id="azubiInfoText"></textarea>
             <br>
