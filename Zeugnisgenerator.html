@@ -46,6 +46,7 @@
             <div id="start">
                 <div class="Tabelle">
                     <div class="Zeile">
+                        <!-- Choose gender -->
                         <div class="Zelle">
                             <label>Anrede: </label>
                         </div>
@@ -56,6 +57,7 @@
                                 </select>
                         </div>
                         <div class="zelle" style="width: 50px;"></div>
+                        <!-- Choose the field -->
                         <div class="Zelle">
                             <label>Beruf:</label>
                         </div>
@@ -93,6 +95,7 @@
                                 </select>
                         </div>
                     </div>
+                    <!-- Last name text input -->
                     <div class="Zeile">
                         <div class="Zelle">
                             <label>Nachname: </label>
@@ -101,6 +104,7 @@
                             <input tabindex="2" type="text" id="nachname" name="Nachname" onchange="updateNachname(value)">
                         </div>
                         <div class="zelle"></div>
+                        <!-- Checkbox "mit Praktikum" -->
                         <div class="Zelle">
                             <label>mit Praktikum: </label>
                         </div>
@@ -108,6 +112,7 @@
                             <input tabindex="7" type="checkbox" id="praktikum" value="im_Praktikum" onclick="update()" disabled>
                         </div>
                     </div>
+                    <!-- First name text input -->
                     <div class="Zeile">
                         <div class="Zelle">
                             <label>Vorname: </label>
@@ -116,17 +121,20 @@
                             <input tabindex="3" type="text" id="vorname" name="Vorname" onchange="updateVorname(value)">
                         </div>
                         <div class="zelle"></div>
+                        <!-- Gender of the Ausbilder dropdown -->
                         <div class="Zelle">
                                 <select tabindex="8" name="Ausbilder" id="ausbilderGender">
                                     <option>Ausbilder</option>
                                     <option>Ausbilderin</option>
                                 </select>
                         </div>
+                        <!-- Name of the Ausbilder text input -->
                         <div class="Zelle">
                             <input tabindex="9" type="text" id="ausbilder" name="input_Ausbilder" onchange="updateAusbilderName(value)" placeholder="Vorname Nachname">
                         </div>
                     </div>
                     <div class="Zeile">
+                        <!-- Location of birth text input -->
                         <div class="Zelle">
                             <label>Geburtsort: </label>
                         </div>
@@ -134,6 +142,7 @@
                             <input tabindex="4" type="text" id="geburtsort" name="Geburtsort" onchange="updateGeburtsort(value)">
                         </div>
                         <div class="zelle"></div>
+                        <!-- Anfangsdatum Ausbildung -->
                         <div class="Zelle">
                             <label>Ausbildungsbeginn: </label>
                         </div>
@@ -142,6 +151,7 @@
                         </div>
                     </div>
                     <div class="Zeile">
+                        <!-- Date of birth text input -->
                         <div class="Zelle">
                             <label>Geburtstag: </label>
                         </div>
@@ -149,6 +159,7 @@
                             <input tabindex="5" type="date" id="geburtstag" onchange="updateGeburtstag(value)">
                         </div>
                         <div class="zelle"></div>
+                        <!-- Ausbildungsendedatum -->
                         <div class="Zelle">
                             <label>Ausbildungsende: </label>
                         </div>
@@ -157,6 +168,7 @@
                         </div>
                     </div>
                     <div class="Zeile">
+                        <!-- Extra programs text input -->
                         <div class="Zelle">
                             <label id="pr" hidden> Programme: </label>
                         </div>
@@ -187,12 +199,14 @@
 
 
         <div id="Fachwissen" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteFachwissen" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlFachwissen">
                     <input id="radioFachwissen1" type="radio" name="radioFachwissen" onclick="changeSelectText(name)">
@@ -217,12 +231,14 @@
         </div>
 
         <div id="Einsatz" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteEinsatz" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlEinsatz">
                     <input id="radioEinsatz1" type="radio" name="radioEinsatz" onclick="changeSelectText(name)">
@@ -247,12 +263,14 @@
         </div>
 
         <div id="Arbeitsweise" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitsweise" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlArbeitsweise">
                     <input id="radioArbeitsweise1" type="radio" name="radioArbeitsweise" onclick="changeSelectText(name)">
@@ -277,12 +295,14 @@
         </div>
 
         <div id="Pensum" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNotePensum" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNotePensum" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNotePensum" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNotePensum" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbaustein -->
             <div>
                 <div class="textAuswahl" name="auswahlPensum">
                     <input id="radioPensum1" type="radio" name="radioPensum" onclick="changeSelectText(name)">
@@ -293,12 +313,14 @@
         </div>
 
         <div id="Arbeitserfolg" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten"> 
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteArbeitserfolg" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlArbeitserfolg">
                     <input id="radioArbeitserfolg1" type="radio" name="radioArbeitserfolg" onclick="changeSelectText(name)">
@@ -323,12 +345,14 @@
         </div>
 
         <div id="Leistung" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteLeistung" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlLeistung">
                     <input id="radioLeistung1" type="radio" name="radioLeistung" onclick="changeSelectText(name)">
@@ -353,12 +377,14 @@
         </div>
 
         <div id="Soziales" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteSoziales" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbausteine -->
             <div>
                 <div class="textAuswahl" name="auswahlSoziales">
                     <input id="radioSoziales1" type="radio" name="radioSoziales" onclick="changeSelectText(name)">
@@ -383,12 +409,14 @@
         </div>
 
         <div id="Abschied" class="tabcontent">
+            <!-- Noten -->
             <div class="divNoten">
                 <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="1" onclick="changeGrade(value)"> Sehr gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="2" onclick="changeGrade(value)"> Gut</label>
                 <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="3" onclick="changeGrade(value)"> Befriedigend</label>
                 <label class="labelNote"><input type="radio" name="radioNoteAbschied" value="4" onclick="changeGrade(value)"> Ausreichend</label>
             </div>
+            <!-- Textbaustein -->
             <div>
                 <div class="textAuswahl" name="auswahlAbschied">
                     <input id="radioAbschied1" type="radio" name="radioAbschied" onclick="changeSelectText(name)">
@@ -397,11 +425,14 @@
             </div>
         </div>
 
-        <div id="Erstellen" class="tabcontent" onload="textAreaAdjust(srhInfoText)" >
+        <!-- Tab erstellen -->
+        <div id="Erstellen" class="tabcontent">
+            <!-- Buttons Zurücksetzen und Print -->
             <div class="divButtonField">
                 <input type="button" class="buttonTabErstellen" value="Zurücksetzen" onclick="zuruecksetzen()">
                 <input type="button" class="buttonTabErstellen" value="Print" onclick="printDiv()"> <!-- printDiv() Parameter übergeben -->
             </div>
+            <!-- All of the textareas -->
             <br>
             <textarea class="autosize"  id="azubiInfoText"></textarea>
             <br>

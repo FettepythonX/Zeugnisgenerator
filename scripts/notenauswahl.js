@@ -19,6 +19,11 @@ let categories = ["Fachwissen", "Einsatz", "Arbeitsweise", "Pensum", "Arbeitserf
 
 function openTab(evt, tabName) {
     if(evt.currentTarget.innerHTML == "Erstellen"){
+        // Check if user is using correct browser (Google Chrome)
+        if(getBrowserName() !== "Google Chrome"){
+            alert("Bitte Google Chrome verwenden");
+            return;
+        }
         // Check if all tabs have something selected
         // if not, inform user and exit function
         for(i = 0; i < tabDone.length; i++){
@@ -189,6 +194,7 @@ function openTab(evt, tabName) {
     }
 } 
 
+// On selecting a grade, set tab color to red and change the texts displayed, then insert last name into texts
 function changeGrade(value){
     //console.log(value);
     //console.log(currentTab);
@@ -352,6 +358,7 @@ function changeGrade(value){
     }
 }
 
+// Declare tab as done and set the color to green when a choice is made
 function changeSelectText(name){
     switch(name){
         case "radioFachwissen":
@@ -421,6 +428,7 @@ function update(){
 function updateGender(){
     gender = document.getElementById("gender").value;
     currentIndex = document.getElementById('job').selectedIndex;
+    // Update dropdown menu of jobs based on gender
     switch(gender){
         case "0": 				
             document.getElementById('job').innerHTML = "";
@@ -707,6 +715,7 @@ function updateAusbildungsende(ausbildungsendeNeu){
     checkDateneingabeFilled();
 }
 
+// Check if all fields in tab "Dateneingabe" are filled, change color accordingly
 function checkDateneingabeFilled(){
     if(document.getElementById("nachname").value == "" || document.getElementById("nachname").value == null 
         || document.getElementById("vorname").value == "" || document.getElementById("vorname").value == null
@@ -768,11 +777,13 @@ function getMonthString(monthIndex){
     return monthName;
 }
 
+// Takes in a date in 'yyyy mm dd' format and outputs it in 'dd. MONTH yyyy' format 
 function getDateString(date){
     let yyyy_mm_dd = date.split('-');
     return yyyy_mm_dd[2] + ". " + getMonthString(yyyy_mm_dd[1]) + " " + yyyy_mm_dd[0]
 }
 
+// Reset all tabs to their default state except the fields on the right in tab "Dateneingabe"
 function zuruecksetzen(){
     for(i = 0; i < tabDone.length; i++){
         tabDone[i] = false;

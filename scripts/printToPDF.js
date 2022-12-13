@@ -25,6 +25,7 @@ function getBrowserName(){
       }
     }*/
 
+    // The pattern for the printed page
     document.getElementById("printMe").innerHTML = `
   <table role="presentation">
     <thead>
@@ -201,5 +202,6 @@ function getBrowserName(){
     html = html.replace("@ausbilderName", ausbilderName);
     document.getElementById("printMe").innerHTML = html;
 
+    // Opens browser print media
     window.print();
   }
